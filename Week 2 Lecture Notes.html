@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Week 2 Lecture Notes</title>
+
+
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb
+}
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+  body {
+    padding: 2cm; 
+  }
+}
+</style>
+
+
+</head>
+
+<body>
+
+<h1 id="toc_0">Week 2 Lecture Notes</h1>
+
+<p>This week, we begin the process of turning raw text into something we can analyze. We’ll explore how to break documents into pieces, represent them numerically, and uncover patterns in large text collections. Along the way, we’ll cover foundational techniques like tokenization, vectorization, sentiment scoring, information retrieval, and clustering — all building toward more advanced modeling in future weeks.</p>
+
+<h2 id="toc_1">Documents and Corpora</h2>
+
+<p>In text mining, a <strong>document</strong> refers to any individual unit of text that we want to analyze. A document can be:</p>
+
+<ul>
+<li>A single tweet</li>
+<li>A product review</li>
+<li>An email</li>
+<li>A paragraph from a news article</li>
+<li>A transcript of a phone call</li>
+</ul>
+
+<p>Essentially, a document is <strong>the smallest unit of analysis</strong> in our pipeline. We might analyze it for sentiment, extract information from it, or compare it to other documents.</p>
+
+<blockquote>
+<p>📌 Example:<br>
+- One Amazon review = one document<br>
+- One customer support ticket = one document  </p>
+</blockquote>
+
+<p>A <strong>corpus</strong> (plural: <em>corpora</em>) is a <strong>collection of documents</strong>. It forms the dataset we use for text mining tasks.</p>
+
+<blockquote>
+<p>📌 Example:<br>
+- All Amazon reviews for a product = a corpus<br>
+- A month’s worth of customer support tickets = a corpus</p>
+</blockquote>
+
+<p>We often analyze patterns <strong>across</strong> the corpus — such as discovering frequent terms, building sentiment models, or detecting clusters of related documents.</p>
+
+<h3 id="toc_2">Summary</h3>
+
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Definition</th>
+<th>Example</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Document</td>
+<td>An individual unit of text</td>
+<td>A tweet, email, review, or article</td>
+</tr>
+<tr>
+<td>Corpus</td>
+<td>A collection of documents</td>
+<td>All reviews for a product, all support tickets</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="toc_3">Tokenization and Text Preprocessing</h2>
+
+<p>Before we can analyze text, we need to break it down into smaller pieces that a computer can work with. This process — known as <strong>tokenization</strong> — is one of the most important foundational steps in text mining. It’s often followed by <strong>preprocessing</strong> steps to clean and normalize the text.</p>
+
+<h3 id="toc_4">What is Tokenization?</h3>
+
+<p><strong>Tokenization</strong> is the process of splitting text into meaningful units called <strong>tokens</strong>. Tokens are typically words, but they can also be phrases, sentences, or even characters depending on the application.</p>
+
+<blockquote>
+<p>📌 Example:
+&quot;The battery life is great!&quot;<br>
+→ [&quot;The&quot;, &quot;battery&quot;, &quot;life&quot;, &quot;is&quot;, &quot;great&quot;, &quot;!&quot;]</p>
+</blockquote>
+
+<p>Tokenization transforms raw text into a form that we can analyze — for example, by counting word frequencies or converting text into numerical features.</p>
+
+<h3 id="toc_5">Types of Tokenization</h3>
+
+<ul>
+<li><strong>Word Tokenization</strong>: Splits text into words and punctuation marks.<br></li>
+<li><strong>Sentence Tokenization</strong>: Splits text into individual sentences.<br></li>
+<li><strong>Character Tokenization</strong>: Splits text into individual characters.<br></li>
+<li><strong>Subword Tokenization</strong>: Breaks rare or unknown words into meaningful components (used in deep learning).</li>
+</ul>
+
+<h3 id="toc_6">Challenges in Tokenization</h3>
+
+<p>Tokenization can be tricky due to:</p>
+
+<ul>
+<li><strong>Punctuation</strong> (e.g., &quot;great!&quot; vs. &quot;great&quot;)</li>
+<li><strong>Contractions</strong> (e.g., &quot;don&#39;t&quot; → &quot;do&quot; and &quot;n&#39;t&quot;? Or leave it as &quot;don&#39;t&quot;?)</li>
+<li><strong>Emojis, hashtags, and symbols</strong> (e.g., 😊 or #winning)</li>
+<li><strong>Language-specific rules</strong> (e.g., compound words in German or no spaces in Chinese)</li>
+</ul>
+
+<h3 id="toc_7">Text Preprocessing</h3>
+
+<p>Once text is tokenized, we often apply <strong>preprocessing steps</strong> to clean and standardize it. These steps help simplify the data and reduce variation.</p>
+
+<h4 id="toc_8">Lowercasing</h4>
+
+<p>Converts all text to lowercase to ensure consistency.</p>
+
+<blockquote>
+<p>&quot;Battery&quot; and &quot;battery&quot; are treated as the same word.</p>
+</blockquote>
+
+<p>This helps reduce redundancy in the vocabulary.</p>
+
+<h4 id="toc_9">Stop Words and Stop Tokens</h4>
+
+<p><strong>Stop words</strong> are common words that carry little meaningful content in many contexts, such as:</p>
+
+<ul>
+<li>&quot;the&quot;, &quot;is&quot;, &quot;in&quot;, &quot;of&quot;, &quot;and&quot;, &quot;a&quot;</li>
+</ul>
+
+<p>Removing stop words can reduce noise in the data and improve model efficiency, especially in tasks like topic modeling or keyword extraction.</p>
+
+<blockquote>
+<p>📌 Without stop word removal:<br>
+[&quot;the&quot;, &quot;battery&quot;, &quot;is&quot;, &quot;great&quot;]</p>
+
+<p>📌 With stop word removal:<br>
+[&quot;battery&quot;, &quot;great&quot;]</p>
+</blockquote>
+
+<p>More generally, we can remove <strong>stop tokens</strong>, which may include:</p>
+
+<ul>
+<li><strong>Punctuation</strong> (e.g., &quot;!&quot;, &quot;...&quot;)</li>
+<li><strong>Digits</strong> (e.g., &quot;123&quot;, &quot;2024&quot;)</li>
+<li><strong>Special symbols</strong> (e.g., &quot;@&quot;, &quot;#&quot;, &quot;$&quot;)</li>
+</ul>
+
+<p>However, <strong>stop word removal is task-dependent</strong>. For example, in sentiment analysis, words like &quot;not&quot; or &quot;never&quot; may be crucial and should be retained.</p>
+
+<h4 id="toc_10">Stemming</h4>
+
+<p><strong>Stemming</strong> reduces words to their root form by removing common suffixes.</p>
+
+<blockquote>
+<p>Examples:
+- &quot;running&quot;, &quot;runner&quot;, &quot;runs&quot; → &quot;run&quot;
+- &quot;relational&quot;, &quot;relations&quot; → &quot;relat&quot;</p>
+</blockquote>
+
+<p>Stemming is fast and simple but can be imprecise. It may result in non-standard words.</p>
+
+<h4 id="toc_11">Lemmatization</h4>
+
+<p><strong>Lemmatization</strong> also reduces words to a base form, but it uses grammar rules and a dictionary to do so more accurately.</p>
+
+<blockquote>
+<p>Examples:
+- &quot;am&quot;, &quot;are&quot;, &quot;is&quot; → &quot;be&quot;
+- &quot;better&quot; → &quot;good&quot;</p>
+</blockquote>
+
+<p>Lemmatization is generally more accurate than stemming but also more computationally intensive.</p>
+
+<p>Next, we’ll look at how we break text down into smaller components — a process called tokenization — and prepare it for analysis.</p>
+
+<h3 id="toc_12">Why Tokenization and Preprocessing Matter</h3>
+
+<ul>
+<li>They prepare raw text for structured analysis.</li>
+<li>They reduce noise and variability in the data.</li>
+<li>They improve the performance and interpretability of models.</li>
+</ul>
+
+<blockquote>
+<p>🧠 <strong>Key Insight</strong>:<br>
+The right combination of tokenization and preprocessing depends on your task. For example, stop word removal may help topic modeling but hurt sentiment analysis. Always consider the context.</p>
+</blockquote>
+
+<h2 id="toc_13">Sequence vs. Bag of Tokens</h2>
+
+<p>After tokenization, we must decide how to represent a document for analysis. One key choice is whether to treat the document as a <strong>sequence</strong> of tokens (preserving word order) or as an <strong>unordered collection</strong> (a “bag”) of tokens. This decision shapes the kinds of models we can use and the kinds of patterns we can detect.</p>
+
+<p>In a <strong>sequence-based representation</strong>, we preserve the <strong>order</strong> in which words appear. This mirrors how language works for humans — where word order affects meaning.</p>
+
+<p>In an <strong>unordered collection-based representation</strong> model (also known as a bag-of-tokens), we treat a document as a <strong>set of tokens</strong>, disregarding order. We only keep track of which tokens appear and how often. When using word tokens, we call this approach <strong>bag-of-words (BoW)</strong>.</p>
+
+<blockquote>
+<p>Example:<br>
+&quot;Great food, bad service!&quot; vs. &quot;Great service, bad food!&quot;<br>
+These sentences contain the same words, but the order gives them opposite meanings. In a bag-of-words representation, these sentences are equivalent. </p>
+</blockquote>
+
+<p>This trade-off between preserving word order and simplifying representation leads to important differences in <strong>accuracy</strong>, <strong>efficiency</strong>, and <strong>interpretability</strong>.</p>
+
+<h3 id="toc_14">Pros and Cons</h3>
+
+<table>
+<thead>
+<tr>
+<th>Approach</th>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><strong>Sequence-based</strong></td>
+<td>- Captures meaning, grammar, and context<br>- Preserves word order</td>
+<td>- More complex to implement<br>- Requires more data and computation<br>- Less interpretable</td>
+</tr>
+<tr>
+<td><strong>Bag-of-Tokens (BoW)</strong></td>
+<td>- Simple and fast<br>- Easy to interpret<br>- Effective for many tasks<br>- Scales well to large corpora</td>
+<td>- Ignores word order<br>- Cannot capture context or negation<br>- May lose subtle meaning</td>
+</tr>
+</tbody>
+</table>
+
+<p>There’s no single &quot;best&quot; approach — the right choice depends on your task, data, and goals. </p>
+
+<h2 id="toc_15">Vectorizing Text</h2>
+
+<p>Once we’ve tokenized and preprocessed our text, the next step is to <strong>convert it into numbers</strong> so that it can be used in machine learning models. This process is called <strong>vectorization</strong>.</p>
+
+<p>A vector is simply a list of numbers — and each document can be represented as a vector based on the words (or tokens) it contains. This allows us to compare documents, build classifiers, cluster similar items, and much more.</p>
+
+<p>For the remainder of this lecture, we will focus on <strong>Bag-of-Words (BoW)</strong> models. These models represent a document by <strong>what words appear</strong>, but not the order in which they appear.</p>
+
+<p>The vectorization methods we’ll explore — Multi-Hot, Term Frequency, and TF-IDF — <strong>only make sense when we ignore word order</strong>. Later in the course, we’ll explore more advanced <strong>sequence-based</strong> models that take context and word position into account.</p>
+
+<p>We will cover three common ways to represent bag-of-words documents as vectors:</p>
+
+<ul>
+<li>Multi-Hot</li>
+<li>Term Frequency</li>
+<li>TF-IDF</li>
+</ul>
+
+<h3 id="toc_16">Example Corpus and Vocabulary</h3>
+
+<p>Let’s use the following simple corpus as an example:</p>
+
+<blockquote>
+<p>Document A: <code>&quot;The battery is great and the screen is great too.&quot;</code><br>
+Document B: <code>&quot;Battery performance is poor.&quot;</code><br>
+Document C: <code>&quot;The screen is bright and clear.&quot;</code></p>
+</blockquote>
+
+<p>After tokenization and preprocessing (lowercasing, removing punctuation, removing stop words &quot;the&quot;, &quot;is&quot;, &quot;and&quot;, and &quot;too&quot;), we get:</p>
+
+<blockquote>
+<p>Document A Tokens: <code>[&quot;battery&quot;, &quot;great&quot;, &quot;screen&quot;, &quot;great&quot;]</code><br>
+Document B Tokens: <code>[&quot;battery&quot;, &quot;performance&quot;, &quot;poor&quot;]</code><br>
+Document C Tokens: <code>[&quot;screen&quot;, &quot;bright&quot;, &quot;clear&quot;]</code></p>
+</blockquote>
+
+<p>Now we build a <strong>vocabulary</strong> — the set of all unique tokens:</p>
+
+<blockquote>
+<p>Vocabulary: <code>[&quot;battery&quot;, &quot;great&quot;, &quot;screen&quot;, &quot;performance&quot;, &quot;poor&quot;, &quot;bright&quot;, &quot;clear&quot;]</code></p>
+</blockquote>
+
+<p>We’ll now represent this corpus using three different vectorization methods.</p>
+
+<h3 id="toc_17">Multi-Hot (Binary) Encoding</h3>
+
+<p>This is the simplest method. We create a vocabulary of all the unique tokens in our corpus, and represent each document as a binary vector:</p>
+
+<ul>
+<li>1 if the word is present in the document</li>
+<li>0 if it is not</li>
+</ul>
+
+<blockquote>
+<p>Document A Vector: <code>[1,1,1,0,0,0,0]</code><br>
+Document B Vector: <code>[1,0,0,1,1,0,0]</code><br>
+Document C Vector: <code>[0,0,1,0,0,1,1]</code></p>
+</blockquote>
+
+<h3 id="toc_18">Term Frequency (TF)</h3>
+
+<p>Instead of just indicating presence or absence, <strong>term frequency</strong> counts how many times each word appears in a document.</p>
+
+<blockquote>
+<p>Document A Vector: <code>[1,2,1,0,0,0,0]</code><br>
+Document B Vector: <code>[1,0,0,1,1,0,0]</code><br>
+Document C Vector: <code>[0,0,1,0,0,1,1]</code></p>
+</blockquote>
+
+<h3 id="toc_19">Term Frequency–Inverse Document Frequency (TF-IDF)</h3>
+
+<p><strong>TF-IDF</strong> adjusts term frequency by how common the word is across all documents in the corpus. Words that appear in many documents get <strong>lower weights</strong>, while rare but potentially important words get <strong>higher weights</strong>.</p>
+
+<ul>
+<li><strong>Term Frequency (TF)</strong> = How often the word appears in the document<br></li>
+<li><strong>Inverse Document Frequency (IDF)</strong> = How rare the word is across the entire corpus</li>
+</ul>
+
+<p>The idea: a word is important if it appears <strong>frequently in one document</strong> but <strong>rarely in others</strong>.</p>
+
+<p>Below is the IDF for each word in the vocabulary, based on the number of documents in which the word appears:</p>
+
+<table>
+<thead>
+<tr>
+<th>Word</th>
+<th>Document Frequency (DF)</th>
+<th>IDF = log(N / DF)</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>battery</td>
+<td>2</td>
+<td>log(3 / 2) ≈ 0.4</td>
+</tr>
+<tr>
+<td>great</td>
+<td>1</td>
+<td>log(3 / 1) ≈ 1.1</td>
+</tr>
+<tr>
+<td>screen</td>
+<td>2</td>
+<td>log(3 / 2) ≈ 0.4</td>
+</tr>
+<tr>
+<td>performance</td>
+<td>1</td>
+<td>log(3 / 1) ≈ 1.1</td>
+</tr>
+<tr>
+<td>poor</td>
+<td>1</td>
+<td>log(3 / 1) ≈ 1.1</td>
+</tr>
+<tr>
+<td>bright</td>
+<td>1</td>
+<td>log(3 / 1) ≈ 1.1</td>
+</tr>
+<tr>
+<td>clear</td>
+<td>1</td>
+<td>log(3 / 1) ≈ 1.1</td>
+</tr>
+</tbody>
+</table>
+
+<blockquote>
+<p>Document A Vector: <code>[0.4,2.2,0.4,0.0,0.0,0.0,0.0]</code><br>
+Document B Vector: <code>[0.4,0.0,0.0,1.1,1.1,0.0,0.0]</code><br>
+Document C Vector: <code>[0.0,0.0,0.4,0.0,0.0,1.1,1.1]</code><br></p>
+</blockquote>
+
+<p>Choosing the right vectorization method depends on the <strong>structure of your data</strong>, the <strong>task at hand</strong>, and the <strong>importance of context</strong>.</p>
+
+<h2 id="toc_20">Lexicon-Based Sentiment Models</h2>
+
+<p>One of the simplest and most interpretable approaches to sentiment analysis is the <strong>lexicon-based model</strong>. Rather than training a machine learning algorithm, we use a <strong>predefined dictionary of words</strong> (called a <strong>sentiment lexicon</strong>) where each word is assigned a sentiment score.</p>
+
+<p>The idea:  </p>
+
+<ul>
+<li>Words like &quot;great&quot;, &quot;amazing&quot;, or &quot;happy&quot; contribute <strong>positive sentiment</strong><br></li>
+<li>Words like &quot;bad&quot;, &quot;terrible&quot;, or &quot;angry&quot; contribute <strong>negative sentiment</strong></li>
+</ul>
+
+<p>To calculate the sentiment of a document, we:</p>
+
+<ol>
+<li>Represent the document as a vector of term frequencies.</li>
+<li>Represent the sentiment lexicon as a vector of scores for the same vocabulary.</li>
+<li>Compute the <strong>dot product</strong> of the two vectors.</li>
+</ol>
+
+<p>The dot product gives us an <strong>overall sentiment score</strong> for the document by combining word frequency and word polarity.</p>
+
+<h3 id="toc_21">Example</h3>
+
+<p>Let’s reuse the preprocessed version of <strong>Document A</strong>:</p>
+
+<blockquote>
+<p>Document A Tokens: <code>[&quot;battery&quot;, &quot;great&quot;, &quot;screen&quot;, &quot;great&quot;]</code><br>
+Vocabulary: <code>[&quot;battery&quot;, &quot;great&quot;, &quot;screen&quot;, &quot;performance&quot;, &quot;poor&quot;, &quot;bright&quot;, &quot;clear&quot;]</code><br>
+Term Frequency Vector: <code>[1, 2, 1, 0, 0, 0, 0]</code></p>
+</blockquote>
+
+<p>Now suppose we have a simple <strong>sentiment lexicon</strong> that assigns the following scores:</p>
+
+<table>
+<thead>
+<tr>
+<th>Word</th>
+<th>Sentiment Score</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>battery</td>
+<td>0</td>
+</tr>
+<tr>
+<td>great</td>
+<td>+1</td>
+</tr>
+<tr>
+<td>screen</td>
+<td>0</td>
+</tr>
+<tr>
+<td>performance</td>
+<td>0</td>
+</tr>
+<tr>
+<td>poor</td>
+<td>–1</td>
+</tr>
+<tr>
+<td>bright</td>
+<td>0</td>
+</tr>
+<tr>
+<td>clear</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+
+<p>We can represent the lexicon as a <strong>sentiment score vector</strong>:</p>
+
+<blockquote>
+<p>Sentiment Lexicon Vector: <code>[0, 1, 0, 0, -1, 0, 0]</code></p>
+</blockquote>
+
+<p>We compute the dot product of the term frequency vector and the sentiment score vector:</p>
+
+<blockquote>
+<p><strong>Sentiment Score</strong> =<br>
+<code>[1, 2, 1, 0, 0, 0, 0] · [0, 1, 0, 0, -1, 0, 0] = (1×0) + (2×1) + (1×0) + (0×0) + (0×-1) + (0×0) + (0×0) = 2</code></p>
+</blockquote>
+
+<p>So, the overall sentiment score of Document A is <strong>+2</strong>, which suggests a <strong>positive</strong> tone.</p>
+
+<h3 id="toc_22">Polarity Classification</h3>
+
+<p>We can convert the sentiment score into a <strong>polarity label</strong>:</p>
+
+<ul>
+<li>If the score &gt; 0 → <strong>Positive</strong></li>
+<li>If the score &lt; 0 → <strong>Negative</strong></li>
+<li>If the score = 0 → <strong>Neutral</strong></li>
+</ul>
+
+<blockquote>
+<p>In this example:<br>
+Score = 2 → <strong>Positive sentiment</strong></p>
+</blockquote>
+
+<p>This simple rule helps categorize documents even without training data, making lexicon-based sentiment models useful in many business contexts.</p>
+
+<h3 id="toc_23">Why This Works</h3>
+
+<p>This model assumes that:</p>
+
+<ul>
+<li>The sentiment of a document is the <strong>sum of the sentiment of its words</strong></li>
+<li>Words contribute <strong>independently</strong> to sentiment</li>
+<li>The more frequently a sentiment-laden word appears, the stronger its effect</li>
+</ul>
+
+<p>This makes it:</p>
+
+<ul>
+<li><strong>Simple and transparent</strong></li>
+<li><strong>Easy to implement</strong></li>
+<li><strong>Fast to compute</strong></li>
+</ul>
+
+<h3 id="toc_24">Limitations of Lexicon-Based Models</h3>
+
+<ul>
+<li><strong>Context is ignored</strong>: “not great” may still score as positive</li>
+<li><strong>No domain adaptation</strong>: Words may have different meanings in different industries</li>
+<li><strong>All words are treated equally</strong> unless weighted otherwise</li>
+</ul>
+
+<blockquote>
+<p>🧠 <strong>Key Insight</strong>:<br>
+Lexicon-based models are a great baseline. They’re interpretable and require no training data — but they often miss nuance. Later in the course, we’ll compare them with machine learning–based sentiment models that learn patterns from labeled examples.</p>
+</blockquote>
+
+<h2 id="toc_25">Information Retrieval with TF-IDF and Cosine Similarity</h2>
+
+<p>So far, we’ve seen how to represent documents as vectors using term frequency and TF-IDF. Now we’ll use these vectors to perform a common text mining task: <strong>information retrieval</strong> — finding the most relevant documents for a given query.</p>
+
+<p>The key idea is to measure how <strong>similar</strong> two pieces of text are using their vector representations. The most common method is <strong>cosine similarity</strong>.</p>
+
+<h3 id="toc_26">Cosine Similarity</h3>
+
+<p>To understand cosine similarity, it helps to think of each document vector as a <strong>line</strong> pointing outward from the origin in a high-dimensional space. Even though we can’t visualize more than 3 dimensions, the math still works the same way. </p>
+
+<p>Cosine similarity measures the <strong>angle</strong> between two vectors. If two documents use similar words in similar proportions, the angle between them is small — and the cosine of that angle is close to <strong>1</strong>.</p>
+
+<p>If the documents are completely different, their vectors point in very different directions — and the cosine is closer to <strong>0</strong>.</p>
+
+<p><strong>Formula:</strong>
+cosine_similarity(A, B) = (A · B) / (||A|| * ||B||)</p>
+
+<p>Where:
+- <code>A · B</code> is the <strong>dot product</strong> of the two vectors
+- <code>||A||</code> and <code>||B||</code> are the <strong>magnitudes</strong> of the vectors</p>
+
+<h3 id="toc_27">Example: Querying &quot;battery performance&quot;</h3>
+
+<p>Let’s use the same corpus and vocabulary from before:</p>
+
+<blockquote>
+<p>Vocabulary: <code>[&quot;battery&quot;, &quot;great&quot;, &quot;screen&quot;, &quot;performance&quot;, &quot;poor&quot;, &quot;bright&quot;, &quot;clear&quot;]</code></p>
+</blockquote>
+
+<p>TF-IDF Vectors:</p>
+
+<ul>
+<li>Document A: <code>[0.4, 2.2, 0.4, 0.0, 0.0, 0.0, 0.0]</code></li>
+<li>Document B: <code>[0.4, 0.0, 0.0, 1.1, 1.1, 0.0, 0.0]</code></li>
+<li>Document C: <code>[0.0, 0.0, 0.4, 0.0, 0.0, 1.1, 1.1]</code></li>
+</ul>
+
+<p>Now let’s create a query:  </p>
+
+<blockquote>
+<p><code>&quot;battery performance&quot;</code></p>
+</blockquote>
+
+<p>After preprocessing and tokenization, we get:</p>
+
+<blockquote>
+<p>Query tokens: <code>[&quot;battery&quot;, &quot;performance&quot;]</code></p>
+</blockquote>
+
+<p>We create a <strong>TF vector</strong> for the query based on term frequency:</p>
+
+<ul>
+<li>Query TF: <code>[&quot;battery&quot;: 1, &quot;performance&quot;: 1]</code></li>
+</ul>
+
+<p>Convert this into a <strong>TF-IDF vector</strong> using the same IDF values:</p>
+
+<table>
+<thead>
+<tr>
+<th>Word</th>
+<th>IDF</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>battery</td>
+<td>0.4</td>
+</tr>
+<tr>
+<td>performance</td>
+<td>1.1</td>
+</tr>
+</tbody>
+</table>
+
+<p>Query TF-IDF vector:  </p>
+
+<blockquote>
+<p><code>[0.4, 0.0, 0.0, 1.1, 0.0, 0.0, 0.0]</code></p>
+</blockquote>
+
+<h3 id="toc_28">Step-by-Step Similarity Calculations</h3>
+
+<p><strong>Dot Products:</strong>
+- Query · Document A = <code>(0.4×0.4) + (1.1×0.0) = 0.16</code>
+- Query · Document B = <code>(0.4×0.4) + (1.1×1.1) = 0.16 + 1.21 = 1.37</code>
+- Query · Document C = <code>(0.4×0.0) + (1.1×0.0) = 0.0</code></p>
+
+<p><strong>Vector Magnitudes:</strong>
+- ||Query|| = sqrt(0.4² + 1.1²) ≈ sqrt(0.16 + 1.21) ≈ sqrt(1.37) ≈ 1.17
+- ||A|| = sqrt(0.4² + 2.2² + 0.4²) ≈ sqrt(5.16) ≈ 2.27
+- ||B|| = sqrt(0.4² + 1.1² + 1.1²) ≈ sqrt(2.58) ≈ 1.61
+- ||C|| = sqrt(0.4² + 1.1² + 1.1²) ≈ same as B ≈ 1.61</p>
+
+<p><strong>Cosine Similarities:</strong>
+- Query vs. A = 0.16 / (1.17 × 2.27) ≈ 0.06
+- Query vs. B = 1.37 / (1.17 × 1.61) ≈ 0.73
+- Query vs. C = 0.0 / (1.17 × 1.61) = 0.00</p>
+
+<h3 id="toc_29">Ranking Results</h3>
+
+<p>Based on cosine similarity, the documents are ranked as:</p>
+
+<ol>
+<li><strong>Document B</strong> (score ≈ 0.73) – highly relevant</li>
+<li><strong>Document A</strong> (score ≈ 0.06) – weakly related</li>
+<li><strong>Document C</strong> (score = 0.00) – unrelated</li>
+</ol>
+
+<blockquote>
+<p>The query &quot;battery performance&quot; most closely matches Document B, which contains both terms. Document A includes “battery” but not “performance,” so it’s only weakly similar. Document C shares no terms and has no similarity.</p>
+</blockquote>
+
+<h3 id="toc_30">Why This Matters</h3>
+
+<p>Cosine similarity allows us to:
+- Find documents similar to a query
+- Build a <strong>basic search engine</strong>
+- Recommend documents, products, or articles based on text similarity</p>
+
+<blockquote>
+<p>🧠 <strong>Key Insight</strong>:<br>
+Using TF-IDF and cosine similarity, we can retrieve relevant documents based on word content — even without training a machine learning model.</p>
+</blockquote>
+
+<h2 id="toc_31">Clustering Documents Using TF-IDF Vectors</h2>
+
+<p>Once we’ve vectorized a set of documents, we can group them based on their <strong>similarity</strong>. This process is called <strong>clustering</strong> — an unsupervised machine learning technique used to discover natural groupings in data.</p>
+
+<p>In text mining, clustering allows us to:</p>
+
+<ul>
+<li>Identify common themes in unstructured data</li>
+<li>Group similar documents without predefined labels</li>
+<li>Summarize or organize large collections of text</li>
+</ul>
+
+<h3 id="toc_32">What Is Clustering?</h3>
+
+<p><strong>Clustering</strong> is the task of assigning each item (in our case, a document) to one of several <strong>groups or clusters</strong> such that:</p>
+
+<ul>
+<li>Documents in the same cluster are <strong>more similar</strong> to each other than to documents in other clusters</li>
+<li>The algorithm does not require any labeled examples</li>
+</ul>
+
+<p>This is different from classification, which requires labeled training data.</p>
+
+<h3 id="toc_33">Common Text Clustering Algorithms</h3>
+
+<p>Several algorithms can cluster text documents. The most common are:</p>
+
+<ul>
+<li><strong>K-Means</strong>: Assigns each document to one of <em>k</em> clusters by minimizing the distance to the cluster&#39;s center.</li>
+<li><strong>Hierarchical Clustering</strong>: Builds a tree-like structure showing how documents can be grouped at different levels.</li>
+<li><strong>DBSCAN</strong>: Groups dense regions of documents and identifies outliers as noise.</li>
+</ul>
+
+<p>Today, we’ll focus on <strong>K-Means</strong>, which works well with vectorized text and is easy to interpret.</p>
+
+<h3 id="toc_34">How K-Means Works (with a 2D Example)</h3>
+
+<p>To understand K-Means clustering, it helps to start with a simple example in <strong>2D space</strong>, where each item is a point with just two features.</p>
+
+<p>Let’s say we have the following five data points:</p>
+
+<ul>
+<li>A = (1, 2)</li>
+<li>B = (1, 4)</li>
+<li>C = (2, 3)</li>
+<li>D = (8, 8)</li>
+<li>E = (9, 10)</li>
+</ul>
+
+<p>Our goal is to group these points into <strong>k = 2</strong> clusters.</p>
+
+<h4 id="toc_35">Step 1: Choose the number of clusters (<strong>k</strong>)</h4>
+
+<p>We decide that we want to divide the data into <strong>2 clusters</strong>.</p>
+
+<h4 id="toc_36">Step 2: Initialize random cluster centers (centroids)</h4>
+
+<p>Let’s start by randomly picking two initial centroids:</p>
+
+<ul>
+<li>Centroid 1 = A = (1, 2)</li>
+<li>Centroid 2 = D = (8, 8)</li>
+</ul>
+
+<h4 id="toc_37">Step 3: Assign each point to the nearest centroid</h4>
+
+<p>We compute the <strong>Euclidean distance</strong> from each point to both centroids:</p>
+
+<table>
+<thead>
+<tr>
+<th>Point</th>
+<th>Distance to Centroid 1 (1,2)</th>
+<th>Distance to Centroid 2 (8,8)</th>
+<th>Assigned Cluster</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>A</td>
+<td>0</td>
+<td>≈ 9.2</td>
+<td>Cluster 1</td>
+</tr>
+<tr>
+<td>B</td>
+<td>2</td>
+<td>≈ 7.2</td>
+<td>Cluster 1</td>
+</tr>
+<tr>
+<td>C</td>
+<td>≈ 1.4</td>
+<td>≈ 7.2</td>
+<td>Cluster 1</td>
+</tr>
+<tr>
+<td>D</td>
+<td>≈ 9.2</td>
+<td>0</td>
+<td>Cluster 2</td>
+</tr>
+<tr>
+<td>E</td>
+<td>≈ 11.4</td>
+<td>≈ 2.2</td>
+<td>Cluster 2</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="toc_38">Step 4: Update the centroids</h4>
+
+<p>Now that the points are assigned, we compute the new centroids by taking the <strong>average (mean)</strong> of all points in each cluster.</p>
+
+<ul>
+<li><p>New Centroid 1 (Cluster 1: A, B, C):</p>
+
+<ul>
+<li>x = (1 + 1 + 2)/3 = 1.33</li>
+<li>y = (2 + 4 + 3)/3 = 3.0</li>
+<li>New Centroid 1 = (1.33, 3.0)</li>
+</ul></li>
+<li><p>New Centroid 2 (Cluster 2: D, E):</p>
+
+<ul>
+<li>x = (8 + 9)/2 = 8.5</li>
+<li>y = (8 + 10)/2 = 9.0</li>
+<li>New Centroid 2 = (8.5, 9.0)</li>
+</ul></li>
+</ul>
+
+<h4 id="toc_39">Step 5: Repeat steps 3 and 4</h4>
+
+<p>With the new centroids, we repeat the assignment and update steps. After a few iterations, the clusters stop changing — this is when we say the algorithm has <strong>converged</strong>.</p>
+
+<h3 id="toc_40">Summary: What K-Means Does</h3>
+
+<ul>
+<li>K-Means tries to find <strong>k centroids</strong> that minimize the distance between each point and its assigned cluster center.</li>
+<li>It works by <strong>alternating between assignment and update steps</strong>.</li>
+<li>It converges when points stop switching clusters (or changes become very small).</li>
+</ul>
+
+<h3 id="toc_41">Applying This to Documents</h3>
+
+<p>In text mining, each document is a <strong>vector in high-dimensional space</strong>, where each dimension corresponds to a word (as defined by the vocabulary). When we cluster using TF-IDF vectors:</p>
+
+<ul>
+<li>Each document is a point in that space</li>
+<li>Similar documents are <strong>closer together</strong></li>
+<li>K-Means groups them based on <strong>shared vocabulary patterns</strong></li>
+</ul>
+
+<p>We use <strong>cosine similarity</strong> (not Euclidean distance) when working with TF-IDF, because direction matters more than raw magnitude in text data.</p>
+
+<h3 id="toc_42">Why Clustering Is Useful</h3>
+
+<ul>
+<li>Helps uncover <strong>hidden structure</strong> in text data</li>
+<li>Useful for <strong>exploratory analysis</strong> (e.g., grouping customer reviews)</li>
+<li>Scales to large document collections</li>
+<li>Can be used to <strong>summarize</strong>, <strong>tag</strong>, or <strong>prioritize</strong> documents</li>
+</ul>
+
+<h3 id="toc_43">Things to Keep in Mind</h3>
+
+<ul>
+<li>The number of clusters (<code>k</code>) must be chosen manually, and different values may produce different results</li>
+<li>Results can vary depending on initialization</li>
+<li>TF-IDF + cosine distance is usually a good starting point for clustering documents, but preprocessing quality has a big impact</li>
+</ul>
+
+<blockquote>
+<p>🧠 <strong>Key Insight</strong>:<br>
+Clustering is a powerful way to organize large volumes of text without labels. It helps you discover patterns, themes, and structure — especially when you don’t know what you’re looking for.</p>
+</blockquote>
+
+<h2 id="toc_44">Summary</h2>
+
+<p>This week, we explored the key building blocks for text analysis:</p>
+
+<ul>
+<li><strong>Documents and corpora</strong> define the structure of our data</li>
+<li><strong>Tokenization and preprocessing</strong> help clean and prepare raw text</li>
+<li><strong>Sequence vs. Bag-of-Words models</strong> define how we represent language</li>
+<li><strong>Vectorization</strong> turns text into numbers using techniques like TF, TF-IDF</li>
+<li><strong>Lexicon-based sentiment models</strong> use predefined word scores to estimate document tone</li>
+<li><strong>Cosine similarity</strong> allows us to measure document similarity</li>
+<li><strong>Clustering</strong> helps us find groups and patterns in unlabeled text</li>
+</ul>
+
+<p>These techniques form the foundation of many real-world text mining applications — from search engines and customer support systems to product review analysis and market research.</p>
+
+<h2 id="toc_45">Exercises</h2>
+
+<ol>
+<li><p><strong>Vocabulary Practice</strong></p>
+
+<ul>
+<li>Take the following sentence:<br>
+<code>&quot;The battery is terrible but the screen is amazing!&quot;</code><br>
+
+<ul>
+<li>Tokenize it (remove stop words and punctuation)</li>
+<li>Apply stemming or lemmatization</li>
+<li>Create a term frequency vector using the vocabulary from this week&#39;s example</li>
+</ul></li>
+</ul></li>
+<li><p><strong>Sentiment Scoring</strong></p>
+
+<ul>
+<li>Using the lexicon <code>[battery: 0, terrible: -1, screen: 0, amazing: +1]</code>, calculate the sentiment score of the sentence above using dot product.</li>
+</ul></li>
+<li><p><strong>Cosine Similarity</strong></p>
+
+<ul>
+<li>Use the TF-IDF vectors from earlier to compute cosine similarity between Document A and Document C. Interpret the result.</li>
+</ul></li>
+<li><p><strong>Clustering Scenario</strong></p>
+
+<ul>
+<li>Suppose you have a corpus of product reviews. How might clustering help a product team? What would be a useful value for <em>k</em>, and why?</li>
+</ul></li>
+<li><p><strong>Reflection</strong></p>
+
+<ul>
+<li>What are some advantages and disadvantages of using a bag-of-words model? When might it fail to capture important meaning?</li>
+</ul></li>
+</ol>
+
+<h2 id="toc_46">Homework</h2>
+
+<ul>
+<li>Read chapters 6 thru 10 of <a href="https://allendowney.github.io/ThinkPython/">Think Python</a></li>
+<li>Complete the Exercises above</li>
+<li>Get going on your Group Project</li>
+</ul>
+
+
+
+<script type="text/x-mathjax-config">
+(function () {
+
+MathJax.Hub.Config({
+	'showProcessingMessages': false,
+	'messageStyle': 'none'
+});
+
+if (typeof MathJaxListener !== 'undefined') {
+	MathJax.Hub.Register.StartupHook('End', function () {
+		MathJaxListener.invokeCallbackForKey_('End');
+	});
+}
+
+})();
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+</body>
+
+</html>
