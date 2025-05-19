@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Week 1 Lecture Notes</title>
+
+
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb
+}
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+  body {
+    padding: 2cm; 
+  }
+}
+</style>
+
+
+</head>
+
+<body>
+
+<h1 id="toc_0">Week 1 Lecture Notes</h1>
+
+<p>Welcome to Week 1 of BAN200: Text Mining and Sentiment Analysis. This week, we’ll introduce the core ideas behind text mining, explore its real-world applications, and set up the tools we&#39;ll be using throughout the course. You’ll also begin learning Python through the book <em>Think Python</em> and start thinking about your group project.</p>
+
+<h2 id="toc_1">What is Text Mining?</h2>
+
+<p>Text mining is the process of extracting meaningful information and patterns from unstructured text data using techniques from natural language processing, machine learning, and statistics.</p>
+
+<h2 id="toc_2">What is Sentiment Analysis?</h2>
+
+<p>Sentiment analysis is a type of text mining that identifies and categorizes opinions or emotions expressed in text, typically to determine whether the sentiment is positive, negative, or neutral.</p>
+
+<h2 id="toc_3">Common Applications of Text Mining</h2>
+
+<p>Text mining can be applied in many ways depending on the business problem. Below are key types of applications, each with a real-world example.</p>
+
+<h3 id="toc_4">Sentiment Analysis</h3>
+
+<p>Identifies the emotional tone or opinion expressed in text.</p>
+
+<p><strong>Example</strong>: Analyzing Twitter posts to determine whether customers are happy or frustrated with a recent product launch.</p>
+
+<h3 id="toc_5">Text Classification</h3>
+
+<p>Assigns each document to one or more <strong>predefined categories</strong> based on its content.</p>
+
+<p><strong>Example</strong>: Automatically tagging incoming customer emails as &quot;technical issue&quot;, &quot;sales inquiry&quot;, or &quot;account question&quot; so they can be routed to the right team.</p>
+
+<h3 id="toc_6">Clustering</h3>
+
+<p>Groups documents together based on <strong>content similarity</strong>, without predefined labels.</p>
+
+<p><strong>Example</strong>: Grouping thousands of customer complaints into clusters to discover patterns like &quot;login issues&quot;, &quot;payment problems&quot;, or &quot;shipping delays&quot;.</p>
+
+<h3 id="toc_7">Topic Modeling</h3>
+
+<p>Identifies common <strong>themes or topics</strong> across a collection of documents, where each document may be associated with <strong>multiple topics</strong>.</p>
+
+<p><strong>Example</strong>: Analyzing product reviews to find that one review may mention both &quot;battery life&quot; and &quot;camera quality&quot;, while another mentions &quot;price&quot; and &quot;design&quot;.</p>
+
+<h3 id="toc_8">Named Entity Recognition (NER)</h3>
+
+<p>Detects and categorizes names of people, organizations, locations, dates, and other entities.</p>
+
+<p><strong>Example</strong>: Extracting company names and monetary values from financial news articles.</p>
+
+<h3 id="toc_9">Information Extraction</h3>
+
+<p>Pulls specific facts or details from text to create structured data.</p>
+
+<p><strong>Example</strong>: Extracting a list of job titles and required skills from online job postings.</p>
+
+<h3 id="toc_10">Text Summarization</h3>
+
+<p>Produces a short summary that captures the key ideas in a longer document.</p>
+
+<p><strong>Example</strong>: Summarizing customer survey responses into a few bullet points for executive reports.</p>
+
+<h3 id="toc_11">Keyword Extraction</h3>
+
+<p>Identifies the most relevant or frequently mentioned words or phrases in a text.</p>
+
+<p><strong>Example</strong>: Finding the top keywords from thousands of open-ended survey comments.</p>
+
+<h3 id="toc_12">Relationship Extraction</h3>
+
+<p>Identifies connections or relationships between entities mentioned in text.</p>
+
+<p><strong>Example</strong>: Detecting that &quot;Apple acquired Beats&quot; indicates a corporate acquisition.</p>
+
+<h3 id="toc_13">Language Detection and Translation</h3>
+
+<p>Determines the language of a text and/or converts it to another language.</p>
+
+<p><strong>Example</strong>: Automatically translating customer reviews from Spanish to English for analysis by an English-speaking team.</p>
+
+<h2 id="toc_14">Types and Sources of Text Data</h2>
+
+<p>Text data comes in many forms and is generated across nearly every business function. Understanding where it comes from and how it behaves is essential before we can begin analyzing it.</p>
+
+<h3 id="toc_15">Structured vs. Unstructured Data</h3>
+
+<ul>
+<li><strong>Structured data</strong>: Data that fits neatly into tables or databases (e.g., sales numbers, dates, inventory counts).</li>
+<li><strong>Unstructured data</strong>: Data that does not follow a fixed format or schema — includes most text data (e.g., product reviews, emails).</li>
+<li>Text mining focuses on <strong>unstructured</strong> (and sometimes semi-structured) data.</li>
+</ul>
+
+<h3 id="toc_16">Common Sources of Text Data in Business</h3>
+
+<ul>
+<li><p><strong>Customer reviews</strong><br>
+Feedback from platforms like Amazon, Yelp, Google Reviews.</p></li>
+<li><p><strong>Social media posts</strong><br>
+Tweets, Facebook comments, LinkedIn posts, and other public sentiment streams.</p></li>
+<li><p><strong>Customer service communications</strong><br>
+Chat transcripts, support tickets, help desk emails, and call center notes.</p></li>
+<li><p><strong>Open-ended survey responses</strong><br>
+Free-text fields in customer or employee surveys that express opinions in the respondent&#39;s own words.</p></li>
+<li><p><strong>Internal documents</strong><br>
+Reports, meeting notes, policy manuals, or memos within an organization.</p></li>
+<li><p><strong>News and press releases</strong><br>
+Articles and corporate statements that reflect external views or company messaging.</p></li>
+<li><p><strong>Web content</strong><br>
+Blog posts, FAQs, product descriptions, and user forums.</p></li>
+</ul>
+
+<h3 id="toc_17">Characteristics of Text Data</h3>
+
+<ul>
+<li><p><strong>High volume</strong><br>
+Text data is generated constantly and often in large quantities.</p></li>
+<li><p><strong>Informal and messy</strong><br>
+May include slang, typos, emojis, inconsistent punctuation, or abbreviations.</p></li>
+<li><p><strong>Context-dependent</strong><br>
+Words may carry different meanings depending on the domain or usage (e.g., “cold” in healthcare vs. weather).</p></li>
+<li><p><strong>Multilingual and diverse</strong><br>
+Businesses often deal with content in multiple languages and across different writing styles.</p></li>
+</ul>
+
+<h3 id="toc_18">Why Text Data Matters</h3>
+
+<ul>
+<li>Contains <strong>rich qualitative insights</strong> that structured data cannot capture.</li>
+<li>Helps understand <strong>customer motivations</strong>, <strong>employee concerns</strong>, and <strong>market trends</strong>.</li>
+<li>Often underutilized — unlocking it can provide a <strong>competitive advantage</strong>.</li>
+</ul>
+
+<h2 id="toc_19">How Do We Analyze Text?</h2>
+
+<p>Text mining involves turning large volumes of unstructured language into structured insights. To do this, we rely on tools from the field of <strong>artificial intelligence (AI)</strong> — specifically, a branch called <strong>natural language processing (NLP)</strong>.</p>
+
+<h3 id="toc_20">NLP Models: AI for Language</h3>
+
+<p><strong>Natural Language Processing (NLP)</strong> is a field of AI that focuses on enabling computers to understand and analyze human language.</p>
+
+<p>In this course, we’ll use <strong>NLP models</strong> to help us process and extract meaning from text data.</p>
+
+<p>These models can be built in different ways — primarily through:</p>
+
+<ul>
+<li><strong>Rule-based systems</strong></li>
+<li><strong>Machine learning–based systems</strong></li>
+</ul>
+
+<h3 id="toc_21">Rule-Based Systems</h3>
+
+<p>Rule-based systems use <strong>hand-crafted rules</strong> to analyze text.</p>
+
+<p>Rules might include:</p>
+
+<ul>
+<li>If a sentence contains the word &quot;refund&quot;, label it as a complaint.</li>
+<li>Count the number of times a positive or negative word appears.</li>
+</ul>
+
+<p>These systems are easy to understand and quick to build, but:</p>
+
+<ul>
+<li>Can be rigid</li>
+<li>May not handle nuance or ambiguity well</li>
+</ul>
+
+<p>They are useful for <strong>simple or highly structured tasks</strong>, especially when labeled data is limited.</p>
+
+<h3 id="toc_22">Machine Learning–Based Systems</h3>
+
+<p>Machine learning–based systems use <strong>statistical methods</strong> to learn patterns from data rather than relying on predefined rules.</p>
+
+<p>Instead of telling the system <em>how</em> to analyze text, we show it examples, and it learns to make decisions based on patterns it detects in the data.</p>
+
+<p>Machine learning approaches can handle <strong>complex</strong>, <strong>ambiguous</strong>, and <strong>large-scale</strong> text data that rule-based systems struggle with. They are built on <strong>statistical foundations</strong> — probabilities, correlations, and optimization — which allow them to generalize from examples. As businesses accumulate more text data, machine learning becomes increasingly essential for scalable and adaptable analysis.</p>
+
+<p>There are two main types of machine learning approaches used in text mining:</p>
+
+<ul>
+<li>Supervised Learning</li>
+<li>Unsupervised Learning</li>
+</ul>
+
+<h3 id="toc_23">Supervised Learning</h3>
+
+<p>In supervised learning, the model is trained on labeled examples — that is, data where the correct answer is already known. The model learns the relationship between the text and the label so it can predict labels for new, unseen text.</p>
+
+<p><strong>Example</strong>: Training a model on customer reviews labeled as &quot;positive&quot; or &quot;negative&quot;, so it can predict sentiment for new reviews.</p>
+
+<ul>
+<li>Relies on <strong>statistical relationships</strong> between features (like word frequencies) and outcomes (like categories or ratings)</li>
+<li>Commonly used for tasks like <strong>classification</strong>, <strong>sentiment analysis</strong>, and <strong>spam detection</strong></li>
+</ul>
+
+<h3 id="toc_24">Unsupervised Learning</h3>
+
+<p>In unsupervised learning, the model looks for <strong>patterns or structure</strong> in text without using labeled examples. These models group or organize the text based on statistical similarities in content.</p>
+
+<p><strong>Example</strong>: Using topic modeling to uncover themes in a collection of open-ended survey responses, without knowing the topics ahead of time.</p>
+
+<ul>
+<li>Helps discover <strong>natural groupings</strong>, <strong>hidden topics</strong>, or <strong>anomalies</strong></li>
+<li>Commonly used for tasks like <strong>clustering</strong>, <strong>topic modeling</strong>, and <strong>keyword extraction</strong></li>
+</ul>
+
+<h2 id="toc_25">Python</h2>
+
+<p>We will be using Python in this course to <strong>analyze text data, build sentiment models, and explore real-world applications of text mining</strong>.</p>
+
+<h3 id="toc_26">What Is Python?</h3>
+
+<p>Python is a high-level programming language that is widely used in data science, artificial intelligence, and software development.</p>
+
+<ul>
+<li>Known for its <strong>clear, readable syntax</strong> — it looks closer to English than many other programming languages.</li>
+<li>General-purpose: can be used for everything from web development to automation to scientific computing.</li>
+<li>Open-source and supported by a large community, which means extensive documentation and free learning resources.</li>
+</ul>
+
+<h3 id="toc_27">Why Python for Text Mining and Sentiment Analysis?</h3>
+
+<p>Python has become the <strong>standard language for data analytics and natural language processing (NLP)</strong> for several reasons:</p>
+
+<ul>
+<li><strong>Rich ecosystem of libraries</strong> for working with text:</li>
+<li><strong>Excellent support for machine learning and AI</strong>, including both rule-based and statistical models</li>
+<li><strong>Easy to prototype and test ideas quickly</strong>, which is ideal for iterative, exploratory work</li>
+</ul>
+
+<p>Python allows us to go from raw text to insight <strong>within a single environment</strong> — from cleaning and transforming the text, to modeling, to visualizing results.</p>
+
+<h2 id="toc_28">Textbook: Think Python</h2>
+
+<p>Don’t worry if you’ve never written a line of code before — this course is designed to support beginners. To make sure everyone builds a solid foundation in Python, we’ll be reading <a href="https://allendowney.github.io/ThinkPython/"><strong>Think Python</strong></a> by Allen B. Downey during the first four weeks of the course.</p>
+
+<p>This book is written specifically for people new to programming. It introduces key concepts gradually and emphasizes clear thinking, problem-solving, and practical examples — all essential skills for text mining.</p>
+
+<h3 id="toc_29">Reading Schedule</h3>
+
+<p>Each week, you’ll read a few short chapters. Try to follow this pace to stay in sync with the hands-on work we’ll be doing in class.</p>
+
+<ul>
+<li><strong>Week 1</strong>: Chapters 1–5<br></li>
+<li><strong>Week 2</strong>: Chapters 6–10<br></li>
+<li><strong>Week 3</strong>: Chapters 11–15<br></li>
+<li><strong>Week 4</strong>: Chapters 16–19<br></li>
+</ul>
+
+<p>These chapters are short and readable — focus on understanding the main ideas and experimenting with small bits of code. We’ll reinforce the concepts in class and through applied exercises.</p>
+
+<h2 id="toc_30">Google Colab</h2>
+
+<p>We’ll be using <a href="https://colab.research.google.com/"><strong>Google Colab</strong></a> as our main coding environment in this course.</p>
+
+<h3 id="toc_31">What Is Google Colab?</h3>
+
+<p>Google Colab (short for <em>Colaboratory</em>) is a <strong>free, cloud-based coding platform</strong> that lets you write and run Python code directly in your web browser — no installation required.</p>
+
+<ul>
+<li>Developed by Google and based on the popular <strong>Jupyter Notebook</strong> interface</li>
+<li>Allows you to combine <strong>code</strong>, <strong>text</strong>, <strong>outputs</strong>, and <strong>visualizations</strong> in a single document</li>
+<li>Runs on Google’s servers, not your local machine — so it&#39;s fast, powerful, and requires no setup</li>
+</ul>
+
+<h3 id="toc_32">Why We&#39;re Using It</h3>
+
+<ul>
+<li><strong>No installation or configuration needed</strong> — just open a link and start coding</li>
+<li>Works on <strong>any computer</strong> with a browser (Windows, Mac, Chromebook, etc.)</li>
+<li>Comes with <strong>Python and key libraries pre-installed</strong>, including tools for:</li>
+<li>Files are saved to your <strong>Google Drive</strong>, so your work is always backed up and accessible</li>
+</ul>
+
+<h3 id="toc_33">How It&#39;s Similar to Jupyter Notebooks</h3>
+
+<p>If you&#39;ve used Jupyter Notebooks before, Google Colab will feel very familiar:</p>
+
+<ul>
+<li>Code is organized into <strong>cells</strong>, which can be run independently</li>
+<li>You can mix code with <strong>Markdown text</strong> (for notes, explanations, and formatting)</li>
+<li>Visualizations and outputs appear <strong>directly below the code</strong> that generates them</li>
+</ul>
+
+<h3 id="toc_34">Getting Started</h3>
+
+<p>We&#39;ll walk through how to access and use Google Colab in class. All you need is:</p>
+
+<ul>
+<li>A <strong>Google account</strong></li>
+<li>A modern <strong>web browser</strong></li>
+</ul>
+
+<h2 id="toc_35">Assessments</h2>
+
+<p>The final grade for this course will be based on a combination of individual assessments and a team-based project. All components are designed to evaluate your understanding of course concepts and your ability to apply them in real-world text mining scenarios.</p>
+
+<table>
+<thead>
+<tr>
+<th>Assessment</th>
+<th>Due Date</th>
+<th>Weight</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Midterm Exam</td>
+<td>Week 8</td>
+<td>17.5%</td>
+</tr>
+<tr>
+<td>Final Exam</td>
+<td>Week 14</td>
+<td>17.5%</td>
+</tr>
+<tr>
+<td>Project Proposal</td>
+<td>Week 7</td>
+<td>12.5%</td>
+</tr>
+<tr>
+<td>Project Milestone</td>
+<td>Week 12</td>
+<td>17.5%</td>
+</tr>
+<tr>
+<td>Project Report</td>
+<td>Week 13</td>
+<td>17.5%</td>
+</tr>
+<tr>
+<td>Project Presentation</td>
+<td>Week 13</td>
+<td>17.5%</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="toc_36">Group Project</h2>
+
+<h3 id="toc_37">Overview</h3>
+
+<p>The group project allows students to apply text mining and sentiment analysis techniques in a real-world business analytics context. Students will form their own groups, select a relevant text dataset, and perform in-depth analysis using methods learned in class. The goal is to generate insights that could inform business decisions, demonstrate technical competence, and effectively communicate findings.</p>
+
+<h3 id="toc_38">Code</h3>
+
+<p>You&#39;ll use Python throughout the term to complete your group project. You&#39;ll need to share your code with the Professor using a public GitHub repo.</p>
+
+<h3 id="toc_39">Group Formation</h3>
+
+<ul>
+<li>Groups must consist of <strong>1 to 6 students</strong>.</li>
+<li>Groups are <strong>self-formed</strong>; you are responsible for organizing your team.</li>
+<li>Project scope and depth should <strong>scale with group size</strong>. Larger groups are expected to demonstrate more ambitious analysis and deliverables.</li>
+</ul>
+
+<h3 id="toc_40">Project Topic and Dataset</h3>
+
+<p>Each group must select a <strong>text-based dataset</strong> relevant to business or industry (e.g., customer reviews, social media data, product descriptions, news articles, earnings call transcripts, etc.).</p>
+
+<p><em>Places to find good datasets:</em></p>
+
+<ul>
+<li><a href="https://github.com/niderhoff/nlp-datasets">NLP Datasets by niderhoff</a></li>
+<li><a href="https://github.com/awesomedata/awesome-public-datasets">Awesome Public Datasets by awesomedata</a></li>
+<li><a href="https://nlp.stanford.edu/links/statnlp.html">Stanford NLP Resources</a></li>
+<li><a href="https://www.kaggle.com/datasets">Kaggle Datasets</a></li>
+<li><a href="https://datasetsearch.research.google.com/">Google Dataset Search</a></li>
+<li><a href="https://huggingface.co/datasets">Hugging Face Datasets</a></li>
+<li><a href="https://data.world/">data.world</a></li>
+<li><a href="https://archive.ics.uci.edu/">UCI Machine Learning Repository</a></li>
+<li><a href="https://registry.opendata.aws/">Registry of Open Data on AWS</a></li>
+<li><a href="https://www.reddit.com/r/datasets/">Reddit Datasets Subreddit</a></li>
+<li><a href="https://datahub.io/">DataHub.io</a></li>
+<li><a href="https://www.openml.org/">OpenML</a></li>
+<li><a href="https://zenodo.org/">Zenodo</a></li>
+<li><a href="https://data.gov/">Data.gov</a></li>
+<li><a href="https://www.microsoft.com/en-us/research/project/academic/">Microsoft Academic</a></li>
+<li><a href="https://www.commoncrawl.org/">Common Crawl</a></li>
+<li><a href="https://www.nltk.org/nltk_data/">NLTK Data</a></li>
+<li><a href="https://corpus.tools/">Corpus.tools</a></li>
+<li><a href="https://paperswithcode.com/datasets">Papers with Code Datasets</a></li>
+</ul>
+
+<h3 id="toc_41">Deliverables</h3>
+
+<p><strong>Project Proposal</strong></p>
+
+<p>A 1-to-2-page document outlining:</p>
+
+<ul>
+<li>Group members<br></li>
+<li>Project title<br></li>
+<li>Dataset description and source<br></li>
+<li>Business problem or question<br></li>
+<li>Planned methods and tools<br></li>
+</ul>
+
+<p>Each group must meet with the Professor to discuss their Proposal during Week 7. </p>
+
+<p><strong>Milestone</strong></p>
+
+<p>A 2-to-3-page document outlining:</p>
+
+<ul>
+<li>Group members<br></li>
+<li>Project title<br></li>
+<li>Dataset description and source<br></li>
+<li>Business problem or question<br></li>
+<li>Overview of work done so far<br></li>
+<li>Plan for remaining work<br></li>
+<li>Link to a public GitHub repo with your code<br></li>
+</ul>
+
+<p>Each group must meet with the Professor to discuss their Milestone during Week 12. </p>
+
+<p><strong>Report</strong></p>
+
+<p>A 4-to-5-page report (plus appendix, if needed) containing:</p>
+
+<ul>
+<li>Group members<br></li>
+<li>Project title<br></li>
+<li>Dataset description and source<br></li>
+<li>Business problem or question<br></li>
+<li>Methodology<br></li>
+<li>Results and evaluation<br></li>
+<li>Discussion of challenges, limitations, and potential improvements<br></li>
+<li>Link to a public GitHub repo with your code<br></li>
+</ul>
+
+<p>Reports are due in Week 13.</p>
+
+<p><strong>Presentation</strong></p>
+
+<p>A 10-minute presentation reviewing the content of your Report. Presentations can be made in-person, online, or via recording. Presentations are due in Week 13.</p>
+
+<h2 id="toc_42">Lectures and Class Time</h2>
+
+<p>This course is designed to be flexible, practical, and interactive.</p>
+
+<ul>
+<li><strong>Lectures will be kept short and focused</strong>, typically covering core concepts or introducing new tools and techniques.</li>
+<li>The rest of the class time will be used for:
+
+<ul>
+<li>Hands-on exercises and coding practice</li>
+<li>Asking questions and getting help</li>
+<li>Working on your <strong>group project</strong></li>
+<li>Collaborating with peers</li>
+</ul></li>
+</ul>
+
+<h3 id="toc_43">Attendance and Access</h3>
+
+<p>The course is offered <strong>in three modes</strong>:</p>
+
+<ul>
+<li><strong>In-person</strong></li>
+<li><strong>Live online via Zoom</strong></li>
+<li><strong>Recorded sessions</strong>, available shortly after each class</li>
+</ul>
+
+<p><strong>Attendance is not mandatory</strong>, but students are responsible for keeping up with readings, exercises, and assessments.</p>
+
+<p>You are encouraged to attend live (in-person or online) whenever possible so you can ask questions, get support, and engage with your classmates and instructor.</p>
+
+<h2 id="toc_44">Questions or Concerns</h2>
+
+<p>Feel free to email me at william.dick[at]senecapolytechnic.ca or speak to me before/during/after class.  </p>
+
+<h2 id="toc_45">Homework</h2>
+
+<ul>
+<li>Read the first five chapters of <a href="https://allendowney.github.io/ThinkPython/">Think Python</a></li>
+<li>Start thinking about your Group Project</li>
+</ul>
+
+
+
+
+</body>
+
+</html>
