@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Week 3 Lecture Notes</title>
+
+
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb
+}
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+  body {
+    padding: 2cm; 
+  }
+}
+</style>
+
+
+</head>
+
+<body>
+
+<h1 id="toc_0">Week 3 Lecture Notes</h1>
+
+<p>This week, we dive deeper into the <strong>practical mechanics of text mining</strong> by working with real-world app reviews from the Google Play Store. You’ll learn how to collect and process raw text data, transform it into structured numerical representations (using techniques like <strong>TF</strong>, <strong>TF-IDF</strong>, and <strong>sparse vectors</strong>), and use these representations to perform tasks such as <strong>sentiment scoring</strong> and <strong>document clustering</strong>. We’ll also explore cosine similarity and apply <strong>K-means clustering</strong> to uncover hidden patterns in user feedback — skills that form the foundation of many real-world text analytics applications.</p>
+
+<h2 id="toc_1">Downloading a Corpus of Google Play Store Reviews</h2>
+
+<p>Today, we are going to be analyzing some reviews downloaded from the Google Play Store.</p>
+
+<h3 id="toc_2">Google Play Scraper</h3>
+
+<p><code>google-play-scraper</code> is a Python library that allows you to programmatically access data from the Google Play Store. You can use it to retrieve app information, ratings, and — most importantly for us — user reviews. This makes it a useful tool for collecting real-world text data that we can analyze using sentiment analysis techniques.</p>
+
+<h3 id="toc_3">PIP</h3>
+
+<p><code>pip</code> is the standard package manager for Python. It allows you to install and manage additional libraries and tools that aren&#39;t included in the Python standard library. Think of it like an app store for Python packages — you can use it to quickly add functionality to your projects, like downloading datasets, building models, or scraping websites.</p>
+
+<p>Normally, you would run <code>pip</code> commands in your computer&#39;s terminal or command prompt — for example, by typing <code>pip install package-name</code> into a command line window. However, since we&#39;re using <strong>Google Colab</strong>, we can run shell commands directly in notebook cells by adding an exclamation mark (<code>!</code>) at the beginning. This tells Colab to treat the line as a terminal command instead of Python code.</p>
+
+<p>In the cell below, we&#39;re using <code>pip</code> to install the <code>google-play-scraper</code> package so we can fetch app reviews from the Google Play Store. This step ensures the library is available in our Colab environment.</p>
+
+<div><pre><code class="language-python">!pip install google-play-scraper</code></pre></div>
+
+<h3 id="toc_4">Import Google Play Scraper</h3>
+
+<p>After installing a library with <code>pip</code>, we still need to <strong>import</strong> it into our Python environment to use its functions. The line <code>import google_play_scraper</code> makes the package available in our code so we can start using it.</p>
+
+<div><pre><code class="language-python">import google_play_scraper</code></pre></div>
+
+<h3 id="toc_5">Download Reviews</h3>
+
+<p>The code below uses the <code>reviews_all()</code> function from the <code>google_play_scraper</code> library to download all available user reviews for a specific app. In this case, we&#39;re fetching reviews for the <strong>TD Bank</strong> mobile app, which has the app ID <code>&#39;com.td&#39;</code>.</p>
+
+<p>We also specify:
+- <code>lang=&#39;en&#39;</code> to get reviews written in English (default is English)
+- <code>country=&#39;ca&#39;</code> to get reviews from the Canadian version of the Play Store (default is the U.S.)</p>
+
+<p>The result is a list of dictionaries, where each dictionary contains details about a single review — including the review text, rating, date, and more.</p>
+
+<div><pre><code class="language-python">reviews = google_play_scraper.reviews_all(
+    &#39;com.td&#39;,
+    lang=&#39;en&#39;, # defaults to &#39;en&#39;
+    country=&#39;ca&#39;, # defaults to &#39;us&#39;
+)</code></pre></div>
+
+<p>After downloading the reviews, we can use <code>len(reviews)</code> to see how many reviews were returned. This tells us the total number of reviews collected for the app.</p>
+
+<div><pre><code class="language-python">len(reviews)</code></pre></div>
+
+<p>To inspect the content, we can look at a few examples using slicing. For example, <code>reviews[0:3]</code> will display the first three reviews in the list. Each review is stored as a dictionary containing fields like the review text (<code>content</code>), rating (<code>score</code>), and timestamp (<code>at</code>).</p>
+
+<div><pre><code class="language-python">reviews[0:3]</code></pre></div>
+
+<h2 id="toc_6">Creating a Tokenizer</h2>
+
+<p>To analyze these reviews we need to tokenize them. Here we&#39;re creating a simple <strong>bag-of-words tokenizer</strong> that splits a text into individual word tokens. We’ll <strong>standardize</strong> all tokens by converting them to lowercase — so that “Great” and “great” are treated as the same word. </p>
+
+<p>We’re using the regular expression <code>\b\w+\b</code> to extract tokens:</p>
+
+<ul>
+<li><code>\w+</code> matches one or more alphanumeric characters (letters, numbers, and underscores)</li>
+<li><code>\b</code> marks a <strong>word boundary</strong>, so this pattern finds full word-like chunks and skips punctuation, symbols, and whitespace</li>
+</ul>
+
+<p>After tokenizing, we&#39;ll remove some common stop words. </p>
+
+<p>Our function <code>tokenize()</code> takes a string as input and returns a list of strings.</p>
+
+<div><pre><code class="language-python">import re
+from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS
+
+def tokenize(text):
+    lowercase_text = text.lower()
+    tokens = re.findall(r&#39;\b\w+\b&#39;, lowercase_text)
+    return [t for t in tokens if t not in ENGLISH_STOP_WORDS]</code></pre></div>
+
+<p>Let&#39;s try tokenizing a sample document.</p>
+
+<div><pre><code class="language-python">doc = &quot;This app is incredibly frustrating. It keeps crashing every time I try to log in, and the new layout is confusing and slow. Terrible experience overall.&quot;
+tokenize(doc)</code></pre></div>
+
+<h2 id="toc_7">Sparse Vectors</h2>
+
+<p>As we discussed last class, when working with bag-of-words models, the next step after tokenization is to <strong>vectorize</strong> each document. You might think a list would be the most obvious way of storing a vector in Python.</p>
+
+<p>But here’s the problem: most documents use only a small fraction of all the words in the full vocabulary. That means most of the values in these vectors are <strong>zeros</strong>.</p>
+
+<p>This kind of structure is called a <strong>sparse vector</strong> — a vector where most of the entries are zero.</p>
+
+<p>To save space and improve efficiency, we can represent sparse vectors using <strong>dictionaries</strong> in Python. Instead of storing every position, we only store the positions (words) that have non-zero values.</p>
+
+<h2 id="toc_8">Binary Vectorization</h2>
+
+<p>The <code>vectorize_binary</code> function creates a <strong>binary (multi-hot) vector</strong> from a list of tokens. This means it returns a dictionary where:</p>
+
+<ul>
+<li>Each <strong>unique token</strong> becomes a key</li>
+<li>The value is always <code>1</code>, indicating that the token is <strong>present</strong> in the document</li>
+</ul>
+
+<p>This approach ignores how many times a word appears — it only cares <strong>whether or not</strong> the word is there. It&#39;s useful when we want to know which words are included but don’t need their exact frequency.</p>
+
+<p>We use a Python <code>set</code> to remove duplicates, then build a dictionary where every token maps to the value <code>1</code>.</p>
+
+<div><pre><code class="language-python">def vectorize_binary(tokens):
+    &quot;&quot;&quot;
+    Takes a list of tokens and returns a dictionary representing
+    a binary (multi-hot) vector — 1 if the word appears, 0 if not (implied).
+    &quot;&quot;&quot;
+    return {token: 1 for token in set(tokens)}</code></pre></div>
+
+<p>Let&#39;s try an example:</p>
+
+<div><pre><code class="language-python">doc = &quot;This app is incredibly frustrating. It keeps crashing every time I try to log in, and the new layout is confusing and slow. Terrible experience overall.&quot;
+tokens = tokenize(doc)
+vectorize_binary(tokens)</code></pre></div>
+
+<h2 id="toc_9">TF Vectorization</h2>
+
+<p>The <code>vectorize_tf</code> function creates a <strong>term frequency (TF) vector</strong> from a list of tokens. This means it returns a dictionary where:</p>
+
+<ul>
+<li>Each <strong>unique token</strong> becomes a key</li>
+<li>The value is the <strong>number of times</strong> that token appears in the document</li>
+</ul>
+
+<p>Unlike binary (multi-hot) encoding, this approach <strong>captures how often</strong> each word occurs, which can give more nuanced insight into the text — especially when certain words are repeated for emphasis or importance.</p>
+
+<p>We build this dictionary by looping through the tokens and counting how many times each one appears.</p>
+
+<div><pre><code class="language-python">def vectorize_tf(tokens):
+    &quot;&quot;&quot;
+    Takes a list of tokens and returns a dictionary representing
+    term frequency (TF) — how many times each token appears.
+    &quot;&quot;&quot;
+    tf = {}
+    for token in tokens:
+        if token in tf:
+            tf[token] += 1
+        else:
+            tf[token] = 1
+    return tf</code></pre></div>
+
+<p>Let&#39;s try an example:</p>
+
+<div><pre><code class="language-python">doc = &quot;This app is incredibly frustrating. It keeps crashing every time I try to log in, and the new layout is confusing and slow. Terrible experience overall.&quot;
+tokens = tokenize(doc)
+vectorize_tf(tokens)</code></pre></div>
+
+<h2 id="toc_10">Calculating IDF</h2>
+
+<p>Before we can compute TF-IDF scores, we need to calculate <strong>Inverse Document Frequency (IDF)</strong> — a measure of how <strong>rare or unique</strong> a word is across all documents in the corpus.</p>
+
+<p>Here’s what the code does step by step:</p>
+
+<ul>
+<li><p><code>N = len(reviews)</code><br>
+Counts the total number of documents (in this case, app reviews) in the corpus.</p></li>
+<li><p>We loop through each review and:</p>
+
+<ul>
+<li>Use <code>tokenize()</code> to split the review into lowercase word tokens.</li>
+<li>Convert the list of tokens into a <code>set</code> to get the <strong>unique words</strong> in that document.</li>
+<li>For each unique word, we increase its <strong>document frequency</strong> — the number of documents in which the word appears.</li>
+</ul></li>
+<li><p>Finally, we calculate the <strong>IDF score</strong> for each token using the formula:  </p>
+
+<p>IDF = log(N / DF)</p>
+
+<p>Where:</p>
+
+<ul>
+<li><code>N</code> is the total number of documents</li>
+<li><code>DF(t)</code> is the number of documents containing token <code>t</code></li>
+</ul></li>
+</ul>
+
+<p>Words that appear in <strong>fewer documents</strong> get <strong>higher IDF scores</strong>, meaning they are considered more informative or unique. Common words that appear in many documents receive <strong>lower scores</strong>.</p>
+
+<div><pre><code class="language-python">from math import log
+
+N = len(reviews) # total number of documents
+
+doc_freq = {} # document frequency for each word
+for review in reviews:
+  if not review[&#39;content&#39;]:
+    continue # some reviews do not have any content, skip these
+  doc = tokenize(review[&#39;content&#39;])
+  unique_tokens = set(doc) # only count once per document
+  for token in unique_tokens:
+      doc_freq[token] = doc_freq.get(token, 0) + 1
+
+idf_dict = {}
+for token, df in doc_freq.items():
+    idf_dict[token] = log(N / df)</code></pre></div>
+
+<p>Let&#39;s see what our <code>idf_dict</code> looks like:</p>
+
+<div><pre><code class="language-python">idf_dict</code></pre></div>
+
+<p>This code displays the tokens with the lowest and highest IDF:</p>
+
+<div><pre><code class="language-python"># Sort tokens by IDF score
+sorted_idf = sorted(idf_dict.items(), key=lambda x: x[1])
+
+# Lowest IDF scores (most common words)
+print(&quot;🔽 5 Most Common Words (Lowest IDF):&quot;)
+for token, score in sorted_idf[:5]:
+    print(f&quot;{token}: {score:.4f}&quot;)
+
+# Highest IDF scores (most unique words)
+print(&quot;\n🔼 5 Most Unique Words (Highest IDF):&quot;)
+for token, score in sorted_idf[-5:]:
+    print(f&quot;{token}: {score:.4f}&quot;)
+</code></pre></div>
+
+<h2 id="toc_11">TF-IDF Vectorization</h2>
+
+<p>The <code>vectorize_tf_idf</code> function creates a <strong>TF-IDF vector</strong> from a list of tokens. This means it returns a dictionary where:</p>
+
+<ul>
+<li>Each <strong>unique token</strong> becomes a key</li>
+<li>The value is the product of the token’s <strong>term frequency (TF)</strong> and its <strong>inverse document frequency (IDF)</strong></li>
+</ul>
+
+<p>TF-IDF scores reflect not just how often a word appears in a document, but also how <strong>informative or distinctive</strong> that word is across the entire corpus. Words that appear frequently in a document but rarely in others will have the <strong>highest TF-IDF scores</strong>.</p>
+
+<p>We first count how many times each word appears (TF), then multiply that by its IDF value (from the <code>idf_dict</code>). Tokens that don’t appear in the IDF dictionary are ignored.</p>
+
+<div><pre><code class="language-python">def vectorize_tf_idf(tokens):
+    &quot;&quot;&quot;
+    Takes a list of tokens and an IDF dictionary,
+    returns a dictionary representing the TF-IDF vector.
+    &quot;&quot;&quot;
+    tf = {}
+    for token in tokens:
+        if token in tf:
+            tf[token] += 1
+        else:
+            tf[token] = 1
+
+    tf_idf = {}
+    for token, freq in tf.items():
+        if token in idf_dict:
+            tf_idf[token] = freq * idf_dict[token]
+
+    return tf_idf</code></pre></div>
+
+<p>Let&#39;s try an example:</p>
+
+<div><pre><code class="language-python">doc = &quot;This app is incredibly frustrating. It keeps crashing every time I try to log in, and the new layout is confusing and slow. Terrible experience overall.&quot;
+tokens = tokenize(doc)
+vectorize_tf_idf(tokens)</code></pre></div>
+
+<h2 id="toc_12">Downloading a Lexicon</h2>
+
+<p>We’re going to analyze the app reviews&#39; sentiment using a <strong>lexicon-based approach</strong>. That means we&#39;ll score each review based on the words it contains, using a predefined list of words (a <em>lexicon</em>) where each word has an associated sentiment score.</p>
+
+<p>To do this, we’ll first download a <strong>lexicon file</strong> that I’ve provided for the course.</p>
+
+<p>The command below uses <code>wget</code> to download the file from GitHub:</p>
+
+<div><pre><code class="language-python">!wget https://raw.githubusercontent.com/wd13ca/BAN200-Summer-2025/refs/heads/main/lexicon.txt</code></pre></div>
+
+<p>Note that this is not a Python command — it’s a shell command that we’re running inside Colab by prefixing it with an exclamation mark (!). This tells Colab to treat the line as if it were typed into a terminal.</p>
+
+<p>The file lexicon.txt is a tab-delimited text file with two columns:</p>
+
+<ul>
+<li>The first column is a word (e.g., great, terrible, fast)</li>
+<li>The second column is the word’s sentiment score — a number that represents how positive or negative that word is</li>
+</ul>
+
+<p>We’ll load this lexicon into Python and use it to calculate sentiment scores for app reviews.</p>
+
+<p>The code below reads the <code>lexicon.txt</code> file and stores its contents in a Python dictionary called <code>lexicon</code>.</p>
+
+<p>Here’s what each part does:</p>
+
+<ul>
+<li><p><code>with open(&quot;lexicon.txt&quot;, &quot;r&quot;) as file:</code><br>
+Opens the file in read mode. The <code>with</code> statement ensures the file is properly closed after reading.</p></li>
+<li><p><code>for line in file:</code><br>
+Loops through each line in the file. Each line contains one word and its sentiment score.</p></li>
+<li><p><code>line.strip().split(&#39;\t&#39;)</code><br>
+Removes any extra whitespace (like newlines) and splits the line into two parts using the <strong>tab character</strong> (<code>\t</code>) as the separator.</p></li>
+<li><p><code>lexicon[word] = float(score)</code><br>
+Adds the word to the dictionary, with its sentiment score stored as a floating-point number.</p></li>
+</ul>
+
+<p>Once this code runs, you’ll have a dictionary where each word maps to a numeric sentiment score — ready to use for scoring reviews.</p>
+
+<div><pre><code class="language-python">lexicon = {}
+
+with open(&quot;lexicon.txt&quot;, &quot;r&quot;) as file:
+    for line in file:
+        word, score = line.strip().split(&#39;\t&#39;)
+        lexicon[word] = float(score)</code></pre></div>
+
+<p>Let&#39;s take a look at our <code>lexicon</code>:</p>
+
+<div><pre><code class="language-python">lexicon</code></pre></div>
+
+<h2 id="toc_13">Sparse Dot Product</h2>
+
+<p>The <code>sparse_dot_product</code> function calculates the <strong>dot product</strong> of two sparse vectors, which are represented as Python dictionaries.</p>
+
+<p>The dot product multiplies matching values from both vectors and sums the results. In our case:</p>
+
+<ul>
+<li>The keys of the dictionaries are the tokens</li>
+<li>The values are numbers like term frequency, TF-IDF scores, or sentiment weights</li>
+</ul>
+
+<p>Only <strong>tokens that appear in both vectors</strong> contribute to the result — which makes this efficient for sparse data. We are assuming that if a key doesn&#39;t appear in a vector, it has a value of zero.</p>
+
+<div><pre><code class="language-python">def sparse_dot_product(vec1, vec2):
+    &quot;&quot;&quot;
+    Computes the dot product of two sparse vectors (dicts).
+    Only keys that appear in both vectors contribute to the result.
+    &quot;&quot;&quot;
+    return sum(vec1[token] * vec2[token] for token in vec1 if token in vec2)</code></pre></div>
+
+<p>Let&#39;s take a look at an example:</p>
+
+<div><pre><code class="language-python">vec1 = {&#39;great&#39;: 2.0, &#39;battery&#39;: 1.0, &#39;screen&#39;: 0.5}
+vec2 = {&#39;great&#39;: 1.0, &#39;battery&#39;: 1.0, &#39;performance&#39;: 0.3}
+
+dot = sparse_dot_product(vec1, vec2)
+print(dot)</code></pre></div>
+
+<h2 id="toc_14">Calculating Sentiment Scores</h2>
+
+<p>To compute the <strong>sentiment score</strong> of a document, we can take the <strong>dot product</strong> of two sparse vectors:</p>
+
+<ol>
+<li>A <strong>document vector</strong>, which represents the words in the document (e.g., using term frequency or TF-IDF)</li>
+<li>A <strong>sentiment lexicon vector</strong>, which assigns a sentiment score (positive, negative, or neutral) to each word</li>
+</ol>
+
+<p>Each word in the vocabulary contributes to the sentiment score based on how often it appears in the document and how emotionally charged it is.</p>
+
+<p>How It Works:</p>
+
+<ul>
+<li>For each word in the document, multiply its <strong>frequency</strong> (or weight) by its <strong>sentiment score</strong> from the lexicon.</li>
+<li>Add up all those products — that’s the total sentiment score.</li>
+</ul>
+
+<p>This is exactly what a <strong>dot product</strong> does:</p>
+
+<p><code>sentiment_score = dot_product(document_vector, sentiment_lexicon)</code></p>
+
+<p>Only words that appear in <strong>both</strong> the document and the lexicon contribute to the result, making this efficient and interpretable.</p>
+
+<p>Interpretation:
+- A <strong>positive score</strong> indicates positive sentiment
+- A <strong>negative score</strong> indicates negative sentiment
+- A score of <strong>zero</strong> (or near zero) is neutral or mixed</p>
+
+<p>Let&#39;s take a look at an example:</p>
+
+<div><pre><code class="language-python">doc = &quot;This app is incredibly frustrating. It keeps crashing every time I try to log in, and the new layout is confusing and slow. Terrible experience overall.&quot;
+doc_tokens = tokenize(doc)
+doc_vector = vectorize_tf_idf(doc_tokens)
+
+sparse_dot_product(lexicon, doc_vector)
+</code></pre></div>
+
+<h2 id="toc_15">Evaluating Our Lexicon Model on TD App Reviews</h2>
+
+<p>Each review from the Google Play Store includes a <strong>star rating</strong> from 1 to 5, given by the user.</p>
+
+<p>We can use our <strong>lexicon-based sentiment model</strong> to calculate a sentiment score for each review, then compare it to the original star rating to see how well our model captures real-world sentiment.</p>
+
+<p>Steps:</p>
+
+<ol>
+<li><strong>Tokenize</strong> the review text.</li>
+<li><strong>Vectorize</strong> it using term frequency.</li>
+<li><strong>Calculate sentiment</strong> using the dot product of the document vector and the sentiment lexicon.</li>
+<li>Store the <strong>sentiment score</strong> alongside the original <strong>star rating</strong>.</li>
+</ol>
+
+<p>This lets us analyze how well our model&#39;s predictions align with user opinions. For example, we’d expect most 5-star reviews to have high positive sentiment scores, and most 1-star reviews to have negative ones.</p>
+
+<h3 id="toc_16">Calculating Corpus Sentiment Scores</h3>
+
+<p>Below, we use our lexicon-based sentiment model to compute a <strong>predicted sentiment score</strong> for each review, and pair it with the <strong>actual star rating</strong> (1 to 5) provided by the user.</p>
+
+<p>What the Code Does:</p>
+
+<ul>
+<li>We create an empty list called <code>results</code> to store pairs of <code>(sentiment_score, star_rating)</code>.</li>
+<li>We loop through each review in the <code>reviews</code> list.
+
+<ul>
+<li>If a review has no text (<code>content</code> is empty), we skip it.</li>
+<li>We tokenize the review text to prepare it for analysis.</li>
+<li>We compute a <strong>term frequency (TF)</strong> vector for the tokens.</li>
+<li>We calculate the <strong>sentiment score</strong> by taking the dot product between the document vector and the lexicon.</li>
+<li>We extract the original star rating from the review (<code>review[&#39;score&#39;]</code>).</li>
+<li>We store both the predicted sentiment and the actual star rating as a tuple.</li>
+</ul></li>
+</ul>
+
+<p>This prepares the data for further analysis — for example, comparing how well our sentiment scores match the user ratings or visualizing the relationship between them.</p>
+
+<div><pre><code class="language-python"># For each review, calculate sentiment score and store it with the star rating
+results = []
+
+for review in reviews:
+  if not review[&#39;content&#39;]:
+    continue # some reviews do not have any content, skip these
+  tokens = tokenize(review[&#39;content&#39;])
+  tf = vectorize_tf(tokens)
+  sentiment_score = sparse_dot_product(tf, lexicon)  # you could also use TF-IDF
+  star_rating = review[&#39;score&#39;]  # assuming &#39;score&#39; is the star rating (1 to 5)
+  results.append((sentiment_score, star_rating))</code></pre></div>
+
+<p>Let&#39;s see what results looks like:</p>
+
+<div><pre><code class="language-python">results</code></pre></div>
+
+<h3 id="toc_17">Evaluation</h3>
+
+<p>To evaluate how well our sentiment model reflects user feedback, we compute the <strong>average sentiment score</strong> for each star rating (from 1 to 5) — but we only include reviews where the model detected a <strong>non-zero</strong> sentiment score.</p>
+
+<p>This helps us focus on reviews that contain clearly positive or negative language, filtering out neutral or ambiguous ones.</p>
+
+<p>How the code works:</p>
+
+<ul>
+<li>We create a regular dictionary called <code>scores_by_rating</code> to group sentiment scores by star rating.</li>
+<li>As we loop through each <code>(sentiment_score, star_rating)</code> pair:
+
+<ul>
+<li>If the sentiment score is exactly <code>0</code>, we skip that review.</li>
+<li>If the star rating is not already in the dictionary, we initialize it with an empty list.</li>
+<li>We append the sentiment score to the appropriate list for that star rating.</li>
+</ul></li>
+<li>After grouping, we calculate:
+
+<ul>
+<li>The <strong>average sentiment score</strong> for each rating</li>
+<li>The <strong>number of reviews</strong> that contributed to the average (<code>n</code>)</li>
+</ul></li>
+</ul>
+
+<p>This gives us a way to compare the model’s predictions to real user ratings, based only on reviews with detectable sentiment.</p>
+
+<div><pre><code class="language-python"># Store sentiment scores grouped by star rating (excluding zero scores)
+scores_by_rating = {}
+
+for sentiment_score, star_rating in results:
+    if sentiment_score == 0:
+        continue  # skip neutral (zero) sentiment scores
+    if star_rating not in scores_by_rating:
+        scores_by_rating[star_rating] = []
+    scores_by_rating[star_rating].append(sentiment_score)
+
+# Calculate and print average sentiment and review count per rating
+print(&quot;⭐ Average Sentiment Score by Star Rating (non-zero only):\n&quot;)
+for rating in sorted(scores_by_rating):
+    scores = scores_by_rating[rating]
+    avg_score = sum(scores) / len(scores)
+    count = len(scores)
+    print(f&quot;{rating} stars: {avg_score:.2f} (n = {count} reviews)&quot;)
+</code></pre></div>
+
+<h2 id="toc_18">Cosine Similarity</h2>
+
+<p>Cosine similarity is a common way to measure how <strong>similar</strong> two documents are, based on the <strong>angle between their vector representations</strong>.</p>
+
+<p>It ranges from:</p>
+
+<ul>
+<li><code>1</code> = very similar (point in the same direction)</li>
+<li><code>0</code> = no similarity (orthogonal vectors)</li>
+<li><code>-1</code> = opposite directions (only applicable if vectors contain negative values)</li>
+</ul>
+
+<p>We already have a <code>sparse_dot_product</code> function, so we can reuse it to calculate both:</p>
+
+<ul>
+<li>The <strong>dot product</strong> between the two vectors</li>
+<li>The <strong>magnitude</strong> (length) of each vector (by taking the square root of its dot product with itself)</li>
+</ul>
+
+<p>We then use the cosine similarity formula:</p>
+
+<p><code>cosine_similarity = dot_product(vec1, vec2) / (||vec1|| * ||vec2||)</code></p>
+
+<p>This function safely handles edge cases where one or both vectors have zero magnitude by returning <code>0.0</code>.</p>
+
+<div><pre><code class="language-python">from math import sqrt
+
+def cosine_similarity(vec1, vec2):
+    &quot;&quot;&quot;
+    Computes cosine similarity between two sparse vectors (dicts).
+    &quot;&quot;&quot;
+    dot = sparse_dot_product(vec1, vec2)
+    mag1 = sqrt(sparse_dot_product(vec1, vec1))
+    mag2 = sqrt(sparse_dot_product(vec2, vec2))
+    if mag1 == 0 or mag2 == 0:
+        return 0.0  # Avoid division by zero
+    return dot / (mag1 * mag2)</code></pre></div>
+
+<p>Example:</p>
+
+<div><pre><code class="language-python"># Example TD app reviews
+doc1 = &quot;I can&#39;t log in at all — the app just freezes on the login screen. This has been going on for days and it&#39;s really frustrating.&quot;
+doc2 = &quot;Every time I try to log in, the app either crashes or gets stuck. Super annoying. Please fix the login issues.&quot;
+doc3 = &quot;Depositing cheques with the app is super easy and quick. Really impressed with how smoothly it works!&quot;
+
+# Step 1: Tokenize each review
+tokens1 = tokenize(doc1)
+tokens2 = tokenize(doc2)
+tokens3 = tokenize(doc3)
+
+# Step 2: Build a corpus and compute IDF
+corpus = [tokens1, tokens2, tokens3]
+
+# Step 3: Vectorize each document using TF-IDF
+vec1 = vectorize_tf_idf(tokens1)
+vec2 = vectorize_tf_idf(tokens2)
+vec3 = vectorize_tf_idf(tokens3)
+
+# Step 4: Compute cosine similarities
+sim_1_2 = cosine_similarity(vec1, vec2)
+sim_1_3 = cosine_similarity(vec1, vec3)
+sim_2_3 = cosine_similarity(vec2, vec3)
+
+# Step 5: Display results
+print(&quot;Cosine Similarity Between Reviews:&quot;)
+print(f&quot;Doc1 vs Doc2: {sim_1_2:.3f}&quot;)
+print(f&quot;Doc1 vs Doc3: {sim_1_3:.3f}&quot;)
+print(f&quot;Doc2 vs Doc3: {sim_2_3:.3f}&quot;)
+</code></pre></div>
+
+<h2 id="toc_19">K-Means</h2>
+
+<p>We will now use <strong>K-Means clustering</strong> to group together reviews that talk about similar things — without needing any labels.</p>
+
+<p>Businesses often receive thousands of open-ended reviews and support messages. Reading them all manually is impossible. <strong>Clustering</strong> helps by automatically organizing this unstructured text into groups based on content.</p>
+
+<p>With K-Means, we can:</p>
+
+<ul>
+<li>Identify major themes in customer feedback (e.g., login issues, mobile deposit problems, customer service complaints)</li>
+<li>Spot emerging issues without having to predefine categories</li>
+<li>Prioritize what to fix or investigate based on how many reviews fall into each cluster</li>
+</ul>
+
+<p>This is especially powerful early in analysis, when you&#39;re just exploring the data and don&#39;t yet know what patterns exist.</p>
+
+<p>How It Works
+1. Randomly choose <strong>k</strong> cluster centroids
+2. Assign each review to the cluster with nearest centroid based on <strong>cosine similarity</strong>
+3. Update cluster centroids based on the contents of each group
+4. Repeat 2 and 3 until the groups stabilize</p>
+
+<p>Each cluster should end up containing reviews that are <strong>similar in meaning or topic</strong> — helping us quickly understand what customers are talking about, even in large datasets.</p>
+
+<h3 id="toc_20">Calculating Centroids</h3>
+
+<p>The centroid of a cluster is the average or mean of the vectors in the cluster. </p>
+
+<p>Averaging (or taking the mean of) a list of vectors means <strong>combining them into a single &quot;average&quot; vector</strong> that represents the typical values across all of them.</p>
+
+<p>More specifically, we take the average <strong>in each dimension</strong> — which means:
+- For every word (or feature) that appears in the vectors, we add up all its values across the documents
+- Then we divide that total by the number of vectors</p>
+
+<p>If the word &quot;login&quot; has a TF-IDF score of 0.4 in one review and 0.6 in another, the average value for &quot;login&quot; in the centroid would be (0.4 + 0.6) / 2 = 0.5.</p>
+
+<p>This creates a new vector that reflects the <strong>overall importance of each word</strong> in that group of documents — and gives us a meaningful &quot;center&quot; for each cluster.</p>
+
+<p>Before performing k-means clustering, we need a function to calculate the mean of a list of vectors:</p>
+
+<div><pre><code class="language-python">def mean_vector(vectors):
+    &quot;&quot;&quot;Averages a list of sparse vectors.&quot;&quot;&quot;
+    summed = {}
+    for vec in vectors:
+        for key, value in vec.items():
+            summed[key] = summed.get(key, 0) + value
+    count = len(vectors)
+    return {k: v / count for k, v in summed.items()}</code></pre></div>
+
+<h3 id="toc_21">Corpus Vectors</h3>
+
+<p>To make our code run more efficiently in class, we&#39;re going to randomly select a subset of reviews for k-means. </p>
+
+<div><pre><code class="language-python">import random
+valid_reviews = [r for r in reviews if r.get(&#39;content&#39;)]
+sampled_reviews = random.sample(valid_reviews, 5000)</code></pre></div>
+
+<p>For each of <code>sampled_reviews</code> we&#39;re going to add a tf-idf vector: </p>
+
+<div><pre><code class="language-python">for i, review in enumerate(sampled_reviews):
+        tf_idf = vectorize_tf_idf(tokenize(review[&#39;content&#39;]))
+        sampled_reviews[i][&#39;tf-idf&#39;] = tf_idf </code></pre></div>
+
+<h3 id="toc_22">K-Means</h3>
+
+<p>This code implements a basic version of the <strong>K-means clustering algorithm</strong> using <strong>cosine similarity</strong> to assign documents (e.g., text vectors) to clusters. </p>
+
+<p>Here&#39;s a breakdown of the steps:</p>
+
+<ol>
+<li><p>We begin by defining the number of clusters <code>k</code> and randomly selecting <code>k</code> documents as the <strong>initial centroids</strong></p></li>
+<li><p>For each document in sampled_reviews, compute the cosine similarity to each centroid and assign the document to the cluster with the highest similarity.</p></li>
+<li><p>After all documents have been assigned to clusters, calculate the new centroids by computing the mean vector of each cluster.</p></li>
+<li><p>If the centroids have not changed from the previous iteration, the algorithm converges and stops</p></li>
+</ol>
+
+<div><pre><code class="language-python"># Step 1: Randomly initialize centroids
+k = 4
+centroids = random.sample([r[&#39;tf-idf&#39;] for r in sampled_reviews], k)
+
+for iteration in range(100):
+    print(f&quot;Iteration {iteration+1}&quot;)
+
+    # Step 2: Assign documents to closest centroid
+    clusters = [[] for _ in range(k)]
+    for doc in sampled_reviews:
+        similarities = [cosine_similarity(doc[&#39;tf-idf&#39;], centroid) for centroid in centroids]
+        best_cluster = similarities.index(max(similarities))
+        clusters[best_cluster].append(doc)
+
+    # Step 3: Update centroids by averaging each cluster
+    new_centroids = [mean_vector([review[&#39;tf-idf&#39;] for review in cluster]) if cluster else centroids[i] for i, cluster in enumerate(clusters)]
+
+    # Step 4: Check for convergence (no change in centroids)
+    if new_centroids == centroids:
+        print(&quot;Converged.&quot;)
+        break
+    centroids = new_centroids</code></pre></div>
+
+<h2 id="toc_23">Analyzing the Clustering Results</h2>
+
+<p>After running the K-means algorithm, we have grouped our reviews into <code>k = 4</code> clusters. Let’s explore each cluster to better understand the characteristics of the grouped reviews.</p>
+
+<h3 id="toc_24">Cluster Size</h3>
+
+<p>The first step is to see how many reviews were assigned to each cluster:</p>
+
+<div><pre><code class="language-python">for i, cluster in enumerate(clusters):
+    print(f&quot;Cluster {i}: {len(cluster)} reviews&quot;)</code></pre></div>
+
+<p>This helps identify whether the clustering was balanced or if one cluster dominated (which could suggest overlapping content or poor separation).</p>
+
+<h3 id="toc_25">Sample Reviews from Each Cluster</h3>
+
+<p>Print a few sample reviews from each cluster to get a sense of what kinds of comments ended up together:</p>
+
+<div><pre><code class="language-python">for i, cluster in enumerate(clusters):
+    print(f&quot;\n=== Cluster {i} ===&quot;)
+    for review in cluster[:10]:
+        print(&quot;-&quot;, review[&#39;content&#39;][:200])  # print first 200 characters</code></pre></div>
+
+<h3 id="toc_26">Average Review Score for Each Cluster</h3>
+
+<p>Calculate the average /5 score for each cluster.</p>
+
+<div><pre><code class="language-python">for i, cluster in enumerate(clusters):
+    scores = [review[&#39;score&#39;] for review in cluster]
+    avg_score = sum(scores) / len(scores) if scores else 0
+    print(f&quot;Cluster {i} average rating: {avg_score:.2f}&quot;)</code></pre></div>
+
+<h3 id="toc_27">Word Cloud</h3>
+
+<p>This code generates a word cloud for each cluster.</p>
+
+<div><pre><code class="language-python">from wordcloud import WordCloud
+import matplotlib.pyplot as plt
+
+for i, centroid in enumerate(centroids):
+    wc = WordCloud(width=400, height=200)
+    wc.generate_from_frequencies(centroid)
+    plt.figure()
+    plt.imshow(wc, interpolation=&quot;bilinear&quot;)
+    plt.axis(&quot;off&quot;)
+    plt.title(f&quot;Centroid {i} Word Cloud&quot;)
+    plt.show()</code></pre></div>
+
+<h2 id="toc_28">Summary</h2>
+
+<p>In this lecture, we explored the full journey from <strong>raw text reviews</strong> to <strong>meaningful insights</strong>:</p>
+
+<ul>
+<li>We used <code>google-play-scraper</code> to collect real app review data.</li>
+<li>We built custom tokenizers and vectorization functions for Binary, TF, and TF-IDF models.</li>
+<li>We learned how to represent text as sparse vectors and use them in sentiment scoring.</li>
+<li>We evaluated a <strong>lexicon-based sentiment model</strong> by comparing predicted sentiment scores to real user ratings.</li>
+<li>We introduced <strong>cosine similarity</strong> to measure document similarity.</li>
+<li>We implemented <strong>K-means clustering</strong> from scratch to discover themes in user reviews.</li>
+<li>Finally, we visualized and interpreted clusters using word clouds and average ratings.</li>
+</ul>
+
+<p>This workflow demonstrates how to turn unstructured customer feedback into actionable insights — a critical capability in business analytics.</p>
+
+<h2 id="toc_29">Exercises</h2>
+
+<p>Try the following exercises to reinforce this week’s concepts:</p>
+
+<ol>
+<li><p>Try re-running the k-means clustering. How stable are the clusters?</p></li>
+<li><p>Try repeating the analysis with varying numbers of clusters. What number gives the best results?</p></li>
+<li><p>Repeat this analysis using a different app or even another dataset.</p></li>
+<li><p>Think about how you would present these results to a business audience. What advice would you give them?</p></li>
+</ol>
+
+<h2 id="toc_30">Homework</h2>
+
+<ul>
+<li>Read chapters 10 thru 15 of <a href="https://allendowney.github.io/ThinkPython/">Think Python</a></li>
+<li>Complete the Exercises above</li>
+<li>Get going on your Group Project</li>
+</ul>
+
+
+
+<script type="text/x-mathjax-config">
+(function () {
+
+MathJax.Hub.Config({
+	'showProcessingMessages': false,
+	'messageStyle': 'none'
+});
+
+if (typeof MathJaxListener !== 'undefined') {
+	MathJax.Hub.Register.StartupHook('End', function () {
+		MathJaxListener.invokeCallbackForKey_('End');
+	});
+}
+
+})();
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+</body>
+
+</html>
