@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Week 4 Lecture Notes</title>
+
+
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb
+}
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+  body {
+    padding: 2cm; 
+  }
+}
+</style>
+
+
+</head>
+
+<body>
+
+<h1 id="toc_0">Week 4 Lecture Notes</h1>
+
+<p>This week, we built our first <strong>supervised machine learning classifier</strong> from scratch — a Naive Bayes model for <strong>spam detection</strong>. Along the way, we compared rule-based and learning-based approaches, reviewed key ML concepts, and connected everything back to ideas we&#39;ve already explored in sentiment analysis. By the end of this unit, you’ll understand not just how Naive Bayes works, but why it works — and how surprisingly similar it is to the lexicon-based classifier we built earlier.</p>
+
+<h2 id="toc_1">Rule-Based vs. Machine Learning–Based Systems</h2>
+
+<p>Before we dive into building our first <em>machine learning model</em>, let’s review the difference between two major approaches to analyzing text:</p>
+
+<h3 id="toc_2">Rule-Based Systems</h3>
+
+<p>Rule-based systems rely on <strong>handcrafted logic</strong> to analyze text. You define the rules, and the system applies them.</p>
+
+<p><strong>Examples:</strong></p>
+
+<ul>
+<li>If a message contains the word “refund”, label it as a complaint.</li>
+<li>If a review contains more positive than negative words (from a lexicon), predict it as positive.</li>
+</ul>
+
+<p>We’ve already seen some rule-based systems in this course:</p>
+
+<ul>
+<li><strong>Information retrieval</strong> using cosine similarity and TF-IDF is rule-based — it follows a fixed mathematical formula to rank documents.</li>
+<li><strong>Lexicon-based sentiment analysis</strong> is rule-based — it assigns scores to documents based on a predefined dictionary of word sentiments. <em>Note: you could use machine learning to create the lexicon (e.g., by training on labeled data), but our approach was purely rule-based.</em></li>
+</ul>
+
+<p><strong>Pros:</strong></p>
+
+<ul>
+<li>Simple, interpretable, and easy to build</li>
+<li>No training data needed</li>
+<li>Good for clear-cut or highly structured tasks</li>
+</ul>
+
+<p><strong>Cons:</strong></p>
+
+<ul>
+<li>Rigid and brittle — can break with new wording or phrasing</li>
+<li>Can’t handle nuance or subtlety (e.g., sarcasm, negation)</li>
+<li>Hard to scale and maintain as complexity grows</li>
+</ul>
+
+<h3 id="toc_3">Machine Learning–Based Systems</h3>
+
+<p>Machine learning systems <strong>learn patterns from labeled examples</strong> instead of being explicitly told what to do.</p>
+
+<p>You give the model <strong>input texts</strong> and the correct <strong>output labels</strong>, and it finds patterns that connect them.</p>
+
+<p><strong>Examples:</strong></p>
+
+<ul>
+<li>Train a model on 10,000 emails labeled “spam” or “not spam”</li>
+<li>Use word frequency patterns to automatically learn what spam looks like</li>
+<li>Predict new labels for unseen messages based on learned patterns</li>
+</ul>
+
+<p>We’ve already seen a machine learning system:</p>
+
+<ul>
+<li><strong>K-Means clustering</strong> is an unsupervised ML model — it learns to group similar documents without predefined categories.</li>
+</ul>
+
+<p><strong>Pros:</strong></p>
+
+<ul>
+<li>Flexible and adaptive — learns from data, not rules</li>
+<li>Can capture subtle statistical signals</li>
+<li>Scales well to large datasets and complex problems</li>
+</ul>
+
+<p><strong>Cons:</strong></p>
+
+<ul>
+<li>Needs labeled data to train (in supervised learning)</li>
+<li>Can be harder to interpret</li>
+<li>May make mistakes in unexpected ways</li>
+</ul>
+
+<h2 id="toc_4">Supervised vs. Unsupervised Learning</h2>
+
+<p>Now that we’ve reviewed machine learning systems, let’s look at two major types of learning: <strong>supervised</strong> and <strong>unsupervised</strong>.</p>
+
+<h3 id="toc_5">Unsupervised Learning</h3>
+
+<p>In <strong>unsupervised learning</strong>, the model is given input data <strong>without any labels</strong>. Its goal is to <strong>find patterns or structure</strong> in the data on its own.</p>
+
+<p><strong>Example: K-Means Clustering</strong></p>
+
+<ul>
+<li>We gave K-Means a set of review vectors — but <strong>no labels</strong> or categories.</li>
+<li>The model grouped similar reviews into clusters based on shared vocabulary.</li>
+<li>We didn’t tell the model what the clusters should be — it discovered patterns automatically.</li>
+</ul>
+
+<p>Unsupervised learning is useful when:
+- You don’t have labeled data
+- You want to explore or summarize large datasets
+- You want to discover hidden structure or themes</p>
+
+<h3 id="toc_6">Supervised Learning</h3>
+
+<p>In <strong>supervised learning</strong>, the model is trained on input data <strong>with known labels</strong>. It learns the relationship between the input and the correct output, so it can make predictions on new data.</p>
+
+<p><strong>What We’re Doing Today: Naive Bayes</strong></p>
+
+<ul>
+<li>We&#39;ll build a <strong>spam detection model</strong> using a dataset of messages labeled as <strong>spam</strong> or <strong>not spam</strong>.</li>
+<li>The model will learn what kinds of words are commonly found in spam messages vs. regular ones.</li>
+<li>Once trained, the model can classify <strong>new, unseen messages</strong> as spam or not.</li>
+</ul>
+
+<blockquote>
+<p><strong>Key Idea</strong>:<br>
+Supervised learning requires labeled data and predicts known outcomes.<br>
+Unsupervised learning looks for patterns without any guidance.</p>
+</blockquote>
+
+<h2 id="toc_7">Introducing Naive Bayes: A Machine Learning Approach to Text Classification</h2>
+
+<p>So far, we’ve built a <strong>lexicon-based sentiment classifier</strong>:  </p>
+
+<ul>
+<li>Every word in a review had a predefined <strong>sentiment score</strong> (positive, negative, or neutral).<br></li>
+<li>To score a review, we <strong>added up the scores of the words it contained</strong>.<br></li>
+<li>Based on the total score, we classified the review as <strong>positive, neutral, or negative</strong>.</li>
+</ul>
+
+<p>Today, we’ll build a new kind of text classifier — using <strong>machine learning</strong>.  </p>
+
+<p>Our task is to classify messages as either <strong>spam</strong> or <strong>not spam</strong> (also called <em>ham</em>).  </p>
+
+<p>We’ll use a model called <strong>Naive Bayes</strong>, which is commonly used for spam detection.</p>
+
+<h3 id="toc_8">Similarities to the Lexicon Model</h3>
+
+<p>In both models:</p>
+
+<ul>
+<li>Each message is represented as a <strong>bag of words</strong></li>
+<li>Each word contributes to the <strong>final message score</strong></li>
+<li>The final score determines the predicted <strong>class label</strong>:
+
+<ul>
+<li>Positive vs. Negative (in sentiment analysis)</li>
+<li>Spam vs. Not Spam (in today’s example)</li>
+</ul></li>
+</ul>
+
+<h3 id="toc_9">Key Difference: Where the Word Scores Come From</h3>
+
+<ul>
+<li>In the <strong>lexicon model</strong>, the word scores were <strong>manually defined</strong> in a sentiment dictionary.<br></li>
+<li>In the <strong>Naive Bayes model</strong>, the word scores will be <strong>learned from data</strong>.<br>
+
+<ul>
+<li>We’ll train the model on <strong>labeled messages</strong> — ones that are already marked as spam or not.</li>
+<li>The model will learn which words are more likely to appear in spam vs. ham.</li>
+</ul></li>
+</ul>
+
+<p>This is what makes Naive Bayes a <strong>supervised machine learning model</strong>.</p>
+
+<blockquote>
+<p><strong>Key Idea</strong>:<br>
+Just like our lexicon-based model, Naive Bayes uses word-level scores to make a prediction —<br>
+but it <strong>learns</strong> those scores automatically by analyzing a labeled dataset.</p>
+</blockquote>
+
+<h2 id="toc_10">Deriving Naive Bayes for Spam Detection</h2>
+
+<p>To understand how our model works, we’ll start with <strong>Bayes’ Rule</strong> — a fundamental idea in probability theory.</p>
+
+<h3 id="toc_11">Bayes’ Rule</h3>
+
+<p>Bayes’ Rule helps us reverse conditional probabilities:</p>
+
+<p><strong>P(A | B) = P(B | A) * P(A) / P(B)</strong></p>
+
+<p>In our case:</p>
+
+<ul>
+<li><strong>A</strong> is the class (e.g., &quot;spam&quot; or &quot;not spam&quot;)</li>
+<li><strong>B</strong> is the message text</li>
+</ul>
+
+<p>We want to calculate:</p>
+
+<p><strong>P(spam | message)</strong> — the probability that a message is spam, given its contents.</p>
+
+<p>Using Bayes’ Rule:</p>
+
+<p><strong>P(spam | message) = P(message | spam) * P(spam) / P(message)</strong></p>
+
+<p>And likewise:</p>
+
+<p><strong>P(ham | message) = P(message | ham) * P(ham) / P(message)</strong></p>
+
+<p>To classify the message, we compare these two probabilities and choose the class with the higher value.</p>
+
+<h3 id="toc_12">The Naive Assumption</h3>
+
+<p>The tricky part is computing <strong>P(message | spam)</strong> — the probability of the entire message, given that it’s spam.</p>
+
+<p>Since messages are made up of many words, this would normally be very hard to compute.<br>
+So we make a simplifying assumption:</p>
+
+<blockquote>
+<p><strong>Naive Bayes assumes that all words in a message are independent, given the class.</strong></p>
+</blockquote>
+
+<p>That means:</p>
+
+<p><strong>P(message | spam)</strong><br>
+≈ <strong>P(w1 | spam) * P(w2 | spam) * ... * P(wn | spam)</strong></p>
+
+<p>We do the same for ham:</p>
+
+<p><strong>P(message | ham)</strong><br>
+≈ <strong>P(w1 | ham) * P(w2 | ham) * ... * P(wn | ham)</strong></p>
+
+<h3 id="toc_13">The Final Classification Rule</h3>
+
+<p>Now we can skip the denominator (P(message)) because it’s the same for both classes.</p>
+
+<p>To classify a message, we compute:</p>
+
+<ul>
+<li><strong>spam score = P(spam) * P(w1 | spam) * P(w2 | spam) * ...</strong></li>
+<li><strong>ham score = P(ham) * P(w1 | ham) * P(w2 | ham) * ...</strong></li>
+</ul>
+
+<p>Then we pick the class with the higher score.</p>
+
+<h3 id="toc_14">Take the Log</h3>
+
+<p>Multiplying lots of small probabilities (like 0.01 × 0.005 × 0.0008...) can lead to <strong>very tiny numbers</strong> that computers have trouble storing.  </p>
+
+<p>Instead, we take the <strong>logarithm</strong> of the scores, which turns multiplication into addition:</p>
+
+<p><strong>log(spam score) = log(P(spam)) + log(P(w1 | spam)) + log(P(w2 | spam)) + ...</strong></p>
+
+<p>And the same for ham:</p>
+
+<p><strong>log(ham score) = log(P(ham)) + log(P(w1 | ham)) + log(P(w2 | ham)) + ...</strong></p>
+
+<p>This gives us a much more stable calculation — and it’s also easier to interpret.</p>
+
+<h3 id="toc_15">Final Classification Rule</h3>
+
+<p>We subtract the two log-scores and check the sign of the result:</p>
+
+<p><strong>score = log(spam score) - log(ham score)</strong><br>
+= <strong>log(P(spam) / P(ham))</strong><br>
+  + <strong>sum over words: log(P(word | spam) / P(word | ham))</strong></p>
+
+<p>This gives us a <strong>single number</strong> that summarizes how &quot;spammy&quot; the message is.</p>
+
+<h3 id="toc_16">How to Make a Prediction</h3>
+
+<ul>
+<li>If the score is <strong>greater than 0</strong>, the message is <strong>more likely spam</strong></li>
+<li>If the score is <strong>less than 0</strong>, the message is <strong>more likely ham (not spam)</strong></li>
+<li>If the score is <strong>exactly 0</strong>, the model is completely uncertain (rare)</li>
+</ul>
+
+<h3 id="toc_17">Why This Looks Like a Lexicon Model</h3>
+
+<ul>
+<li>In lexicon-based sentiment analysis, we added up the <strong>sentiment scores</strong> of each word.</li>
+<li>In Naive Bayes (after taking logs), we add up the <strong>spaminess scores</strong> of each word:
+
+<ul>
+<li>For each word: <strong>log(P(word | spam) / P(word | ham))</strong></li>
+</ul></li>
+</ul>
+
+<p>This becomes our <strong>spam lexicon</strong>, but instead of being handcrafted, it&#39;s <strong>learned from data</strong>.</p>
+
+<h3 id="toc_18">What About the Constant?</h3>
+
+<p>In our log-based Naive Bayes classifier, the full formula looks like this:</p>
+
+<p><strong>score = log(P(spam) / P(ham))<br>
+  + sum over words: log(P(word | spam) / P(word | ham))</strong></p>
+
+<p>The first part — <strong>log(P(spam) / P(ham))</strong> — is a <strong>constant</strong>. It doesn’t depend on the message or its words. It just reflects how common spam is in the training data compared to ham.</p>
+
+<h4 id="toc_19">What Does It Mean?</h4>
+
+<ul>
+<li>If spam is more common than ham in the training set, the constant will be <strong>positive</strong></li>
+<li>If ham is more common, the constant will be <strong>negative</strong></li>
+</ul>
+
+<p>This constant shifts the final score <strong>up or down</strong> and acts as a <strong>bias term</strong>:
+- A high constant makes the model more likely to predict spam (unless the words strongly suggest otherwise)
+- A low constant makes the model more conservative (only labeling as spam if the words are very spammy)</p>
+
+<h4 id="toc_20">Why Don’t We Have This in Lexicon-Based Sentiment?</h4>
+
+<p>In our sentiment model, we only use the sum of word scores — there’s <strong>no class prior</strong> built into the model.</p>
+
+<p>That means:
+- We assume that positive and negative reviews are equally likely by default
+- There&#39;s <strong>no bias toward one label or the other</strong> unless the words push it in that direction</p>
+
+<p>If we wanted to, we could <strong>add a constant</strong> to our sentiment model to reflect prior expectations — for example, if we know most reviews tend to be positive — but in practice, we usually leave it out for simplicity.</p>
+
+<h2 id="toc_21">SMS Spam Collection</h2>
+
+<p>Now that we understand how the Naive Bayes model works, let’s put it into practice.</p>
+
+<p>We’ll be using a real-world dataset called the <strong>SMS Spam Collection</strong>. It contains <strong>5,574 text messages</strong>, each labeled as either:</p>
+
+<ul>
+<li><strong>&quot;spam&quot;</strong> — unwanted commercial messages, scams, or promotions</li>
+<li><strong>&quot;ham&quot;</strong> — regular, non-spam messages (e.g., from friends, family, or service providers)</li>
+</ul>
+
+<p>This dataset is widely used to teach and evaluate text classification models, and it&#39;s perfect for our goal today.</p>
+
+<h3 id="toc_22">Our Objective</h3>
+
+<p>We want to <strong>train a Naive Bayes classifier</strong> that can automatically determine whether a new message is spam or not.</p>
+
+<p>To do that, we’ll:</p>
+
+<ol>
+<li><strong>Load the dataset</strong></li>
+<li><strong>Tokenize the messages</strong></li>
+<li><strong>Estimate word probabilities for each class</strong></li>
+<li><strong>Compute log-scores for new messages</strong></li>
+<li><strong>Make predictions and evaluate accuracy</strong></li>
+</ol>
+
+<p>This is a classic example of <strong>supervised learning</strong>:</p>
+
+<ul>
+<li>We train the model on a set of <strong>labeled examples</strong></li>
+<li>The model learns which words are more likely to appear in spam vs. ham</li>
+<li>It uses this to classify <strong>new, unseen messages</strong></li>
+</ul>
+
+<p>Let’s get started by loading and exploring the data.</p>
+
+<h2 id="toc_23">Download and Load the Dataset</h2>
+
+<p>The SMS Spam Collection is available as a <strong>tab-delimited text file</strong> where:</p>
+
+<ul>
+<li>The first column is the <strong>label</strong> (<code>ham</code> or <code>spam</code>)</li>
+<li>The second column is the <strong>message text</strong></li>
+</ul>
+
+<p>We’ll download the file using <code>wget</code>, then read it into a DataFrame using <code>pandas</code>.</p>
+
+<div><pre><code class="language-python"># Download the dataset
+!wget https://storage.googleapis.com/wd13/SMSSpamCollection.txt
+
+# Load it into a pandas DataFrame
+import pandas as pd
+
+df = pd.read_csv(&quot;SMSSpamCollection.txt&quot;, sep=&quot;\t&quot;, header=None, names=[&quot;label&quot;, &quot;message&quot;])
+
+# Display the first few rows
+df.head()</code></pre></div>
+
+<p>Each row represents one SMS message, labeled as either <code>&quot;ham&quot;</code> or <code>&quot;spam&quot;</code>. We&#39;ll use this DataFrame as our training data for the Naive Bayes classifier.</p>
+
+<h3 id="toc_24">A Quick Note on Pandas and DataFrames</h3>
+
+<p>In this example, we&#39;re using a Python library called <strong>pandas</strong>. It&#39;s one of the most popular tools for working with data in Python.</p>
+
+<p>The main structure in pandas is the <strong>DataFrame</strong> — a table of data with <strong>rows and columns</strong>, similar to a spreadsheet or a SQL table.</p>
+
+<p>When we load our SMS dataset using <code>pd.read_csv()</code>, we get a DataFrame where:</p>
+
+<ul>
+<li>Each <strong>row</strong> is one text message</li>
+<li>Each <strong>column</strong> holds a different kind of information (like the label or the message text)</li>
+</ul>
+
+<p>For example:</p>
+
+<table>
+<thead>
+<tr>
+<th>label</th>
+<th>message</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>ham</td>
+<td>Go until jurong point, crazy..</td>
+</tr>
+<tr>
+<td>ham</td>
+<td>Ok lar... Joking wif u oni...</td>
+</tr>
+<tr>
+<td>spam</td>
+<td>Free entry in 2 a wkly comp to win FA...</td>
+</tr>
+</tbody>
+</table>
+
+<p>We can inspect the first few rows of any DataFrame using <code>.head()</code>.</p>
+
+<h2 id="toc_25">Split Into Training and Test Sets</h2>
+
+<p>Before we train our Naive Bayes model, we need to split our dataset into two parts:</p>
+
+<ul>
+<li><strong>Training set</strong>: The portion of the data we use to <strong>teach</strong> the model. It learns which words are common in spam vs. ham.</li>
+<li><strong>Test set</strong>: A separate portion that we use to <strong>evaluate</strong> the model — to see how well it performs on new, unseen messages.</li>
+</ul>
+
+<p><em>Why do we split the data?</em> If we evaluate the model on the same data it was trained on, we’re not really testing its ability to generalize.  To truly see how well it works, we need to test it on data it hasn’t seen — just like how it would be used in the real world.</p>
+
+<p>To do this, we’ll use a function called <code>train_test_split</code> from a library called <strong>scikit-learn</strong> (or <code>sklearn</code> for short).<br>
+Scikit-learn is one of the most widely used machine learning libraries in Python — it provides tools for building models, evaluating them, and managing data workflows.</p>
+
+<div><pre><code class="language-python">from sklearn.model_selection import train_test_split
+
+# Split the dataset: 80% training, 20% testing
+train_df, test_df = train_test_split(df, test_size=0.2, random_state=42)
+
+# Show the number of messages in each set
+print(&quot;Training messages:&quot;, len(train_df))
+print(&quot;Test messages:&quot;, len(test_df))</code></pre></div>
+
+<p>The <code>random_state</code> parameter is like a seed for randomness — it ensures that we get the same split every time we run this code.</p>
+
+<p>Now we’re ready to start building and training our Naive Bayes model using the <code>train_df</code> data!</p>
+
+<h2 id="toc_26">Tokenizer</h2>
+
+<p>Just like we did last class, we’ll need a tokenizer. We’ll use the same function we defined earlier, which:</p>
+
+<ul>
+<li>Converts text to lowercase</li>
+<li>Uses a regular expression to extract word-like tokens</li>
+<li>Removes stop words (common words like “the”, “is”, “and” that don’t carry much meaning)</li>
+</ul>
+
+<p>Here’s the function:</p>
+
+<div><pre><code class="language-python">import re
+from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS
+
+def tokenize(text):
+    lowercase_text = text.lower()
+    tokens = re.findall(r&#39;\b\w+\b&#39;, lowercase_text)
+    return [t for t in tokens if t not in ENGLISH_STOP_WORDS]</code></pre></div>
+
+<h2 id="toc_27">Create Word Frequency Tables</h2>
+
+<p>Now that we can tokenize messages, we’ll count how often each word appears in:</p>
+
+<ul>
+<li>Spam messages</li>
+<li>Ham (non-spam) messages</li>
+</ul>
+
+<p>These counts will help us estimate the probabilities <strong>P(word | spam)</strong> and <strong>P(word | ham)</strong> — which the Naive Bayes model needs to make predictions.</p>
+
+<p>We’ll create two dictionaries:</p>
+
+<ul>
+<li><code>spam_counts</code> — maps each word to how many times it appears in spam messages</li>
+<li><code>ham_counts</code> — same idea, but for ham messages</li>
+</ul>
+
+<div><pre><code class="language-python"># Initialize word count dictionaries
+spam_counts = {}
+ham_counts = {}
+
+# Loop through the training messages
+for _, row in train_df.iterrows():
+    tokens = tokenize(row[&quot;message&quot;])
+    label = row[&quot;label&quot;]
+
+    for token in tokens:
+        if label == &quot;spam&quot;:
+            spam_counts[token] = spam_counts.get(token, 0) + 1
+        else:
+            ham_counts[token] = ham_counts.get(token, 0) + 1</code></pre></div>
+
+<p>At this point:</p>
+
+<ul>
+<li><code>spam_counts[&quot;win&quot;]</code> tells us how many times the word &quot;win&quot; appeared in spam messages</li>
+<li><code>ham_counts[&quot;ok&quot;]</code> tells us how many times the word &quot;ok&quot; appeared in ham messages</li>
+</ul>
+
+<p>These raw counts are the building blocks of our model. Next, we’ll convert them into <strong>probabilities</strong> — and apply <strong>Laplace smoothing</strong> to avoid zero-probability issues.</p>
+
+<h2 id="toc_28">Estimate P(word | spam) and P(word | ham) with Laplace Smoothing</h2>
+
+<p>Now that we have word frequency tables, we want to calculate:</p>
+
+<ul>
+<li><strong>P(word | spam)</strong> — how likely a word is to appear in spam messages</li>
+<li><strong>P(word | ham)</strong> — how likely it is to appear in ham messages</li>
+</ul>
+
+<p>But there&#39;s a problem:  If a word never appears in one category (e.g., <code>&quot;pizza&quot;</code> never shows up in spam), then its probability is 0 — which would cause division by zero errors. To avoid this, we use <strong>Laplace smoothing</strong>.</p>
+
+<h3 id="toc_29">Laplace Smoothing Formula</h3>
+
+<p>To calculate smoothed probabilities, we use this formula:</p>
+
+<p><strong>P(word | class) = (count + 1) / (total_count + V)</strong></p>
+
+<p>Where:
+- <code>count</code> = how many times the word appears in that class (spam or ham)
+- <code>total_count</code> = total number of words in that class
+- <code>V</code> = size of the full vocabulary (number of unique words across both classes)</p>
+
+<p>Adding <code>1</code> ensures that <strong>every word has at least a tiny non-zero probability</strong> in both classes.</p>
+
+<div><pre><code class="language-python"># Combine vocab from both classes
+vocab = set(spam_counts.keys()) | set(ham_counts.keys())
+V = len(vocab)
+
+# Total number of words in each class
+spam_total = sum(spam_counts.values())
+ham_total = sum(ham_counts.values())
+
+# Create smoothed probability tables
+P_word_given_spam = {}
+P_word_given_ham = {}
+
+for word in vocab:
+    # Smoothed spam probability
+    spam_count = spam_counts.get(word, 0)
+    P_word_given_spam[word] = (spam_count + 1) / (spam_total + V)
+
+    # Smoothed ham probability
+    ham_count = ham_counts.get(word, 0)
+    P_word_given_ham[word] = (ham_count + 1) / (ham_total + V)</code></pre></div>
+
+<p>At this point:</p>
+
+<ul>
+<li><code>P_word_given_spam[&quot;win&quot;]</code> gives us the smoothed probability of the word &quot;win&quot; in spam</li>
+<li><code>P_word_given_ham[&quot;ok&quot;]</code> gives us the smoothed probability of &quot;ok&quot; in ham</li>
+</ul>
+
+<p>These probabilities are now safe to use — even for rare or previously unseen words.</p>
+
+<p>Next, we’ll convert these into <strong>log probabilities</strong> and build a function to classify new messages!</p>
+
+<h2 id="toc_30">Convert to Log-Probabilities</h2>
+
+<p>In Naive Bayes, we multiply together many small probabilities — one for each word in the message.<br>
+But multiplying lots of small numbers can quickly underflow (i.e., become too small for the computer to handle).</p>
+
+<p>To fix that, we take the <strong>logarithm</strong> of each probability — which turns multiplication into addition:</p>
+
+<ul>
+<li><code>log(P(w1 | spam) × P(w2 | spam))</code> → <code>log(P(w1 | spam)) + log(P(w2 | spam))</code></li>
+</ul>
+
+<p>This also makes our model behave more like the <strong>lexicon-based model</strong> from earlier —<br>
+Each word contributes a score, and we just <strong>add them up</strong>.</p>
+
+<p>We’ll also precompute the <strong>log-ratio</strong> for each word:</p>
+
+<div><pre><code class="language-python">import math
+
+log_ratios = {}
+
+for word in vocab:
+    pw_spam = P_word_given_spam[word]
+    pw_ham = P_word_given_ham[word]
+    log_ratios[word] = math.log(pw_spam / pw_ham)</code></pre></div>
+
+<p>This dictionary <code>log_ratios</code> is now our <strong>&quot;spam lexicon&quot;</strong>:</p>
+
+<ul>
+<li>Words with positive values are more spammy</li>
+<li>Words with negative values are more ham-like</li>
+<li>Words with scores near zero don’t strongly favor either class</li>
+</ul>
+
+<p>Now we’re ready to build the final prediction function — using these word-level log scores!</p>
+
+<h2 id="toc_31">Classify a Message with Naive Bayes</h2>
+
+<p>To predict whether a message is spam or ham, we:</p>
+
+<ol>
+<li>Tokenize the message</li>
+<li>For each word, look up its <strong>log-ratio</strong>: <code>log(P(word | spam) / P(word | ham))</code></li>
+<li>Add those values together</li>
+<li>Add the <strong>log prior ratio</strong>: <code>log(P(spam) / P(ham))</code></li>
+<li>Predict <strong>spam if the total score &gt; 0</strong>, otherwise <strong>ham</strong></li>
+</ol>
+
+<p>Let’s calculate the class priors from our training data:</p>
+
+<div><pre><code class="language-python"># Count spam and ham messages
+num_spam = (train_df[&quot;label&quot;] == &quot;spam&quot;).sum()
+num_ham = (train_df[&quot;label&quot;] == &quot;ham&quot;).sum()
+
+# Compute class prior probabilities
+P_spam = num_spam / len(train_df)
+P_ham = num_ham / len(train_df)
+
+# Compute log prior (the constant)
+log_prior = math.log(P_spam / P_ham)</code></pre></div>
+
+<p>Now we’ll write a prediction function that:</p>
+
+<ul>
+<li>Computes the total log-score of a message</li>
+<li>Returns <code>&quot;spam&quot;</code> if the score is greater than 0</li>
+<li>Returns <code>&quot;ham&quot;</code> otherwise</li>
+</ul>
+
+<div><pre><code class="language-python">def predict(message):
+    tokens = tokenize(message)
+    score = log_prior  # start with the class bias
+
+    for token in tokens:
+        if token in log_ratios:
+            score += log_ratios[token]
+
+    return &quot;spam&quot; if score &gt; 0 else &quot;ham&quot;</code></pre></div>
+
+<p>Let’s try it out on a few test messages!</p>
+
+<div><pre><code class="language-python">print(predict(&quot;Congratulations! You&#39;ve won a free ticket to Bahamas. Click here to claim.&quot;))
+print(predict(&quot;Hey, are we still on for dinner tonight?&quot;))</code></pre></div>
+
+<h2 id="toc_32">Evaluate Model Accuracy on the Test Set</h2>
+
+<p>Now that we have a working <code>predict()</code> function, we’ll apply it to every message in the test set.</p>
+
+<p>Then we’ll compare the predicted labels to the actual labels and calculate the model’s accuracy.</p>
+
+<div><pre><code class="language-python"># Predict all messages in the test set
+predictions = []
+
+for _, row in test_df.iterrows():
+    message = row[&quot;message&quot;]
+    prediction = predict(message)
+    predictions.append(prediction)
+
+# Actual labels
+actual = test_df[&quot;label&quot;].tolist()
+
+# Compute accuracy
+correct = sum([pred == truth for pred, truth in zip(predictions, actual)])
+accuracy = correct / len(test_df)
+
+print(f&quot;Accuracy: {accuracy:.2%}&quot;)</code></pre></div>
+
+<p>This tells us how well our Naive Bayes model generalizes to new data.</p>
+
+<p>In most cases, you should see accuracy well above <strong>90%</strong>, even with this simple bag-of-words approach.</p>
+
+<p>Next: we can analyze <strong>which words had the strongest influence</strong> on the model — or look at <strong>false positives and false negatives</strong> to better understand where it succeeds or fails.</p>
+
+<h3 id="toc_33">Confusion Matrix</h3>
+
+<p>A <strong>confusion matrix</strong> helps us see where the model gets things right and wrong:</p>
+
+<ul>
+<li><strong>True Positives (TP)</strong>: Spam correctly labeled as spam<br></li>
+<li><strong>True Negatives (TN)</strong>: Ham correctly labeled as ham<br></li>
+<li><strong>False Positives (FP)</strong>: Ham incorrectly labeled as spam<br></li>
+<li><strong>False Negatives (FN)</strong>: Spam incorrectly labeled as ham</li>
+</ul>
+
+<p>We’ll use <code>sklearn.metrics.confusion_matrix</code> to build one.</p>
+
+<div><pre><code class="language-python">from sklearn.metrics import confusion_matrix
+
+# Generate confusion matrix
+cm = confusion_matrix(actual, predictions, labels=[&quot;spam&quot;, &quot;ham&quot;])
+
+# Display as a readable table
+print(&quot;Confusion Matrix:&quot;)
+print(f&quot;               Predicted&quot;)
+print(f&quot;             | spam | ham &quot;)
+print(f&quot;Actual spam  |  {cm[0][0]:4} | {cm[0][1]:4}&quot;)
+print(f&quot;Actual ham   |  {cm[1][0]:4} | {cm[1][1]:4}&quot;)</code></pre></div>
+
+<p><strong>Why Accuracy Isn’t Always Enough</strong></p>
+
+<p>Suppose 99% of the messages in your dataset are <strong>ham</strong>.<br>
+A model that simply <strong>guesses &quot;ham&quot; every time</strong> would be right 99% of the time — and get <strong>99% accuracy</strong> — but it would be <strong>completely useless</strong> at detecting spam.</p>
+
+<p>This is why we need to look beyond accuracy and examine the <strong>confusion matrix</strong>:
+- It shows <strong>how many spam messages were missed</strong> (false negatives)
+- And <strong>how many ham messages were mislabeled</strong> as spam (false positives)</p>
+
+<p>These errors matter a lot — especially in real-world systems like email filtering or fraud detection, where the &quot;rare&quot; class is often the most important to catch.</p>
+
+<h3 id="toc_34">Precision, Recall, and F1-Score</h3>
+
+<p>When evaluating a classifier — especially on <strong>imbalanced datasets</strong> — it&#39;s important to go beyond accuracy.</p>
+
+<p>Let’s define three important metrics:</p>
+
+<h4 id="toc_35">🔹 Precision</h4>
+
+<blockquote>
+<p>Of all the messages the model predicted as <strong>spam</strong>, how many were actually spam?</p>
+</blockquote>
+
+<p>High precision means <strong>few false positives</strong>.</p>
+
+<h4 id="toc_36">🔹 Recall</h4>
+
+<blockquote>
+<p>Of all the actual spam messages, how many did the model correctly identify?</p>
+</blockquote>
+
+<p>High recall means <strong>few false negatives</strong> — you&#39;re catching most of the spam.</p>
+
+<h4 id="toc_37">🔹 F1-Score</h4>
+
+<blockquote>
+<p>A balanced average of precision and recall.</p>
+</blockquote>
+
+<p>F1 = 2 × (precision × recall) / (precision + recall)</p>
+
+<p>Useful when you care about both avoiding <strong>false alarms</strong> and <strong>missing real spam</strong>.</p>
+
+<p>We can compute all three using <code>sklearn.metrics.classification_report</code>:</p>
+
+<div><pre><code class="language-python">from sklearn.metrics import classification_report
+
+print(classification_report(actual, predictions, target_names=[&quot;spam&quot;, &quot;ham&quot;]))</code></pre></div>
+
+<p>This gives you a full breakdown of:</p>
+
+<ul>
+<li><strong>Precision</strong>: Of the messages predicted as spam/ham, how many were actually correct?</li>
+<li><strong>Recall</strong>: Of the actual spam/ham messages, how many did the model correctly identify?</li>
+<li><strong>F1-score</strong>: A balance between precision and recall — high only when both are high.</li>
+<li><strong>Support</strong>: The number of true examples of each class in the test set.</li>
+<li><strong>Macro avg</strong>: The unweighted average across classes — treats each class equally.</li>
+<li><strong>Weighted avg</strong>: The average weighted by class frequency — reflects overall performance on imbalanced data.</li>
+</ul>
+
+<p>These metrics help you understand where your model is strong — and where it needs improvement. They are especially useful when the dataset has class imbalance (e.g., more ham than spam).</p>
+
+<h3 id="toc_38">Most &quot;Spammy&quot; and &quot;Hammy&quot; Words</h3>
+
+<p>Let’s inspect which words had the strongest influence on our model — the highest and lowest log-ratios.</p>
+
+<p>Words with very positive log-ratios are strong indicators of spam.</p>
+
+<p>Words with very negative log-ratios are strong indicators of ham.</p>
+
+<div><pre><code class="language-python"># Sort words by log-ratio
+sorted_words = sorted(log_ratios.items(), key=lambda x: x[1])
+
+# Most hammy (very negative log-ratio)
+print(&quot;💬 Most ham-like words:&quot;)
+for word, score in sorted_words[:10]:
+    print(f&quot;{word:15} {score:.4f}&quot;)
+
+# Most spammy (very positive log-ratio)
+print(&quot;\n💬 Most spam-like words:&quot;)
+for word, score in sorted_words[-10:]:
+    print(f&quot;{word:15} {score:.4f}&quot;)</code></pre></div>
+
+<h3 id="toc_39">Error Analysis</h3>
+
+<p>Let’s look at some misclassified messages — where the model&#39;s prediction didn&#39;t match the true label.</p>
+
+<p>This helps us understand:</p>
+
+<ul>
+<li>Where the model is confused</li>
+<li>Whether certain types of spam are being missed</li>
+<li>If it’s too aggressive (labeling ham as spam)</li>
+</ul>
+
+<div><pre><code class="language-python"># Show the first 10 misclassified messages
+for i in range(len(test_df)):
+    if predictions[i] != actual[i]:
+        print(f&quot;\n--- Misclassified Message ---&quot;)
+        print(f&quot;Actual:    {actual[i]}&quot;)
+        print(f&quot;Predicted: {predictions[i]}&quot;)
+        print(f&quot;Message:   {test_df.iloc[i][&#39;message&#39;]}&quot;)</code></pre></div>
+
+<h2 id="toc_40">Summary</h2>
+
+<p>This week, you learned how to:</p>
+
+<ul>
+<li><strong>Compare rule-based and machine learning–based systems</strong> for text analysis<br></li>
+<li>Distinguish between <strong>supervised</strong> and <strong>unsupervised</strong> learning<br></li>
+<li>Use <strong>Bayes’ Rule</strong> to build a Naive Bayes classifier for spam detection<br></li>
+<li>Implement a <strong>bag-of-words</strong> model with <strong>Laplace smoothing</strong><br></li>
+<li>Convert word-level probabilities into <strong>log-scores</strong><br></li>
+<li>Classify new messages using a trained Naive Bayes model<br></li>
+<li>Measure performance using <strong>accuracy</strong>, <strong>confusion matrices</strong>, and <strong>precision/recall/F1</strong><br></li>
+<li>Inspect <strong>model behavior</strong> by analyzing the most &quot;spammy&quot; and &quot;hammy&quot; words<br></li>
+<li>Perform basic <strong>error analysis</strong> to see where the model makes mistakes<br></li>
+</ul>
+
+<p>Even though Naive Bayes is a relatively simple algorithm, it’s highly effective — and a great foundation for building intuition about how machine learning works with text.</p>
+
+<h2 id="toc_41">Exercises</h2>
+
+<ol>
+<li><p><strong>Manual Classification</strong><br>
+Pick 3 messages from the dataset (or your own inbox!).<br>
+Tokenize each one and estimate whether it’s more likely spam or ham using your intuition and word-level log scores.</p></li>
+<li><p><strong>Evaluate with More Metrics</strong><br>
+Use <code>classification_report</code> to get the precision, recall, and F1-score for your model.<br>
+What do these scores tell you about your model’s strengths and weaknesses?</p></li>
+<li><p><strong>Inspect the Lexicon</strong><br>
+Print the 20 most &quot;spammy&quot; and &quot;hammy&quot; words from the <code>log_ratios</code> dictionary.<br>
+Are any of them surprising? Do they make sense?</p></li>
+<li><p><strong>Adjust the Prior</strong><br>
+What happens if you <strong>manually increase or decrease</strong> the prior (log(P(spam)/P(ham)))?<br>
+Try removing the prior entirely and observe how that affects performance on the test set.</p></li>
+<li><p><strong>Compare with Lexicon Model</strong><br>
+Conceptually compare the Naive Bayes model to the lexicon-based sentiment model from Week 2.<br>
+What’s similar? What’s different?</p></li>
+<li><p><strong>Error Inspection</strong><br>
+Use the error analysis loop to inspect at least 5 misclassified messages.<br>
+Try to identify <em>why</em> the model was confused.</p></li>
+<li><p><strong>Explore Further</strong><br>
+Try applying your Naive Bayes classifier to a <strong>different dataset</strong> — for example, Yelp reviews labeled as positive or negative.<br>
+What would change? What parts of your code could be reused?</p></li>
+</ol>
+
+<h2 id="toc_42">Homework</h2>
+
+<ul>
+<li>Read chapters 16 thru 20 of <a href="https://allendowney.github.io/ThinkPython/">Think Python</a></li>
+<li>Complete the Exercises above</li>
+<li>Get going on your Group Project</li>
+</ul>
+
+
+
+<script type="text/x-mathjax-config">
+(function () {
+
+MathJax.Hub.Config({
+	'showProcessingMessages': false,
+	'messageStyle': 'none'
+});
+
+if (typeof MathJaxListener !== 'undefined') {
+	MathJax.Hub.Register.StartupHook('End', function () {
+		MathJaxListener.invokeCallbackForKey_('End');
+	});
+}
+
+})();
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+</body>
+
+</html>
