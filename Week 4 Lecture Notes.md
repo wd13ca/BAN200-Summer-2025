@@ -299,7 +299,7 @@ We’ll download the file using `wget`, then read it into a DataFrame using `pan
 
 ```python
 # Download the dataset
-!wget https://storage.googleapis.com/wd13/SMSSpamCollection.txt
+!wget https://wd13ca.github.io/BAN200-Summer-2025/SMSSpamCollection.txt
 
 # Load it into a pandas DataFrame
 import pandas as pd
