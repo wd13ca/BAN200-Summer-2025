@@ -1,0 +1,1579 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Week 5 Lecture Notes</title>
+
+
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb
+}
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+  body {
+    padding: 2cm; 
+  }
+}
+</style>
+
+
+</head>
+
+<body>
+
+<h1 id="toc_0">Week 5 Lecture Notes</h1>
+
+<p>This week, we introduce one of the most powerful families of models in modern machine learning: <strong>neural networks</strong>. We’ll start by building intuition around how neural networks work, why they’re called &quot;neural&quot;, and how they learn from data. Along the way, we’ll revisit linear regression from a new perspective, explore the mathematics of learning via <strong>gradient descent</strong>, and extend our toolkit to include <strong>logistic regression for classification</strong>. By the end of this lecture, you’ll see how these foundational ideas set the stage for more advanced models like deep learning.</p>
+
+<h2 id="toc_1">What Is a Neural Network?</h2>
+
+<p>A <strong>neural network</strong> is a type of machine learning model that can learn patterns from data to make predictions.</p>
+
+<p>Like the other models we&#39;ve looked at, a neural network is really just a <strong>mathematical equation</strong>. It takes some <strong>input</strong> (represented as numbers), processes it through a series of steps, and produces some <strong>output</strong> (also represented as numbers).</p>
+
+<p>What makes neural networks different is <strong>how they learn</strong>. Instead of using:
+- Hard-coded rules (like we did with lexicon-based sentiment analysis)
+- Predefined probabilities based on counting (like we did with Naive Bayes)</p>
+
+<p>Neural networks learn their own internal rules using a method called <strong>gradient descent</strong> — a process that gradually adjusts the model’s parameters to reduce error over time.</p>
+
+<h3 id="toc_2">Why Are They Called Neural Networks?</h3>
+
+<p>The neural networks we&#39;ll study in this course are more specifically called <strong>artificial neural networks</strong>, named after the <strong>biological neural networks</strong> found in animal brains.</p>
+
+<p>While the original idea was inspired by how real neurons fire and connect, artificial neural networks work quite differently. In practice, they are better thought of as <strong>powerful pattern-matching systems</strong> — mathematical models that learn from data, not true simulations of the brain.</p>
+
+<h2 id="toc_3">Tensor</h2>
+
+<p>Before we go further into neural networks, we need to talk about the data structures they use — specifically something called a <strong>tensor</strong>.</p>
+
+<h3 id="toc_4">Tensors Are Just Generalized Arrays</h3>
+
+<p>At a basic level, a <strong>tensor</strong> is just a container for numbers — kind of like a list, array, or table. In fact:</p>
+
+<ul>
+<li>A <strong>scalar</strong> (a single number) is a <strong>0D tensor</strong></li>
+<li>A <strong>vector</strong> (a column or row of numbers) is a <strong>1D tensor</strong></li>
+<li>A <strong>matrix</strong> (a rectangle of numbers) is a <strong>2D tensor</strong></li>
+<li>A cube of numbers is a <strong>3D tensor</strong></li>
+</ul>
+
+<p>Tensors can be extended into higher dimensions as well.</p>
+
+<h3 id="toc_5">Input and Output Examples</h3>
+
+<p>Tensors are used to represent <strong>both inputs and outputs</strong> in neural networks. Depending on the type of data we&#39;re working with, tensors can have different dimensions.</p>
+
+<p>Here are a few common examples:</p>
+
+<ul>
+<li><p><strong>Regression output (0D tensor)</strong><br>
+If your model predicts a single number (e.g., house price or sentiment score), the output is a scalar (0D tensor)</p></li>
+<li><p><strong>Document input (1D tensor)</strong><br>
+A document represented using bag-of-words or TF-IDF is a 1D tensor — a simple list of numbers</p></li>
+<li><p><strong>Classification output (1D tensor)</strong><br>
+In a classification model, the output can be represented as a 1D tensor with one element for each class<br>
+For example, if you&#39;re building a model to route incoming customer emails into one of three categories — <strong>Billing</strong>, <strong>Sales</strong>, or <strong>Tech Support</strong> — the model might output a vector like:<br>
+<code>[0.7, 0.1, 0.2]</code><br>
+These numbers can be interpreted as <strong>probabilities</strong>. In this case, the model is most confident the email is about a billing issue</p></li>
+<li><p><strong>Black and white image input (2D tensor)</strong><br>
+A grayscale image is stored as a 2D tensor with shape: height × width</p></li>
+<li><p><strong>Colour image input (3D tensor)</strong><br>
+A colour image is stored as a 3D tensor with shape: height × width × colour channels<br>
+For example, a 64×64 RGB image would be represented as: 64 × 64 × 3</p></li>
+<li><p><strong>Video input (4D tensor)</strong><br>
+A short colour video can be represented as a 4D tensor with shape: time × height × width × channels<br>
+For example, a 10-frame video of 64×64 RGB images: 10 × 64 × 64 × 3</p></li>
+</ul>
+
+<h2 id="toc_6">Linear Regression</h2>
+
+<p>A <strong>linear regression</strong> is one of the simplest types of neural networks. It’s a model that learns to <strong>predict a single number</strong> (like a price, score, or value) by combining input features using a weighted sum.</p>
+
+<p>The mathematical form of a linear regression is:</p>
+
+<div><pre><code class="language-none">ŷ = w₁x₁ + w₂x₂ + ... + wₙxₙ + b</code></pre></div>
+
+<ul>
+<li><code>x₁, x₂, ..., xₙ</code> are the input features<br></li>
+<li><code>w₁, w₂, ..., wₙ</code> are the feature weights the model learns<br></li>
+<li><code>b</code> is the bias weight (intercept) the model learns<br></li>
+<li><code>ŷ</code> is the predicted output (a single number)</li>
+</ul>
+
+<p>This is also known as a <strong>weighted sum</strong> or a <strong>linear combination</strong>.</p>
+
+<h3 id="toc_7">Example: Predicting a House Price</h3>
+
+<p>Suppose we want to predict the price of a house based on three features:</p>
+
+<ul>
+<li><code>x₁ = 1200</code> (square footage)<br></li>
+<li><code>x₂ = 3</code> (number of bedrooms)<br></li>
+<li><code>x₃ = 1</code> (has garage: 1 = yes, 0 = no)</li>
+</ul>
+
+<p>Let’s say our model has learned the following weights:</p>
+
+<ul>
+<li><code>w₁ = 150</code><br></li>
+<li><code>w₂ = 10,000</code><br></li>
+<li><code>w₃ = 5,000</code><br></li>
+<li><code>b = 20,000</code> (the base price)</li>
+</ul>
+
+<p>We plug these into the equation:</p>
+
+<div><pre><code class="language-none">ŷ = (150 × 1200) + (10,000 × 3) + (5,000 × 1) + 20,000  
+  = 180,000 + 30,000 + 5,000 + 20,000  
+  = 235,000</code></pre></div>
+
+<p>So, the model predicts that the house is worth <strong>$235,000</strong>.</p>
+
+<h3 id="toc_8">Vector Form</h3>
+
+<p>You can also write this equation in <strong>vector form</strong>:</p>
+
+<div><pre><code class="language-none">ŷ = w · x + b</code></pre></div>
+
+<ul>
+<li><code>w</code> is a <strong>1D tensor</strong> (vector) of weights<br></li>
+<li><code>x</code> is a <strong>1D tensor</strong> (vector) of input features<br></li>
+<li><code>·</code> represents the <strong>dot product</strong>, which multiplies each pair of values and sums the results<br></li>
+<li><code>b</code> is still the bias<br></li>
+<li><code>ŷ</code> is the output — a single number</li>
+</ul>
+
+<p>This vectorized version does exactly the same thing: it multiplies each input by its corresponding weight, adds them all together, and then adds the bias.</p>
+
+<p>It’s mathematically identical to the expanded version — just more compact and efficient, especially when working with large models or datasets.</p>
+
+<h2 id="toc_9">Loss Functions</h2>
+
+<p>So far, we&#39;ve talked about how a linear regression model makes predictions using weights (<code>w</code>) and a bias (<code>b</code>). But how do we know if a particular set of weights is <strong>good or bad</strong>?</p>
+
+<p>To train a model, we need to define what it means for a model to perform well. This is where <strong>loss functions</strong> come in.</p>
+
+<h3 id="toc_10">What Are We Trying to Do?</h3>
+
+<p>At the end of the day, we want to find weights and a bias that make the model&#39;s predictions as accurate as possible. That means we need a way to <strong>measure how far off the predictions are</strong> from the actual answers.</p>
+
+<p>That’s the job of a <strong>loss function</strong>: it assigns a number (the <strong>loss</strong>) to each prediction, telling us how bad it was. Lower is better.</p>
+
+<blockquote>
+<p><strong>Key idea:</strong><br>
+A <strong>loss function</strong> tells us how well the model is doing.<br>
+We want to find the weights (<code>w</code>) and bias (<code>b</code>) that <strong>minimize the loss</strong>.</p>
+</blockquote>
+
+<h3 id="toc_11">Mean Squared Error (MSE)</h3>
+
+<p>For regression tasks (predicting a number), a common loss function is <strong>Mean Squared Error (MSE)</strong>:</p>
+
+<div><pre><code class="language-none">MSE = average((ŷ - y)²)</code></pre></div>
+
+<ul>
+<li><code>ŷ</code> is the predicted value from the model<br></li>
+<li><code>y</code> is the true value from the training data<br></li>
+<li>We subtract them to get the <strong>error</strong>, then square it (to make all errors positive and penalize bigger mistakes more)</li>
+</ul>
+
+<h4 id="toc_12">Example:</h4>
+
+<p>If the true house price is <code>$300,000</code> and the model predicts <code>$280,000</code>, the squared error is:</p>
+
+<div><pre><code class="language-none">(280,000 - 300,000)² = 400,000,000</code></pre></div>
+
+<p>If we do this for every house in the dataset and take the average, we get the MSE — a single number that summarizes how far off our predictions are.</p>
+
+<h3 id="toc_13">Why Not Just Take the Mean Error?</h3>
+
+<p>You might wonder: why not just compute the <strong>mean error</strong> like this?</p>
+
+<div><pre><code class="language-none">average(ŷ - y)</code></pre></div>
+
+<p>This won’t work — because <strong>positive and negative errors will cancel each other out</strong>.  </p>
+
+<p>For example, if the model overpredicts one example by 20 and underpredicts another by 20, the average error would be 0 — even though both predictions were wrong.</p>
+
+<p>To avoid this cancellation, we square each error. This makes all the errors positive and ensures that <strong>larger mistakes are penalized more heavily</strong>.</p>
+
+<h3 id="toc_14">Why Not Just Take the Mean Absolute Error?</h3>
+
+<p>Another option is to use <strong>Mean Absolute Error (MAE)</strong>:</p>
+
+<div><pre><code class="language-none">MAE = average(|ŷ - y|)</code></pre></div>
+
+<p>Instead of squaring the error, we take the <strong>absolute value</strong> — which also avoids cancellation and gives a clear measure of the average size of the errors.</p>
+
+<p>So why don’t we use this as the default?</p>
+
+<h4 id="toc_15">A Historical Reason: It Was Too Hard to Calculate</h4>
+
+<p>When linear regression was first developed in the early 1800s — long before calculators or computers — all the math had to be done <strong>by hand</strong>.  </p>
+
+<p>And it turns out that <strong>minimizing absolute error is much harder to do by hand</strong> than minimizing squared error.</p>
+
+<p>So squared error became the standard — not because it was the only option, but because it was the one that was <strong>mathematically convenient</strong> at the time. And it stuck.</p>
+
+<p>That said, today <strong>mean absolute error</strong> is often used instead of MSE.</p>
+
+<h2 id="toc_16">Gradient Descent</h2>
+
+<p>Now that we know how to measure how &quot;good&quot; a set of weights is — using a <strong>loss function</strong> — the next question is:</p>
+
+<blockquote>
+<p><strong>How do we actually find good weights?</strong></p>
+</blockquote>
+
+<p>There are infinitely many possible values for the weights and bias. We can&#39;t try them all, and there&#39;s no obvious formula that tells us the best ones.<br>
+So instead of guessing randomly or exhaustively searching, we need an <strong>intelligent way to search</strong> for a good solution.</p>
+
+<p>That strategy is called <strong>gradient descent</strong>.</p>
+
+<h3 id="toc_17">The Basic Idea</h3>
+
+<p>Imagine you&#39;re standing somewhere on a hilly landscape, and your goal is to get to the bottom of the valley — where the <strong>loss</strong> is lowest.</p>
+
+<p>You can’t see the whole terrain, but you can feel which direction the ground slopes. So you take a step downhill. Then another. Then another.<br>
+Eventually, you get closer and closer to the lowest point.</p>
+
+<p>This is exactly what <strong>gradient descent</strong> does — but instead of navigating a landscape, it’s searching through possible weights for your model.<br>
+It moves step-by-step in the direction that <strong>reduces the loss</strong>.</p>
+
+<blockquote>
+<p><strong>Gradient descent is an optimization algorithm that tweaks the model’s weights to reduce the loss.</strong></p>
+</blockquote>
+
+<h3 id="toc_18">How It Works</h3>
+
+<p>At each training step:</p>
+
+<ol>
+<li>The model makes a prediction using the current weights and bias</li>
+<li>The prediction is compared to the true answer using the <strong>loss function</strong></li>
+<li>The <strong>gradient</strong> of the loss is computed — how much the loss would change if we nudged each weight a little</li>
+<li>The weights are updated by taking a small step in the direction that reduces the loss</li>
+</ol>
+
+<p>This step is done for <strong>each weight</strong> and the bias.</p>
+
+<h4 id="toc_19">Update Rule</h4>
+
+<p>The standard update formula looks like this:</p>
+
+<div><pre><code class="language-none">wᵢ ← wᵢ - η * ∂L/∂wᵢ</code></pre></div>
+
+<ul>
+<li><code>wᵢ</code> is the current weight<br></li>
+<li><code>∂L/∂wᵢ</code> is the gradient of the loss with respect to that weight<br></li>
+<li><code>η</code> (eta) is the <strong>learning rate</strong> — a small constant that controls the step size<br></li>
+<li>The new weight is the old weight <strong>minus</strong> a small step in the direction of the gradient</li>
+</ul>
+
+<p>We do the same for the bias <code>b</code>:</p>
+
+<div><pre><code class="language-none">b ← b - η * ∂L/∂b</code></pre></div>
+
+<blockquote>
+<p>The minus sign is important — it tells us to move <strong>downhill</strong>, not uphill.</p>
+</blockquote>
+
+<h3 id="toc_20">The Learning Rate</h3>
+
+<p>The learning rate <code>η</code> is a small number like <code>0.01</code> or <code>0.001</code>. It controls <strong>how big each step is</strong>.</p>
+
+<ul>
+<li>If it&#39;s too small, training will be slow<br></li>
+<li>If it&#39;s too big, training can overshoot the minimum and never settle</li>
+</ul>
+
+<p>Finding a good learning rate is part of tuning the training process.</p>
+
+<h3 id="toc_21">A Simple Example</h3>
+
+<p>Let’s say we have a model with just one weight:</p>
+
+<ul>
+<li>The current weight is <code>w = 2.0</code><br></li>
+<li>The loss function tells us that increasing <code>w</code> increases the loss<br></li>
+<li>The gradient is <code>∂L/∂w = 4.0</code><br></li>
+<li>We’re using a learning rate of <code>η = 0.1</code></li>
+</ul>
+
+<p>We update the weight:</p>
+
+<div><pre><code class="language-none">w ← 2.0 - 0.1 * 4.0 = 1.6</code></pre></div>
+
+<p>We’ve taken a small step <strong>toward lower loss</strong>.</p>
+
+<p>On the next step, we repeat the process — compute a new prediction, get the new loss and gradient, and update again.<br>
+This process continues until the loss stops improving (or we reach a set number of steps).</p>
+
+<h3 id="toc_22">Why It Works</h3>
+
+<p>The magic of gradient descent is that it <strong>uses the slope of the loss function</strong> to guide the search.</p>
+
+<ul>
+<li>If the slope is steep, the weight update is bigger<br></li>
+<li>If we’re close to the minimum, the slope flattens, and the updates become smaller<br></li>
+<li>Over time, the model settles into a <strong>minimum-loss</strong> solution</li>
+</ul>
+
+<blockquote>
+<p><strong>Key idea:</strong><br>
+Gradient descent turns learning into a process of repeated small improvements,<br>
+guided by math, not guesswork.</p>
+</blockquote>
+
+<h3 id="toc_23">Will It Always Find the Best Solution?</h3>
+
+<p>Not necessarily.</p>
+
+<p>Gradient descent is a powerful tool, but it doesn’t <strong>guarantee</strong> that we’ll find the best possible set of weights — the true global minimum of the loss function.</p>
+
+<p>Why not?</p>
+
+<ul>
+<li>The <strong>loss landscape</strong> can be complicated, especially for deep neural networks</li>
+<li>It might have <strong>multiple valleys</strong> (local minima), <strong>flat regions</strong>, or <strong>noisy slopes</strong></li>
+<li>Gradient descent can get stuck in a <strong>local minimum</strong>, or just settle somewhere “good enough”</li>
+</ul>
+
+<p>In practice, this usually isn’t a big problem. For many real-world tasks, getting to a <strong>low-loss</strong> solution (even if it&#39;s not the lowest possible) is good enough — and gradient descent gets us there surprisingly well.</p>
+
+<blockquote>
+<p>So while gradient descent doesn’t always find <em>the best</em>, it often finds something <strong>very useful</strong> — and it does it fast.</p>
+</blockquote>
+
+<h3 id="toc_24">Batch Gradient Descent</h3>
+
+<p>When we train a neural network using gradient descent, we need to compute how wrong the model is — the <strong>loss</strong> — and then use that to update the weights.</p>
+
+<p>But here’s an important question:</p>
+
+<blockquote>
+<p><strong>How much data should we use to compute that update?</strong></p>
+</blockquote>
+
+<p>There are actually a few different strategies, and they each have tradeoffs.</p>
+
+<h4 id="toc_25">1. Full-Batch Gradient Descent</h4>
+
+<p>This is the most straightforward idea:</p>
+
+<ul>
+<li>Use the <strong>entire training dataset</strong> to compute the average loss<br></li>
+<li>Then update the weights once, using the overall gradient</li>
+</ul>
+
+<h4 id="toc_26">2. Stochastic Gradient Descent (SGD)</h4>
+
+<p>At the opposite extreme, we can update the model using <strong>just one example at a time</strong>:</p>
+
+<ul>
+<li>Pick one training example<br></li>
+<li>Compute the loss and gradient<br></li>
+<li>Update the weights<br></li>
+<li>Repeat</li>
+</ul>
+
+<p>This is called <strong>stochastic gradient descent</strong> — &quot;stochastic&quot; meaning random. It updates the weights using <strong>noisy</strong>, fast updates.</p>
+
+<h4 id="toc_27">3. Mini-Batch Gradient Descent (the most common)</h4>
+
+<p>Stochastic Gradient Descent (SGD) updates the model using one training example at a time, which makes each update very fast. This can be a big advantage when working with large datasets. Because it&#39;s based on just a single example, SGD introduces some randomness (&quot;noise&quot;) into the updates — which can help the model escape local minimums but also makes training less stable. Full-batch gradient descent, on the other hand, uses the entire dataset to compute each update. This gives a very accurate gradient and makes learning more stable and predictable — but each update is much slower, and it requires a lot more memory. In practice, most modern training uses a compromise: <strong>mini-batch gradient descent</strong>, which combines the speed of SGD with the stability of full-batch.</p>
+
+<blockquote>
+<p><strong>Mini-batch gradient descent</strong> uses a small number of examples at a time — usually 32, 64, or 128.</p>
+</blockquote>
+
+<p>Each step works like this:</p>
+
+<ul>
+<li>Pick a small <strong>batch</strong> of examples (e.g. 64 messages)</li>
+<li>Compute the average loss and gradient for just that batch</li>
+<li>Update the weights</li>
+<li>Move to the next batch</li>
+</ul>
+
+<h3 id="toc_28">Epochs</h3>
+
+<p>When we say we’ve done one <strong>epoch</strong> of training, it means we’ve gone through the <strong>entire training dataset once</strong>. Training usually takes <strong>multiple epochs</strong>, so the model gets many chances to improve. Over time, the weights are refined to make better and better predictions.</p>
+
+<h2 id="toc_29">Deriving the Gradient of MSE Loss for Linear Regression</h2>
+
+<p>Let’s derive the gradient we need for training a linear regression model using gradient descent.</p>
+
+<h3 id="toc_30">Step 1: The Model</h3>
+
+<p>We start with the linear regression equation:</p>
+
+<p><strong>ŷ = w · x + b</strong></p>
+
+<p>Where:<br>
+- <code>x</code> is the input vector (a 1D tensor of features)<br>
+- <code>w</code> is the weight vector (same size as <code>x</code>)<br>
+- <code>b</code> is the bias (a scalar)<br>
+- <code>ŷ</code> is the predicted output (a scalar)</p>
+
+<h3 id="toc_31">Step 2: The Loss Function</h3>
+
+<p>We’ll use <strong>Mean Squared Error (MSE)</strong> as our loss function.<br>
+For a single training example:</p>
+
+<p><strong>L = (ŷ - y)²</strong></p>
+
+<p>Where:<br>
+- <code>ŷ = w · x + b</code> is the predicted value<br>
+- <code>y</code> is the true value from the training data</p>
+
+<p>We want to compute the gradients of <code>L</code> with respect to <code>w</code> and <code>b</code>.</p>
+
+<h3 id="toc_32">Step 3: Gradient with Respect to Weights (w)</h3>
+
+<p>We use the chain rule:</p>
+
+<p><strong>dL/dw = dL/dŷ · dŷ/dw</strong></p>
+
+<p>First:</p>
+
+<p><strong>dL/dŷ = 2(ŷ - y)</strong></p>
+
+<p>Then:</p>
+
+<p><strong>dŷ/dw = x</strong></p>
+
+<p>Putting it together:</p>
+
+<p><strong>dL/dw = 2(ŷ - y) · x</strong></p>
+
+<h3 id="toc_33">Step 4: Gradient with Respect to Bias (b)</h3>
+
+<p>Again, using the chain rule:</p>
+
+<p><strong>dL/db = dL/dŷ · dŷ/db</strong></p>
+
+<p>We already have:</p>
+
+<p><strong>dL/dŷ = 2(ŷ - y)</strong></p>
+
+<p>And:</p>
+
+<p><strong>dŷ/db = 1</strong></p>
+
+<p>So:</p>
+
+<p><strong>dL/db = 2(ŷ - y)</strong></p>
+
+<h3 id="toc_34">Final Gradient Equations</h3>
+
+<p>For one training example:</p>
+
+<ul>
+<li><p><strong>Gradient of the weights:</strong><br>
+<strong>∇w L = 2(ŷ - y) · x</strong></p></li>
+<li><p><strong>Gradient of the bias:</strong><br>
+<strong>∇b L = 2(ŷ - y)</strong></p></li>
+</ul>
+
+<p>These gradients tell us how to update the weights and bias in the direction that reduces the loss.</p>
+
+<h3 id="toc_35">Note on Averaging (for Mini-Batches)</h3>
+
+<p>If you&#39;re working with a <strong>batch of examples</strong>, you would average the gradients over the batch:</p>
+
+<ul>
+<li><strong>∇w L = average over batch of [2(ŷ - y) · x]</strong><br></li>
+<li><strong>∇b L = average over batch of [2(ŷ - y)]</strong></li>
+</ul>
+
+<p>This ensures that the update reflects the overall trend across the examples, not just a single case.</p>
+
+<h2 id="toc_36">Predicting Ice Cream Sales</h2>
+
+<p>Imagine you run an <strong>ice cream shop</strong>, and you’ve recorded your <strong>daily ice cream sales</strong> alongside the <strong>temperature</strong> on that day.</p>
+
+<p>We want to build a model that can predict <strong>ice cream sales (<code>y</code>)</strong> based on the <strong>temperature (<code>x</code>)</strong>.</p>
+
+<h3 id="toc_37">Dataset</h3>
+
+<p>We&#39;ll use a simple <strong>synthetic dataset</strong> that simulates our real-world scenario. The dataset is generated using this rough formula:</p>
+
+<div><pre><code class="language-none">y ≈ 126 + 13x + noise</code></pre></div>
+
+<ul>
+<li><code>x</code> is the temperature (in degrees Celsius), randomly sampled between 0 and 30<br></li>
+<li><code>y</code> is the number of ice cream cones sold, with some random noise added to simulate real-world variability<br></li>
+<li>The noise makes the relationship more realistic — it&#39;s not perfectly linear, just mostly linear</li>
+</ul>
+
+<p>This synthetic data allows us to:
+- Focus on the <strong>core ideas</strong> of linear regression
+- Keep the math and code simple
+- Easily <strong>visualize</strong> the data and the model, since it has only one feature</p>
+
+<p>We’ve wrapped the dataset in a small Python class called <code>IceCreamDataSet</code> that lets us generate and plot the data easily.</p>
+
+<div><pre><code class="language-python">import random
+import matplotlib.pyplot as plt
+
+random.seed(13)
+
+class IceCreamDataSet:
+
+  def __init__(self):
+    self.n = 100
+    self.x = [random.uniform(0,30) for _ in range(self.n)]
+    self.y = [round(max(0,126 + 13*xi + random.normalvariate(0,26))) for xi in self.x]
+
+  def plot_data(self):
+    plt.figure(figsize=(8,6))
+    plt.scatter(self.x,self.y)
+    plt.xlabel(&quot;Temperature (°C)&quot;)
+    plt.ylabel(&quot;Ice Cream Sales&quot;)
+    plt.title(&quot;Ice Cream Sales vs. Temperature&quot;)
+    plt.show()
+
+  def plot_model(self,model):
+    plt.figure(figsize=(8,6))
+    plt.scatter(self.x,self.y)
+    line_x = [min(self.x), max(self.x)]
+    line_y = [model.forward(xi) for xi in line_x]
+    plt.plot(line_x,line_y,color=&#39;red&#39;)
+    plt.xlabel(&quot;Temperature (°C)&quot;)
+    plt.ylabel(&quot;Ice Cream Sales&quot;)
+    plt.title(&quot;Model Prediction vs. Data&quot;)
+    plt.show()</code></pre></div>
+
+<p>Here, we create an instance of the synthetic dataset, simulating 100 days of ice cream sales based on daily temperature.</p>
+
+<div><pre><code class="language-python">dataset = IceCreamDataSet()</code></pre></div>
+
+<p>Let&#39;s show a scatterplot of the data, where each point represents one day&#39;s temperature and the corresponding number of ice cream cones sold.</p>
+
+<div><pre><code class="language-python">dataset.plot_data()</code></pre></div>
+
+<h3 id="toc_38">Building a Simple Linear Regression Model</h3>
+
+<p>Now that we have a dataset, we need a model to learn from it.</p>
+
+<p>We’ll create a simple <strong>linear regression model</strong> from scratch. The model will predict ice cream sales using this formula:</p>
+
+<div><pre><code class="language-none">ŷ = w * x + b</code></pre></div>
+
+<p>Where:</p>
+
+<ul>
+<li><code>x</code> is the input (temperature)</li>
+<li><code>ŷ</code> is the predicted output (sales)</li>
+<li><code>w</code> is the <strong>weight</strong> (slope), and <code>b</code> is the <strong>bias</strong> (intercept) — both are parameters the model will learn</li>
+</ul>
+
+<p>Here’s a class that defines the model and its two core operations:</p>
+
+<ul>
+<li><code>forward</code>: Makes a prediction</li>
+<li><code>backward</code>: Computes gradients of the loss with respect to <code>w</code> and <code>b</code>, using Mean Squared Error (MSE)</li>
+</ul>
+
+<div><pre><code class="language-python">class LinearModel:
+    &quot;&quot;&quot;
+    A simple linear regression model:
+    ŷ = w * x + b
+    &quot;&quot;&quot;
+
+    def __init__(self):
+        # Initialize weights and bias to zero
+        self.w = 0
+        self.b = 0
+
+    def forward(self, x):
+        &quot;&quot;&quot;
+        Predict the output ŷ given input x.
+        &quot;&quot;&quot;
+        return self.w * x + self.b
+
+    def backward(self, x, y):
+        &quot;&quot;&quot;
+        Compute gradients of the loss with respect to w and b
+        using Mean Squared Error (MSE) for a single example.
+        &quot;&quot;&quot;
+        y_pred = self.forward(x)
+        error = y_pred - y
+        dw = 2 * error * x   # gradient w.r.t. w
+        db = 2 * error       # gradient w.r.t. b
+        return dw, db</code></pre></div>
+
+<p>Let&#39;s use the class to create a model. </p>
+
+<div><pre><code class="language-python">model = LinearModel()</code></pre></div>
+
+<p>Let&#39;s take a look at the initial weights:</p>
+
+<div><pre><code class="language-python">dataset.plot_model(model)</code></pre></div>
+
+<h4 id="toc_39">Why Is It Called &quot;Backward&quot;?</h4>
+
+<p>The function that computes the gradient is called <code>backward</code> because it’s about working <strong>backward from the error</strong> to figure out how to adjust the model.</p>
+
+<p>In the <strong>forward</strong> step, the model takes an input (like temperature), runs it through the equation (<code>ŷ = w * x + b</code>), and produces a prediction.  </p>
+
+<p>Then we compare that prediction to the true answer and calculate how wrong it was — the <strong>loss</strong>.</p>
+
+<p>In the <strong>backward</strong> step, we take that loss and ask:  </p>
+
+<blockquote>
+<p><em>How should we change the weights and bias to reduce this error next time?</em></p>
+</blockquote>
+
+<p>To answer that, we work backward through the equation, computing how much each part (each parameter) contributed to the mistake. This is the start of a process called <strong>backpropagation</strong> — short for <em>backward propagation of errors</em>.</p>
+
+<p>In more complex networks, this process involves the <strong>chain rule</strong> from calculus, which allows us to pass gradients backward through layers of functions.<br>
+We’ll see that later — but even now, you’re seeing the core idea:  </p>
+
+<blockquote>
+<p><em>To learn, a model must look at the error and trace it back to the parts that caused it.</em></p>
+</blockquote>
+
+<h3 id="toc_40">Training the Model (One Example at a Time)</h3>
+
+<p>Now that we have a model and a dataset, let’s train the model using <strong>gradient descent</strong>.</p>
+
+<p>We&#39;ll use a very simple form of training called <strong>stochastic gradient descent</strong>. That means we’ll update the model <strong>one example at a time</strong> — using just a single <code>(x, y)</code> pair per update.</p>
+
+<p>For each training example:</p>
+
+<ol>
+<li>Make a prediction using the model<br></li>
+<li>Compare it to the actual value to get the error<br></li>
+<li>Use the <code>backward()</code> method to compute the gradients<br></li>
+<li>Adjust the model’s parameters (<code>w</code> and <code>b</code>) to reduce the error</li>
+</ol>
+
+<p>To visualize the training process, we’ll also plot the model’s current line after each epoch, and pause briefly so we can see it evolve.</p>
+
+<div><pre><code class="language-python">import time
+from IPython.display import clear_output
+
+# Set the learning rate — controls how big each update is
+learning_rate = 0.001
+
+# Train for 100 passes (epochs) over the dataset
+for epoch in range(100):
+    for i in range(dataset.n):
+        # Get one example (temperature and sales)
+        x = dataset.x[i]
+        y = dataset.y[i]
+
+        # Forward pass: make a prediction
+        y_pred = model.forward(x)
+
+        # Backward pass: compute gradients
+        dw, db = model.backward(x, y)
+
+        # Update weights and bias using gradient descent
+        model.w -= learning_rate * dw
+        model.b -= learning_rate * db
+
+    # Clear previous plot/output
+    clear_output(wait=True)
+
+    # Print current progress
+    print(&quot;Epoch:&quot;, epoch)
+    print(&quot;Learned weight (w):&quot;, model.w)
+    print(&quot;Learned bias (b):&quot;, model.b)
+
+    # Plot the current model line
+    dataset.plot_model(model)
+
+    # Pause so we can see the update before moving on
+    time.sleep(0.5)</code></pre></div>
+
+<h2 id="toc_41">Multiclass Logistic Regression</h2>
+
+<p>So far, we’ve looked at <strong>linear regression</strong>, where the model predicts a <strong>single number</strong>. Now let’s extend this idea to a classification task, where the goal is to predict <strong>which category</strong> something belongs to.</p>
+
+<h3 id="toc_42">From Regression to Classification</h3>
+
+<p>In classification, instead of predicting a single continuous value, we want to predict one of several <strong>classes</strong>. </p>
+
+<p>For example, we might want to classify a customer email as:</p>
+
+<ul>
+<li><code>0</code> = Billing<br></li>
+<li><code>1</code> = Sales<br></li>
+<li><code>2</code> = Tech Support</li>
+</ul>
+
+<h3 id="toc_43">Outputs as a Vector</h3>
+
+<p>Instead of outputting a single number <code>ŷ</code>, the model now outputs a <strong>vector of values</strong> — one for each class.</p>
+
+<p>For example, the model might output a vector like this:</p>
+
+<div><pre><code class="language-none">ŷ = [0.1, 0.7, 0.2]</code></pre></div>
+
+<p>We can interpret this as:</p>
+
+<ul>
+<li>10% chance it&#39;s Billing<br></li>
+<li>70% chance it&#39;s Sales<br></li>
+<li>20% chance it&#39;s Tech Support<br></li>
+</ul>
+
+<p>And we would classify this example as <strong>Sales</strong>, since it has the highest score.</p>
+
+<h3 id="toc_44">Model Equation</h3>
+
+<p>Our model equation is now:</p>
+
+<div><pre><code class="language-none">ŷ = softmax(w · x + b)</code></pre></div>
+
+<p>Let’s break it down:</p>
+
+<ul>
+<li><code>x</code> is the <strong>input vector</strong> (with <code>n</code> features)</li>
+<li><code>w</code> is the <strong>weight matrix</strong>, with shape <code>k × n</code><br>
+(one row of weights for each of the <code>k</code> classes)</li>
+<li><code>b</code> is the <strong>bias vector</strong>, with one bias per class</li>
+<li>The result <code>w · x + b</code> is a <strong>vector of raw scores</strong> (called <strong>logits</strong>)</li>
+<li>We apply a function called <strong>softmax</strong> to turn those scores into <strong>probabilities</strong></li>
+</ul>
+
+<h3 id="toc_45">Softmax: From Scores to Probabilities</h3>
+
+<p>Softmax is a type of <strong>activation function</strong> — a function applied at the output of a model to shape or interpret the result in some useful way.</p>
+
+<p>The softmax function takes in a vector of raw scores and returns a vector of probabilities that sum to 1. It’s defined as:</p>
+
+<div><pre><code class="language-none">softmax(zᵢ) = exp(zᵢ) / Σⱼ exp(zⱼ)</code></pre></div>
+
+<p>Where:
+- <code>zᵢ</code> is the raw score for class <code>i</code> (the <code>i</code>th element of the logits vector)
+- <code>exp(zᵢ)</code> makes all the scores positive and amplifies larger ones
+- The denominator ensures the outputs sum to 1</p>
+
+<blockquote>
+<p>This lets us interpret the outputs as a <strong>probability distribution</strong> over the classes.</p>
+</blockquote>
+
+<h3 id="toc_46">Why Is <code>w</code> a Matrix?</h3>
+
+<p>In linear regression, we had:</p>
+
+<div><pre><code class="language-none">ŷ = w · x + b</code></pre></div>
+
+<p>Here, <code>w</code> was a vector (1D), and <code>ŷ</code> was a single number.</p>
+
+<p>But in classification, we want <strong>one output per class</strong>, so we need <strong>a different set of weights for each class</strong>. That means <code>w</code> becomes a <strong>matrix</strong>:</p>
+
+<ul>
+<li>Each <strong>row</strong> of <code>w</code> corresponds to one class</li>
+<li>The dot product between that row and the input <code>x</code> gives a <strong>score</strong> for that class</li>
+</ul>
+
+<p>In effect, it’s like running <strong>multiple linear regressions in parallel</strong> — one for each class — and then using softmax to pick the most likely one.</p>
+
+<h3 id="toc_47">Summary</h3>
+
+<p>Multiclass logistic regression is a natural extension of linear regression:</p>
+
+<ul>
+<li>We go from a <strong>single output</strong> to a <strong>vector of outputs</strong></li>
+<li>We go from a <strong>weight vector</strong> to a <strong>weight matrix</strong></li>
+<li>We apply a <strong>nonlinear activation function</strong> (softmax) to interpret the outputs as probabilities</li>
+</ul>
+
+<h2 id="toc_48">Deriving the Gradient: Multiclass Logistic Regression</h2>
+
+<p>We’ll now derive the gradient for a <strong>softmax classifier</strong> trained with <strong>cross-entropy loss</strong>.</p>
+
+<h3 id="toc_49">Model Output</h3>
+
+<p>The model computes:</p>
+
+<div><pre><code class="language-none">z = w · x + b         # raw scores (logits)
+ŷ = softmax(z)        # predicted probabilities</code></pre></div>
+
+<p>Where:
+- <code>x</code> is the input vector (length <code>n</code>)
+- <code>w</code> is a weight matrix with shape <code>k × n</code> (k = number of classes)
+- <code>b</code> is a bias vector (length <code>k</code>)
+- <code>ŷ</code> is a vector of class probabilities (length <code>k</code>)</p>
+
+<p>The softmax function for class <code>i</code> is:</p>
+
+<div><pre><code class="language-none">ŷᵢ = exp(zᵢ) / sum_j exp(zⱼ)</code></pre></div>
+
+<h3 id="toc_50">Loss Function: Cross-Entropy</h3>
+
+<p>If the true class label is <code>y</code> (an integer from <code>0</code> to <code>k-1</code>), the loss is:</p>
+
+<div><pre><code class="language-none">L = -log(ŷ_y)        # negative log of the predicted probability for the true class</code></pre></div>
+
+<h3 id="toc_51">Goal</h3>
+
+<p>We want to compute the gradients:</p>
+
+<ul>
+<li>∂L/∂wᵢⱼ — how the loss changes with respect to each weight</li>
+<li>∂L/∂bᵢ  — how the loss changes with respect to each bias</li>
+</ul>
+
+<h3 id="toc_52">Gradient of the Loss</h3>
+
+<p>We apply the chain rule. The derivative of the loss with respect to the logit <code>zᵢ</code> is:</p>
+
+<div><pre><code class="language-none">∂L/∂zᵢ = ŷᵢ - 1   if i == y
+∂L/∂zᵢ = ŷᵢ       otherwise</code></pre></div>
+
+<p>This tells us that:</p>
+
+<ul>
+<li>For the <strong>correct class</strong>, we subtract 1 from the predicted probability</li>
+<li>For all other classes, the gradient is just the predicted probability</li>
+</ul>
+
+<h3 id="toc_53">Final Gradients</h3>
+
+<p>Now that we have ∂L/∂zᵢ, we compute the gradients with respect to the weights and biases:</p>
+
+<div><pre><code class="language-none">∂L/∂wᵢⱼ = (ŷᵢ - 1[y = i]) * xⱼ
+∂L/∂bᵢ  = (ŷᵢ - 1[y = i])</code></pre></div>
+
+<p>Where <code>1[y = i]</code> is 1 if <code>i</code> is the correct class, otherwise 0.</p>
+
+<h3 id="toc_54">Summary</h3>
+
+<ul>
+<li>The <strong>error</strong> for each class is:<br>
+<code>
+errorᵢ = ŷᵢ - 1[y = i]
+</code></li>
+<li>We multiply that error by each input feature to get the gradient:
+<code>
+dwᵢⱼ = errorᵢ * xⱼ
+dbᵢ  = errorᵢ
+</code></li>
+</ul>
+
+<p>This gives us the gradients we need to perform gradient descent on a multiclass softmax classifier.</p>
+
+<h2 id="toc_55">SMS Spam Collection</h2>
+
+<p>To see how logistic regressions work, let&#39;s try building one. We&#39;ll use the same dataset we used last week. </p>
+
+<h3 id="toc_56">Dataset, Tokenizer, and Vectorizer</h3>
+
+<p>First, we&#39;ll download the data and split it into test and train datasets.</p>
+
+<div><pre><code class="language-python"># Download the dataset
+!wget https://wd13ca.github.io/BAN200-Summer-2025/SMSSpamCollection.txt
+
+# Load it into a pandas DataFrame
+import pandas as pd
+
+df = pd.read_csv(&quot;SMSSpamCollection.txt&quot;, sep=&quot;\t&quot;, header=None, names=[&quot;label&quot;, &quot;message&quot;])
+
+from sklearn.model_selection import train_test_split
+
+# Split the dataset: 80% training, 20% testing
+train_df, test_df = train_test_split(df, test_size=0.2, random_state=42)
+
+# Show the number of messages in each set
+print(&quot;Training messages:&quot;, len(train_df))
+print(&quot;Test messages:&quot;, len(test_df))</code></pre></div>
+
+<p>Next, we&#39;ll recreate our tokenizer.</p>
+
+<div><pre><code class="language-python">import re
+from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS
+
+def tokenize(text):
+    lowercase_text = text.lower()
+    tokens = re.findall(r&#39;\b\w+\b&#39;, lowercase_text)
+    return [t for t in tokens if t not in ENGLISH_STOP_WORDS]</code></pre></div>
+
+<p>We&#39;ll also need a vectorizer. Let&#39;s use the one from Week 3. </p>
+
+<div><pre><code class="language-python">from math import log
+
+N = len(train_df) # total number of documents
+
+doc_freq = {} # document frequency for each word
+for _, row in train_df.iterrows():
+  tokens = tokenize(row[&quot;message&quot;])
+  unique_tokens = set(tokens) # only count once per document
+  for token in unique_tokens:
+      doc_freq[token] = doc_freq.get(token, 0) + 1
+
+idf_dict = {}
+for token, df in doc_freq.items():
+    idf_dict[token] = log(N / df)
+
+def vectorize_tf_idf(tokens):
+    &quot;&quot;&quot;
+    Takes a list of tokens and an IDF dictionary,
+    returns a dictionary representing the TF-IDF vector.
+    &quot;&quot;&quot;
+    tf = {}
+    for token in tokens:
+        if token in tf:
+            tf[token] += 1
+        else:
+            tf[token] = 1
+
+    tf_idf = {}
+    for token, freq in tf.items():
+        if token in idf_dict:
+            tf_idf[token] = freq * idf_dict[token]
+
+    return tf_idf</code></pre></div>
+
+<h3 id="toc_57">Defining a Model Class</h3>
+
+<p>To build a multiclass classification model from scratch, we’ll use <strong>multiclass logistic regression</strong> with:</p>
+
+<ul>
+<li>A <strong>softmax activation function</strong> to produce probabilities</li>
+<li>A <strong>cross-entropy loss</strong> to measure how wrong the predictions are</li>
+<li><strong>Gradient descent</strong> to update the weights and bias</li>
+</ul>
+
+<p>We’ll define a Python class called <code>BoWLogisticClassifier</code> to encapsulate everything: prediction (<code>forward</code>), gradient computation (<code>backward</code>), and model parameters (<code>w</code> and <code>b</code>).</p>
+
+<div><pre><code class="language-python">import math
+
+class BoWLogisticClassifier:
+    &quot;&quot;&quot;
+    A sparse multiclass logistic regression model with softmax activation.
+    Input vectors x are sparse dictionaries: {feature: value}.
+    &quot;&quot;&quot;
+
+    def __init__(self, vocab, classes):
+        &quot;&quot;&quot;
+        Initialize model with zero weights and zero biases.
+        - vocab: a set of input feature names (e.g., words)
+        - classes: a set of class labels (e.g., &#39;spam&#39;, &#39;ham&#39;)
+        &quot;&quot;&quot;
+        self.vocab = sorted(vocab)
+        self.classes = sorted(classes)
+        self.input_dim = len(self.vocab)
+        self.output_dim = len(self.classes)
+
+        # Map vocab and classes to index
+        self.vocab_index = {word: i for i, word in enumerate(self.vocab)}
+        self.class_index = {label: i for i, label in enumerate(self.classes)}
+
+        # Initialize weights and biases
+        self.w = [[0.0 for _ in range(self.input_dim)] for _ in range(self.output_dim)]
+        self.b = [0.0 for _ in range(self.output_dim)]
+
+    def softmax(self, logits):
+        &quot;&quot;&quot;
+        Apply softmax to logits for numerical stability.
+        &quot;&quot;&quot;
+        max_logit = max(logits)
+        exp_scores = [math.exp(z - max_logit) for z in logits]
+        sum_exp = sum(exp_scores)
+        return [s / sum_exp for s in exp_scores]
+
+    def forward(self, x_sparse):
+        &quot;&quot;&quot;
+        Compute prediction for sparse input x_sparse: dict {feature: value}.
+        Returns probability distribution over classes.
+        &quot;&quot;&quot;
+        logits = []
+        for k in range(self.output_dim):
+            score = self.b[k]
+            for word, value in x_sparse.items():
+                if word in self.vocab_index:
+                    j = self.vocab_index[word]
+                    score += self.w[k][j] * value
+            logits.append(score)
+        return self.softmax(logits)
+
+    def backward(self, x_sparse, y_true_label):
+        &quot;&quot;&quot;
+        Compute gradients w.r.t weights and biases using cross-entropy loss.
+        - x_sparse: input features as dict {feature: value}
+        - y_true_label: true class label (e.g., &#39;spam&#39;)
+
+        Returns:
+            dw: sparse gradient of weights (dict of dicts)
+            db: dense gradient of biases (list)
+        &quot;&quot;&quot;
+        y_true = self.class_index[y_true_label]
+        y_pred = self.forward(x_sparse)
+
+        # Gradients
+        dw = {k: {} for k in range(self.output_dim)}
+        db = [0.0 for _ in range(self.output_dim)]
+
+        for k in range(self.output_dim):
+            error = y_pred[k] - (1 if k == y_true else 0)
+            for word, value in x_sparse.items():
+                if word in self.vocab_index:
+                    j = self.vocab_index[word]
+                    dw[k][word] = error * value
+            db[k] = error
+
+        return dw, db</code></pre></div>
+
+<h3 id="toc_58">Training the Classifier</h3>
+
+<p>Now let’s train our logistic regression model using gradient descent.</p>
+
+<div><pre><code class="language-python">from collections import defaultdict
+import random
+
+# Build vocabulary and class labels from training set
+all_tokens = [token for message in train_df[&quot;message&quot;] for token in tokenize(message)]
+vocab = set(all_tokens)
+classes = set(train_df[&quot;label&quot;])
+
+# Initialize model
+model = BoWLogisticClassifier(vocab=vocab, classes=classes)
+
+# Prepare training data as (x_sparse, y_label) pairs
+train_data = []
+for _, row in train_df.iterrows():
+    tokens = tokenize(row[&quot;message&quot;])
+    x_sparse = vectorize_tf_idf(tokens)
+    y_label = row[&quot;label&quot;]
+    train_data.append((x_sparse, y_label))
+
+# Training loop
+def train(model, data, lr=0.1, epochs=5):
+    for epoch in range(epochs):
+        random.shuffle(data)
+        total_loss = 0.0
+
+        for x_sparse, y_label in data:
+            y_true_idx = model.class_index[y_label]
+            y_pred = model.forward(x_sparse)
+
+            # Cross-entropy loss
+            loss = -math.log(y_pred[y_true_idx] + 1e-12)
+            total_loss += loss
+
+            # Compute gradients
+            dw, db = model.backward(x_sparse, y_label)
+
+            # Update weights and biases
+            for k in range(model.output_dim):
+                for word, grad in dw[k].items():
+                    j = model.vocab_index[word]
+                    model.w[k][j] -= lr * grad
+                model.b[k] -= lr * db[k]
+
+        avg_loss = total_loss / len(data)
+        print(f&quot;Epoch {epoch + 1}: Average Loss = {avg_loss:.4f}&quot;)
+
+# Train the model
+train(model, train_data, lr=0.1, epochs=10)</code></pre></div>
+
+<h3 id="toc_59">Predict Function</h3>
+
+<p>Let&#39;s create a <code>predict()</code> function that takes an unlabeled message and returns a predicted label:</p>
+
+<div><pre><code class="language-python">def predict(message, model, tokenizer, vectorizer):
+    &quot;&quot;&quot;
+    Predict the class label for a raw input message (string).
+    - message: the input message (e.g., &quot;Free entry now!!!&quot;)
+    - tokenizer: a function that tokenizes the message
+    - vectorizer: a function that turns tokens into sparse vector
+
+    Returns:
+        predicted_label: the class label with highest probability
+    &quot;&quot;&quot;
+    tokens = tokenizer(message)
+    x_sparse = vectorizer(tokens)
+    probs = model.forward(x_sparse)
+    predicted_idx = probs.index(max(probs))
+    return model.classes[predicted_idx]
+</code></pre></div>
+
+<h3 id="toc_60">Evaluate Model Accuracy on the Test Set</h3>
+
+<p>Now that we have a working <code>predict()</code> function, we’ll apply it to every message in the test set.</p>
+
+<p>Then we’ll compare the predicted labels to the actual labels and calculate the model’s accuracy.</p>
+
+<div><pre><code class="language-python"># Predict all messages in the test set
+predictions = []
+
+for _, row in test_df.iterrows():
+    message = row[&quot;message&quot;]
+    prediction = predict(message,model,tokenize,vectorize_tf_idf)
+    predictions.append(prediction)
+
+# Actual labels
+actual = test_df[&quot;label&quot;].tolist()
+
+# Compute accuracy
+correct = sum([pred == truth for pred, truth in zip(predictions, actual)])
+accuracy = correct / len(test_df)
+
+print(f&quot;Accuracy: {accuracy:.2%}&quot;)</code></pre></div>
+
+<h3 id="toc_61">Confusion Matrix</h3>
+
+<p>Now let&#39;s take a look at the confusion matrix:</p>
+
+<div><pre><code class="language-python">from sklearn.metrics import confusion_matrix
+
+# Generate confusion matrix
+cm = confusion_matrix(actual, predictions, labels=[&quot;spam&quot;, &quot;ham&quot;])
+
+# Display as a readable table
+print(&quot;Confusion Matrix:&quot;)
+print(f&quot;               Predicted&quot;)
+print(f&quot;             | spam | ham &quot;)
+print(f&quot;Actual spam  |  {cm[0][0]:4} | {cm[0][1]:4}&quot;)
+print(f&quot;Actual ham   |  {cm[1][0]:4} | {cm[1][1]:4}&quot;)</code></pre></div>
+
+<h3 id="toc_62">Precision, Recall, and F1-Score</h3>
+
+<p>Here are the precision, recall, and F1-scores:</p>
+
+<div><pre><code class="language-python">from sklearn.metrics import classification_report
+
+print(classification_report(actual, predictions, target_names=[&quot;spam&quot;, &quot;ham&quot;]))</code></pre></div>
+
+<h3 id="toc_63">Error Analysis</h3>
+
+<p>Let’s look at some misclassified messages — where the model&#39;s prediction didn&#39;t match the true label.</p>
+
+<p>This helps us understand:</p>
+
+<ul>
+<li>Where the model is confused</li>
+<li>Whether certain types of spam are being missed</li>
+<li>If it’s too aggressive (labeling ham as spam)</li>
+</ul>
+
+<div><pre><code class="language-python"># Show the first 10 misclassified messages
+for i in range(len(test_df)):
+    if predictions[i] != actual[i]:
+        print(f&quot;\n--- Misclassified Message ---&quot;)
+        print(f&quot;Actual:    {actual[i]}&quot;)
+        print(f&quot;Predicted: {predictions[i]}&quot;)
+        print(f&quot;Message:   {test_df.iloc[i][&#39;message&#39;]}&quot;)</code></pre></div>
+
+<h2 id="toc_64">Logistic Regression vs. Naive Bayes: Why Logistic Regression Sometimes Performs Worse</h2>
+
+<p>You may have noticed that our <strong>logistic regression model</strong> doesn&#39;t perform quite as well as the <strong>Naive Bayes model</strong> on the SMS Spam Collection dataset. This might seem surprising at first — after all, logistic regression is more flexible and learned its weights directly from the data. So what’s going on?</p>
+
+<h3 id="toc_65">Why Logistic Regression Might Underperform</h3>
+
+<p>Here are a few possible reasons:</p>
+
+<ol>
+<li><p><strong>Naive Bayes is surprisingly strong for text classification</strong><br>
+Even though it makes strong independence assumptions (i.e. that words are independent given the class), those assumptions actually hold <em>reasonably well</em> in many text datasets. This makes Naive Bayes hard to beat, especially on short documents like SMS messages.</p></li>
+<li><p><strong>Logistic regression is more sensitive to sparse features</strong><br>
+Logistic regression must learn one weight per feature, and when the vocabulary is large and many features appear rarely (as in text), it can be harder for the model to learn stable estimates — especially with limited training data.</p></li>
+<li><p><strong>No regularization in our implementation</strong><br>
+Our logistic regression model is very basic: it doesn’t use techniques like <strong>L2 regularization</strong>, which can prevent overfitting and improve generalization — especially with high-dimensional sparse inputs like TF-IDF vectors.</p></li>
+<li><p><strong>Naive Bayes builds in strong priors</strong><br>
+Naive Bayes directly incorporates class priors (how common spam vs. ham messages are), and it’s especially effective when those priors are unbalanced. Logistic regression can learn this too, but it requires more data and care.</p></li>
+</ol>
+
+<h3 id="toc_66">Why Learn Logistic Regression Anyway?</h3>
+
+<p>Even though Naive Bayes outperforms logistic regression <em>here</em>, logistic regression is still <strong>worth learning — and essential going forward</strong>:</p>
+
+<ul>
+<li>It introduces the idea of <strong>learning weights from data</strong>, not from counts or rules<br></li>
+<li>It teaches the concept of <strong>gradient descent</strong>, which we’ll use to train more complex models<br></li>
+<li>It prepares us for <strong>deep learning</strong>, where logistic regression is effectively the <strong>final layer</strong> of most neural networks used for classification<br></li>
+<li>It scales better to complex, high-dimensional data once regularization and optimization improvements are added</li>
+</ul>
+
+<blockquote>
+<p><strong>Key takeaway:</strong><br>
+Logistic regression might not win on this dataset — but it’s a critical stepping stone toward more powerful and general models, like deep neural networks and transformers.</p>
+</blockquote>
+
+<h2 id="toc_67">Summary</h2>
+
+<p>This week, we explored the building blocks of modern neural networks and machine learning through hands-on implementations and intuitive explanations:</p>
+
+<ul>
+<li>We introduced <strong>artificial neural networks</strong> as powerful pattern-matching systems</li>
+<li>We learned how <strong>tensors</strong> serve as the basic data structure for neural models</li>
+<li>We re-framed <strong>linear regression</strong> as a single-layer neural network</li>
+<li>We studied <strong>loss functions</strong> — especially <strong>mean squared error (MSE)</strong> — to measure how wrong a model is</li>
+<li>We implemented <strong>gradient descent</strong>, the algorithm that adjusts model weights to reduce error</li>
+<li>We trained a model to predict <strong>ice cream sales from temperature</strong>, step by step</li>
+<li>We extended linear models to <strong>multiclass classification</strong> with <strong>softmax</strong> and <strong>cross-entropy loss</strong></li>
+<li>We built a complete <strong>logistic regression classifier</strong> for spam detection using sparse TF-IDF vectors</li>
+</ul>
+
+<p>Even though our logistic regression model didn’t outperform Naive Bayes on this dataset, it marks an important transition: we are now building models that <strong>learn directly from data</strong>, laying the foundation for deep learning and neural architectures we’ll explore in future weeks.</p>
+
+<h2 id="toc_68">Exercises</h2>
+
+<p>Try the following exercises to reinforce this week’s concepts:</p>
+
+<ol>
+<li><p><strong>Manual Prediction</strong><br>
+Using the linear regression example from class, compute the prediction for a new house with features:<br>
+<code>x₁ = 1500</code>, <code>x₂ = 4</code>, <code>x₃ = 0</code><br>
+Use the same weights as in the house price example.</p></li>
+<li><p><strong>Derive the Gradient</strong><br>
+Walk through the derivation of the MSE gradient for a single data point using the chain rule.<br>
+Explain what each part means in plain English.</p></li>
+<li><p><strong>Experiment with Learning Rate</strong><br>
+Modify the ice cream training code to try different learning rates. What happens if you set it to <code>0.0001</code> or <code>0.1</code>?</p></li>
+<li><p><strong>Inspect the Weights</strong><br>
+Print the 10 largest and smallest weights from your logistic regression model.<br>
+What kinds of words are getting high/low weights?</p></li>
+<li><p><strong>Backpropagation Reflection</strong><br>
+In your own words, explain why the <code>.backward()</code> function is called &quot;backward&quot;.<br>
+What’s being traced backward, and why is that important?</p></li>
+<li><p><strong>Try a New Dataset</strong><br>
+Replace the SMS spam dataset with a small custom dataset (e.g., short labeled tweets or comments) and try retraining the logistic regression model.</p></li>
+</ol>
+
+<h2 id="toc_69">Group Project Reminder</h2>
+
+<p>Each group must meet with me to discuss their Project Proposal. Meetings will take place during the Week 7 class. Not all members of the group need to attend. If no one from your group is able to attend during class time, please email me by June 8 to make an accommodation.</p>
+
+
+
+<script type="text/x-mathjax-config">
+(function () {
+
+MathJax.Hub.Config({
+	'showProcessingMessages': false,
+	'messageStyle': 'none'
+});
+
+if (typeof MathJaxListener !== 'undefined') {
+	MathJax.Hub.Register.StartupHook('End', function () {
+		MathJaxListener.invokeCallbackForKey_('End');
+	});
+}
+
+})();
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+</body>
+
+</html>
