@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Week 9 Lecture Notes</title>
+
+
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb
+}
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+  body {
+    padding: 2cm; 
+  }
+}
+</style>
+
+
+</head>
+
+<body>
+
+<h1 id="toc_0">Week 9 Lecture Notes</h1>
+
+<h2 id="toc_1">Review: Linear and Logistic Regression</h2>
+
+<p>Before we move on to neural networks, let’s take a step back and review the models we&#39;ve built so far — <strong>linear regression</strong> and <strong>logistic regression</strong>.</p>
+
+<p>These two models illustrate a powerful general recipe for building machine learning systems:</p>
+
+<h3 id="toc_2">The Four Ingredients of a Model</h3>
+
+<ol>
+<li><strong>Data</strong> — What are the inputs and outputs?</li>
+<li><strong>Architecture</strong> — What kind of model are we using? (e.g., linear function, softmax layer)</li>
+<li><strong>Loss Function</strong> — How do we measure how wrong the predictions are?</li>
+<li><strong>Training Algorithm</strong> — How do we improve the model? (usually with gradient descent)</li>
+</ol>
+
+<h3 id="toc_3">Linear Regression</h3>
+
+<p><strong>Goal</strong>: Predict a single number (e.g., a house price)</p>
+
+<h4 id="toc_4">1. Data</h4>
+
+<ul>
+<li>Input: vector <code>x</code> of features (e.g., size, location)<br></li>
+<li>Output: scalar <code>y</code> (e.g., price)</li>
+</ul>
+
+<h4 id="toc_5">2. Architecture</h4>
+
+<p>A simple linear model:</p>
+
+<div><pre><code class="language-none">ŷ = w · x + b</code></pre></div>
+
+<p>Where:
+- <code>w</code> is a weight vector<br>
+- <code>b</code> is a scalar bias<br>
+- <code>ŷ</code> is the predicted value</p>
+
+<h4 id="toc_6">3. Loss Function</h4>
+
+<p>We use <strong>Mean Squared Error (MSE)</strong>:</p>
+
+<div><pre><code class="language-none">L = (ŷ - y)²</code></pre></div>
+
+<h4 id="toc_7">4. Training Algorithm</h4>
+
+<p>Use gradient descent to minimize the loss by updating <code>w</code> and <code>b</code>.</p>
+
+<h3 id="toc_8">Logistic Regression</h3>
+
+<p><strong>Goal</strong>: Predict a <strong>class</strong>, not a number</p>
+
+<h4 id="toc_9">1. Data</h4>
+
+<ul>
+<li>Input: vector <code>x</code> of features (e.g., tokenized message)<br></li>
+<li>Output: vector <code>y</code> of class labels</li>
+</ul>
+
+<h4 id="toc_10">2. Architecture</h4>
+
+<p>A linear model plus an activation function.</p>
+
+<p><strong>Binary Classification:</strong></p>
+
+<div><pre><code class="language-none">z = w · x + b  
+ŷ = sigmoid(z)</code></pre></div>
+
+<p><strong>Multiclass Classification:</strong></p>
+
+<div><pre><code class="language-none">z = w · x + b  
+ŷ = softmax(z)</code></pre></div>
+
+<p>Where:
+- <code>w</code> is now a <strong>matrix</strong> (one row of weights per class)<br>
+- <code>ŷ</code> is a <strong>vector of probabilities</strong>, one per class
+- <code>softmax</code> or <code>sigmoid</code> is the activation function</p>
+
+<h4 id="toc_11">3. Loss Function</h4>
+
+<p>We use <strong>Cross-Entropy Loss</strong>:</p>
+
+<div><pre><code class="language-none">L = -log(ŷ_y)</code></pre></div>
+
+<p>Where <code>ŷ_y</code> is the predicted probability for the true class <code>y</code>.</p>
+
+<h4 id="toc_12">4. Training Algorithm</h4>
+
+<p>Use gradient descent to minimize the loss by updating <code>w</code> and <code>b</code>.</p>
+
+<h2 id="toc_13">From Logistic Regression to Neural Networks</h2>
+
+<p>So far, we’ve seen how a <strong>logistic regression model</strong> can take an input vector <code>x</code>, apply a linear transformation, and then use <strong>softmax</strong> to produce a prediction.</p>
+
+<p>But what if the data isn’t linearly separable? What if we want the model to learn <strong>interactions between features</strong>, or <strong>nonlinear patterns</strong>?</p>
+
+<p>To solve that, we introduce the next step in our journey:</p>
+
+<p><strong>Multi-Layer Networks (Neural Networks)</strong></p>
+
+<h3 id="toc_14">Key Idea</h3>
+
+<p>Add <strong>layers</strong> of computation between the input and the output.</p>
+
+<p>These layers apply <strong>nonlinear functions</strong> to the data — giving the model more flexibility and power to learn complex patterns.</p>
+
+<h3 id="toc_15">Neural Network Architecture</h3>
+
+<p>The simplest kind of neural network is called a <strong>feedforward network</strong> or <strong>multi-layer perceptron (MLP)</strong>.</p>
+
+<p>It looks like this:</p>
+
+<div><pre><code class="language-none">input x
+   ↓
+Linear: z₁ = W₁ · x + b₁
+   ↓
+Nonlinearity: h = ReLU(z₁)
+   ↓
+Linear: z₂ = W₂ · h + b₂
+   ↓
+Softmax: ŷ = softmax(z₂)</code></pre></div>
+
+<p>Each step transforms the data a bit more, allowing the model to build up increasingly abstract representations.</p>
+
+<h3 id="toc_16">Hidden Layers</h3>
+
+<p>A <strong>hidden layer</strong> is any layer that comes between the input and the output.</p>
+
+<ul>
+<li>It has its own weights and biases (<code>W₁</code>, <code>b₁</code>)</li>
+<li>It applies a <strong>nonlinear activation function</strong> like <strong>ReLU</strong>, <strong>tanh</strong>, or <strong>sigmoid</strong></li>
+<li>It produces a new internal representation <code>h</code>, which becomes the input to the next layer</li>
+</ul>
+
+<h3 id="toc_17">ReLU Activation Function</h3>
+
+<p>One of the most popular activation functions is <strong>ReLU (Rectified Linear Unit)</strong>:</p>
+
+<div><pre><code class="language-none">ReLU(z) = max(0, z)</code></pre></div>
+
+<p>Why ReLU?</p>
+
+<ul>
+<li>It introduces <strong>nonlinearity</strong>, so the model can learn more than just lines or planes</li>
+<li>It&#39;s <strong>simple to compute</strong></li>
+<li>It helps with <strong>gradient flow</strong> in deeper networks</li>
+</ul>
+
+<h3 id="toc_18">Final Layer: Softmax</h3>
+
+<p>As before, we use <strong>softmax</strong> at the output to turn raw scores into probabilities:</p>
+
+<div><pre><code class="language-none">ŷ = softmax(W₂ · h + b₂)</code></pre></div>
+
+<p>Where:</p>
+
+<ul>
+<li><code>h</code> is the hidden layer output<br></li>
+<li><code>W₂</code>, <code>b₂</code> are the weights and biases of the final layer<br></li>
+<li><code>ŷ</code> is a probability distribution over classes</li>
+</ul>
+
+<h3 id="toc_19">Updated 4 Ingredients</h3>
+
+<p>We’re still following the same recipe — just with more expressive power:</p>
+
+<ol>
+<li><strong>Data</strong> — still the same input-output pairs<br></li>
+<li><strong>Architecture</strong> — now has <strong>multiple layers</strong> and <strong>nonlinearities</strong><br></li>
+<li><strong>Loss Function</strong> — still <strong>cross-entropy</strong> for classification<br></li>
+<li><strong>Training Algorithm</strong> — still <strong>gradient descent</strong>, now applied to <strong>every layer</strong></li>
+</ol>
+
+<p>We’ll need to compute gradients for all weights using a technique called <strong>backpropagation</strong> — a generalization of the chain rule from calculus.</p>
+
+<h3 id="toc_20">Summary</h3>
+
+<ul>
+<li>A <strong>neural network</strong> is a stack of linear layers and nonlinear activations<br></li>
+<li>Each layer transforms the data into a new space<br></li>
+<li>Nonlinear activations (like ReLU) give the model the power to learn complex patterns<br></li>
+<li>At the output, we use softmax to predict class probabilities<br></li>
+<li>Training is done using gradient descent — just like logistic regression</li>
+</ul>
+
+<h2 id="toc_21">Backpropagation: How Neural Networks Learn</h2>
+
+<p>Now that we&#39;ve introduced multi-layer networks, the big question is:</p>
+
+<p><strong>How do we train all these layers?</strong></p>
+
+<p>In logistic regression, we computed the gradient of the loss with respect to the weights and biases using the chain rule. In a neural network, we do the same thing — just across <strong>multiple layers</strong>.</p>
+
+<p>This process is called <strong>backpropagation</strong>.</p>
+
+<h3 id="toc_22">What Is Backpropagation?</h3>
+
+<p><strong>Backpropagation</strong> is a method for computing the gradient of the loss with respect to <strong>every parameter in the network</strong>.</p>
+
+<p>It’s based on two ideas:</p>
+
+<ol>
+<li><p><strong>Chain Rule</strong> (from calculus):<br>
+If a function is made of multiple parts, we can compute its derivative by multiplying the derivatives of each part.</p></li>
+<li><p><strong>Reusing Intermediate Results</strong>:<br>
+Instead of recomputing everything from scratch, we compute gradients layer by layer, starting from the output and working backward.</p></li>
+</ol>
+
+<p>That’s why it’s called <strong>back</strong>propagation — we go <strong>backwards</strong> through the network.</p>
+
+<h3 id="toc_23">The 4 Ingredients (Again)</h3>
+
+<p>Let’s revisit the model-building recipe:</p>
+
+<ol>
+<li><strong>Data</strong> — inputs <code>x</code>, targets <code>y</code></li>
+<li><strong>Architecture</strong> — multiple layers with weights and activations</li>
+<li><strong>Loss Function</strong> — measures how wrong our prediction is</li>
+<li><strong>Training Algorithm</strong> — this is where backpropagation lives</li>
+</ol>
+
+<p>Backpropagation is how we implement gradient descent for <strong>multi-layer networks</strong>.</p>
+
+<h3 id="toc_24">Backprop: Step by Step</h3>
+
+<p>For a simple neural network like this:</p>
+
+<div><pre><code class="language-none">x → Linear → ReLU → Linear → Softmax → Loss</code></pre></div>
+
+<p>Backpropagation proceeds as follows:</p>
+
+<ol>
+<li><p><strong>Forward pass</strong>:<br>
+Compute predictions and loss just like normal.</p></li>
+<li><p><strong>Backward pass</strong>:  </p>
+
+<ul>
+<li>Start with the gradient of the loss (∂L/∂ŷ)</li>
+<li>Use the <strong>chain rule</strong> to compute gradients for the last layer<br>
+(e.g., ∂L/∂W₂ and ∂L/∂b₂)</li>
+<li>Pass the error <strong>backward</strong> through the ReLU<br></li>
+<li>Continue to compute gradients for the first layer<br>
+(e.g., ∂L/∂W₁ and ∂L/∂b₁)</li>
+</ul></li>
+<li><p><strong>Update weights</strong>:<br>
+Use gradient descent to adjust all weights and biases.</p></li>
+</ol>
+
+<h3 id="toc_25">Why It Works</h3>
+
+<p>Each layer of the network is just a function — usually linear followed by a nonlinearity. Because we know how to differentiate each part, we can use the chain rule to compute the full gradient.</p>
+
+<p>This allows us to <strong>learn all the weights in the network</strong>, no matter how many layers there are.</p>
+
+<h3 id="toc_26">Summary</h3>
+
+<ul>
+<li>Backpropagation is a generalization of gradient descent for multi-layer models</li>
+<li>It uses the <strong>chain rule</strong> to compute gradients from output to input</li>
+<li>It allows us to train all layers of a neural network — not just the last one</li>
+<li>It’s the foundation of modern deep learning</li>
+</ul>
+
+<p>You don’t need to memorize the math — the key idea is that we can compute gradients for each layer automatically and use them to improve the model.</p>
+
+<h2 id="toc_27">What Is PyTorch?</h2>
+
+<p><strong>PyTorch</strong> is a popular open-source deep learning library developed by <strong>Meta (Facebook AI Research)</strong>. It provides flexible tools for:</p>
+
+<ul>
+<li>Working with <strong>tensors</strong> (multi-dimensional arrays)</li>
+<li>Building <strong>neural networks</strong></li>
+<li>Running models on <strong>GPUs</strong> for fast computation</li>
+<li>Automatically computing <strong>gradients</strong> using a system called <strong>autograd</strong></li>
+</ul>
+
+<p>PyTorch is used by researchers, engineers, and companies around the world — from small prototypes to large-scale production systems.</p>
+
+<h3 id="toc_28">Why Are We Using It Now?</h3>
+
+<p>Building models from scratch helped us:</p>
+
+<ul>
+<li>Understand how predictions, loss, gradients, and updates actually work</li>
+<li>See how matrix math underpins all learning</li>
+</ul>
+
+<p>But in practice, almost no one writes models completely from scratch.<br>
+Instead, people use <strong>high-level libraries</strong> like PyTorch and Google&#39;s TensorFlow.</p>
+
+<p>These tools save time, reduce bugs, and make it easy to scale up to larger models.</p>
+
+<blockquote>
+<p>From here on, we&#39;ll use PyTorch to build and train our neural networks — but now you’ll understand exactly what’s going on under the hood.</p>
+</blockquote>
+
+<h2 id="toc_29">SMS Spam Collection</h2>
+
+<p>We’re returning to the <strong>SMS Spam Collection</strong> — a dataset we’ve used a few times already to explore text classification.</p>
+
+<p>Each row in the dataset contains:
+- A <strong>label</strong>: either <code>&quot;spam&quot;</code> or <code>&quot;ham&quot;</code> (not spam)
+- A <strong>message</strong>: the text content of an SMS</p>
+
+<p>Previously, we used:
+- <strong>Naive Bayes</strong> to classify messages using word counts
+- <strong>Logistic Regression</strong> (from scratch) with TF-IDF vectors</p>
+
+<p>This time, we’ll build a <strong>multi-layer neural network</strong> to perform the same task — using <strong>PyTorch</strong> to manage tensors, layers, gradients, and optimization.</p>
+
+<blockquote>
+<p>Same dataset, but now a more powerful model — and a much more scalable framework.</p>
+</blockquote>
+
+<h2 id="toc_30">Preparing the Data</h2>
+
+<p>Before we can train a neural network, we need to turn our SMS messages into numeric input vectors that PyTorch can understand. In this section, we:</p>
+
+<ol>
+<li><strong>Load the dataset</strong></li>
+<li><strong>Split into training and test sets</strong></li>
+<li><strong>Tokenize the messages</strong></li>
+<li><strong>Compute TF‑IDF scores</strong></li>
+<li><strong>Convert messages into PyTorch tensors</strong></li>
+<li><strong>Wrap everything in a Dataset and DataLoader</strong></li>
+</ol>
+
+<h3 id="toc_31">Step 1: Load the Dataset</h3>
+
+<p>We use <code>pandas</code> to read the SMS Spam Collection file from a URL. Each row contains a label (<code>&quot;spam&quot;</code> or <code>&quot;ham&quot;</code>) and a message.</p>
+
+<div><pre><code class="language-python">import pandas as pd
+df = pd.read_csv(
+    &quot;https://wd13ca.github.io/BAN200-Summer-2025/SMSSpamCollection.txt&quot;,
+    sep=&quot;\t&quot;, header=None, names=[&quot;label&quot;, &quot;message&quot;]
+)</code></pre></div>
+
+<h3 id="toc_32">Step 2: Train-Test Split</h3>
+
+<p>We randomly split the dataset: 80% for training, 20% for testing.</p>
+
+<div><pre><code class="language-python">from sklearn.model_selection import train_test_split
+train_df, test_df = train_test_split(df, test_size=0.2, random_state=13)</code></pre></div>
+
+<h3 id="toc_33">Step 3: Tokenize the Text</h3>
+
+<p>We define a simple tokenizer that:
+- Lowercases the text
+- Removes stop words (like &quot;the&quot;, &quot;and&quot;, etc.)
+- Extracts word tokens using regular expressions</p>
+
+<div><pre><code class="language-python">import re
+from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS
+
+def tokenize(text):
+    tokens = re.findall(r&quot;\b\w+\b&quot;, text.lower())
+    return [t for t in tokens if t not in ENGLISH_STOP_WORDS]</code></pre></div>
+
+<h3 id="toc_34">Step 4: Compute IDF Scores</h3>
+
+<p>We compute the <strong>inverse document frequency (IDF)</strong> of each word in the training set. Words that appear in many messages get lower weights; rare words get higher weights.</p>
+
+<div><pre><code class="language-python">import math
+
+N = len(train_df)
+doc_freq = {}
+for msg in train_df[&quot;message&quot;]:
+    for tok in set(tokenize(msg)):
+        doc_freq[tok] = doc_freq.get(tok, 0) + 1
+
+idf = {tok: math.log(N / df) for tok, df in doc_freq.items()}</code></pre></div>
+
+<h3 id="toc_35">Step 5: Vectorize Each Message</h3>
+
+<p>Finally, we create a tokenizer that converts a message into a dense PyTorch tensor. Each element of the vector corresponds to a word in the vocabulary, weighted by its TF‑IDF score.</p>
+
+<div><pre><code class="language-python">vocab = [word for word, _ in sorted(doc_freq.items(), key=lambda item: item[1], reverse=True)]
+word2idx = {w: i for i, w in enumerate(vocab)}
+
+def vectorize(message):
+    vec = torch.zeros(len(vocab))
+    for tok in tokenize(message):
+        if tok in idf:
+            vec[word2idx[tok]] += idf[tok]
+    return vec</code></pre></div>
+
+<h3 id="toc_36">Step 6: Create a Dataset and DataLoader</h3>
+
+<p>To use PyTorch effectively, we wrap our data in a <code>Dataset</code> class and feed it to a <code>DataLoader</code>. This handles batching and shuffling automatically.</p>
+
+<div><pre><code class="language-python">import torch
+import torch.nn as nn
+from torch.utils.data import Dataset, DataLoader
+
+label2index = {&#39;spam&#39;: 0, &#39;ham&#39;: 1}
+
+class SMSDataset(Dataset):
+    def __init__(self, df):
+        self.x = torch.stack([vectorize(m) for m in df[&quot;message&quot;]])
+        self.y = torch.tensor([label2index[lbl] for lbl in df[&quot;label&quot;]])
+    def __len__(self): 
+        return len(self.y)
+    def __getitem__(self, idx): 
+        return self.x[idx], self.y[idx]
+
+batch_size = 64
+train_loader = DataLoader(SMSDataset(train_df), batch_size=batch_size, shuffle=True)
+test_loader  = DataLoader(SMSDataset(test_df),  batch_size=batch_size)</code></pre></div>
+
+<blockquote>
+<p>At this point, we have a working PyTorch pipeline: raw text → TF‑IDF vector → PyTorch tensor → mini-batches for training.</p>
+</blockquote>
+
+<h2 id="toc_37">Defining the Model</h2>
+
+<p>Now that our data is ready, let’s define the neural network we’ll use to classify SMS messages.</p>
+
+<p>We’ll build a <strong>two-layer feedforward neural network</strong>:</p>
+
+<ol>
+<li>A <strong>linear layer</strong> that maps from the input size to a hidden dimension<br></li>
+<li>A <strong>ReLU activation</strong> to introduce nonlinearity<br></li>
+<li>A second <strong>linear layer</strong> that maps from the hidden dimension to 2 output units (spam or ham)</li>
+</ol>
+
+<h3 id="toc_38">Why 2 Outputs?</h3>
+
+<p>Because we encoded the labels as <code>[1.0, 0.0]</code> for spam and <code>[0.0, 1.0]</code> for ham, the model must output two numbers — one for each class. We&#39;ll later apply <strong>softmax</strong> or <strong>cross-entropy loss</strong> to turn those into probabilities.</p>
+
+<h3 id="toc_39">PyTorch Model Definition</h3>
+
+<p>We’ll use <code>torch.nn.Sequential</code> to stack the layers.</p>
+
+<div><pre><code class="language-python">import torch.nn as nn
+
+class TwoLayerNet(nn.Module):
+    def __init__(self, input_dim, hidden_dim, output_dim):
+        super().__init__()
+        self.layers = nn.Sequential(
+            nn.Linear(input_dim, hidden_dim),
+            nn.ReLU(),
+            nn.Linear(hidden_dim, output_dim)
+        )
+
+    def forward(self, x):
+        return self.layers(x)</code></pre></div>
+
+<h3 id="toc_40">Instantiate the Model</h3>
+
+<p>We define:
+- <code>input_dim</code>: the size of the TF‑IDF vector (i.e. vocab size)
+- <code>hidden_dim</code>: number of hidden units (you can tune this)
+- <code>output_dim</code>: 2 (for spam and ham)</p>
+
+<div><pre><code class="language-python">input_dim = len(vocab)
+hidden_dim = 100
+output_dim = 2
+
+model = TwoLayerNet(input_dim, hidden_dim, output_dim)</code></pre></div>
+
+<blockquote>
+<p>This model has learnable weights in both layers and can learn complex patterns in the input — much more powerful than logistic regression.</p>
+</blockquote>
+
+<p>Next, we’ll train this model using gradient descent.</p>
+
+<h2 id="toc_41">Training the Model</h2>
+
+<p>To train the model, we need two key components:</p>
+
+<ol>
+<li>A <strong>loss function</strong> to measure how wrong the predictions are<br></li>
+<li>An <strong>optimizer</strong> to update the model’s weights using gradients</li>
+</ol>
+
+<p>We’ll use:
+- <code>nn.CrossEntropyLoss()</code> — combines softmax + log-loss
+- <code>torch.optim.Adam</code> — a good default optimizer</p>
+
+<div><pre><code class="language-python">import torch.nn as nn
+import torch.optim as optim
+
+criterion = nn.CrossEntropyLoss()
+optimizer = optim.Adam(model.parameters(), lr=1e-3)</code></pre></div>
+
+<p>Now we train the model over multiple epochs:</p>
+
+<div><pre><code class="language-python">epochs = 10
+
+for epoch in range(epochs):
+    # --- Training phase ---
+    model.train()
+    total_loss = 0
+    correct = 0
+    total = 0
+
+    for xb, yb in train_loader:
+        optimizer.zero_grad()
+        logits = model(xb)
+        loss = criterion(logits, yb)
+        loss.backward()
+        optimizer.step()
+
+        total_loss += loss.item() * len(yb)
+        preds = logits.argmax(dim=1)
+        correct += (preds == yb).sum().item()
+        total += len(yb)
+
+    avg_train_loss = total_loss / total
+    train_acc = correct / total
+
+    # --- Evaluation phase ---
+    model.eval()
+    test_loss = 0
+    correct = 0
+    total = 0
+
+    with torch.no_grad():
+        for xb, yb in test_loader:
+            logits = model(xb)
+            loss = criterion(logits, yb)
+            test_loss += loss.item() * len(yb)
+            preds = logits.argmax(dim=1)
+            correct += (preds == yb).sum().item()
+            total += len(yb)
+
+    avg_test_loss = test_loss / total
+    test_acc = correct / total
+
+    print(f&quot;Epoch {epoch+1}: &quot;
+          f&quot;Train Loss = {avg_train_loss:.4f}, Acc = {train_acc:.2%} | &quot;
+          f&quot;Test Loss = {avg_test_loss:.4f}, Acc = {test_acc:.2%}&quot;)</code></pre></div>
+
+<p>After training, we’ll evaluate the model’s accuracy on the test set.</p>
+
+<h2 id="toc_42">Overfitting and Early Stopping</h2>
+
+<p>As we build more powerful models — especially neural networks with multiple layers — we also increase the risk of <strong>overfitting</strong>.</p>
+
+<h3 id="toc_43">What Is Overfitting?</h3>
+
+<p><strong>Overfitting</strong> happens when a model learns to perform very well on the <strong>training data</strong>, but fails to generalize to <strong>new, unseen data</strong>. In other words, the model starts to memorize the training set instead of learning useful patterns.</p>
+
+<h3 id="toc_44">Why Does It Happen?</h3>
+
+<p>Overfitting is more likely when:
+- The model has <strong>many parameters</strong> (e.g., deep or wide networks)
+- The dataset is <strong>small</strong> or <strong>noisy</strong>
+- Training runs for <strong>too many epochs</strong></p>
+
+<p>The model becomes so flexible that it can &quot;explain&quot; the training data perfectly — including the noise — but it performs poorly on the test set.</p>
+
+<p>You’ll often see this pattern:</p>
+
+<ul>
+<li><strong>Training loss keeps decreasing</strong></li>
+<li><strong>Validation (test) loss starts increasing</strong></li>
+</ul>
+
+<p>This is a clear sign of overfitting.</p>
+
+<h3 id="toc_45">One Solution: Early Stopping</h3>
+
+<p><strong>Early stopping</strong> is a simple and effective way to avoid overfitting.</p>
+
+<p>Here’s how it works:
+- During training, monitor performance on the <strong>validation set</strong>
+- If validation loss stops improving for several epochs in a row, <strong>stop training early</strong>
+- Keep the model from the epoch with the <strong>lowest validation loss</strong></p>
+
+<p>Early stopping helps prevent the model from &quot;going too far&quot; and starting to memorize the training data.</p>
+
+<blockquote>
+<p>Overfitting is a sign that your model is too powerful for your data — regularization, more data, or simpler models can help, but early stopping is often the easiest place to start.</p>
+</blockquote>
+
+<h2 id="toc_46">Evaluate the Model</h2>
+
+<h3 id="toc_47">Predict Function</h3>
+
+<p>Let&#39;s create a <code>predict()</code> function that takes an unlabeled message and returns a predicted label:</p>
+
+<div><pre><code class="language-python">def predict(message):
+    &quot;&quot;&quot;
+    Predict the class label for a raw input message (string).
+    - message: the input message (e.g., &quot;Free entry now!!!&quot;)
+
+    Returns:
+        predicted_label: the class label with highest probability
+    &quot;&quot;&quot;
+    model.eval()
+    with torch.no_grad():
+        vec = vectorize(message).unsqueeze(0)  # add batch dimension
+        logits = model(vec)                   # raw scores (1 x num_classes)
+        predicted_class = logits.argmax(dim=1).item()
+    return list(label2index.keys())[list(label2index.values()).index(predicted_class)]
+</code></pre></div>
+
+<h3 id="toc_48">Evaluate Model Accuracy on the Test Set</h3>
+
+<p>Now that we have a working <code>predict()</code> function, we’ll apply it to every message in the test set.</p>
+
+<p>Then we’ll compare the predicted labels to the actual labels and calculate the model’s accuracy.</p>
+
+<div><pre><code class="language-python"># Predict all messages in the test set
+predictions = []
+
+for _, row in test_df.iterrows():
+    message = row[&quot;message&quot;]
+    prediction = predict(message)
+    predictions.append(prediction)
+
+# Actual labels
+actual = test_df[&quot;label&quot;].tolist()
+
+# Compute accuracy
+correct = sum([pred == truth for pred, truth in zip(predictions, actual)])
+accuracy = correct / len(test_df)
+
+print(f&quot;Accuracy: {accuracy:.2%}&quot;)</code></pre></div>
+
+<h3 id="toc_49">Confusion Matrix</h3>
+
+<p>Now let&#39;s take a look at the confusion matrix:</p>
+
+<div><pre><code class="language-python">from sklearn.metrics import confusion_matrix
+
+# Generate confusion matrix
+cm = confusion_matrix(actual, predictions, labels=[&quot;spam&quot;, &quot;ham&quot;])
+
+# Display as a readable table
+print(&quot;Confusion Matrix:&quot;)
+print(f&quot;               Predicted&quot;)
+print(f&quot;             | spam | ham &quot;)
+print(f&quot;Actual spam  |  {cm[0][0]:4} | {cm[0][1]:4}&quot;)
+print(f&quot;Actual ham   |  {cm[1][0]:4} | {cm[1][1]:4}&quot;)</code></pre></div>
+
+<h3 id="toc_50">Precision, Recall, and F1-Score</h3>
+
+<p>Here are the precision, recall, and F1-scores:</p>
+
+<div><pre><code class="language-python">from sklearn.metrics import classification_report
+
+print(classification_report(actual, predictions, target_names=[&quot;spam&quot;, &quot;ham&quot;]))</code></pre></div>
+
+<h3 id="toc_51">Error Analysis</h3>
+
+<p>Let’s look at some misclassified messages — where the model&#39;s prediction didn&#39;t match the true label.</p>
+
+<p>This helps us understand:</p>
+
+<ul>
+<li>Where the model is confused</li>
+<li>Whether certain types of spam are being missed</li>
+<li>If it’s too aggressive (labeling ham as spam)</li>
+</ul>
+
+<div><pre><code class="language-python"># Show the first 10 misclassified messages
+for i in range(len(test_df)):
+    if predictions[i] != actual[i]:
+        print(f&quot;\n--- Misclassified Message ---&quot;)
+        print(f&quot;Actual:    {actual[i]}&quot;)
+        print(f&quot;Predicted: {predictions[i]}&quot;)
+        print(f&quot;Message:   {test_df.iloc[i][&#39;message&#39;]}&quot;)</code></pre></div>
+
+<h2 id="toc_52">Exercises</h2>
+
+<p>Try these exercises to deepen your understanding of neural network architecture and PyTorch:</p>
+
+<ol>
+<li>Change the Number of Hidden Units</li>
+<li>Add an Extra Layer</li>
+<li>Remove the Hidden Layer</li>
+<li>Try a New Dataset</li>
+</ol>
+
+
+
+<script type="text/x-mathjax-config">
+(function () {
+
+MathJax.Hub.Config({
+	'showProcessingMessages': false,
+	'messageStyle': 'none'
+});
+
+if (typeof MathJaxListener !== 'undefined') {
+	MathJax.Hub.Register.StartupHook('End', function () {
+		MathJaxListener.invokeCallbackForKey_('End');
+	});
+}
+
+})();
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+</body>
+
+</html>
